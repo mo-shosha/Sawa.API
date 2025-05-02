@@ -1,0 +1,341 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\projects in back\\Advansed_SE\\SAWA.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Migrations\\20250502200010_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SAWA.infrastructure\\Migrations\\20250502200010_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.infrastructure\\data\\config\\appuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|solutionrelative:sawa.infrastructure\\data\\config\\appuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.infrastructure\\data\\config\\postconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|solutionrelative:sawa.infrastructure\\data\\config\\postconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.infrastructure\\data\\config\\reportconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|solutionrelative:sawa.infrastructure\\data\\config\\reportconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.infrastructure\\data\\config\\photoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|solutionrelative:sawa.infrastructure\\data\\config\\photoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.infrastructure\\data\\config\\helprequestconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|solutionrelative:sawa.infrastructure\\data\\config\\helprequestconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.infrastructure\\data\\config\\donationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|solutionrelative:sawa.infrastructure\\data\\config\\donationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.infrastructure\\data\\config\\commentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|solutionrelative:sawa.infrastructure\\data\\config\\commentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.infrastructure\\data\\config\\branchconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF015A34-F238-485D-B10A-A28C5CF75176}|SAWA.infrastructure\\SAWA.infrastructure.csproj|solutionrelative:sawa.infrastructure\\data\\config\\branchconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.core\\models\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|solutionrelative:sawa.core\\models\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.core\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|solutionrelative:sawa.core\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.core\\models\\donation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|solutionrelative:sawa.core\\models\\donation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.core\\models\\helprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|solutionrelative:sawa.core\\models\\helprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.core\\models\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|solutionrelative:sawa.core\\models\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.core\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|solutionrelative:sawa.core\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.core\\models\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|solutionrelative:sawa.core\\models\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|e:\\projects in back\\advansed_se\\sawa.api\\sawa.core\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A6EB7-F711-44F3-BD2E-E66FD3F1D7DE}|SAWA.core\\SAWA.core.csproj|solutionrelative:sawa.core\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250502200010_init.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Migrations\\20250502200010_init.cs",
+              "RelativeDocumentMoniker": "SAWA.infrastructure\\Migrations\\20250502200010_init.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Migrations\\20250502200010_init.cs",
+              "RelativeToolTip": "SAWA.infrastructure\\Migrations\\20250502200010_init.cs",
+              "ViewState": "AgIAAA8CAAAAkGZmZmYRwDcCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T20:00:11.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReportConfiguration.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\ReportConfiguration.cs",
+              "RelativeDocumentMoniker": "SAWA.infrastructure\\Data\\Config\\ReportConfiguration.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\ReportConfiguration.cs",
+              "RelativeToolTip": "SAWA.infrastructure\\Data\\Config\\ReportConfiguration.cs",
+              "ViewState": "AgIAAAUAAACAMjMzMzMLwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T19:56:14.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostConfiguration.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\PostConfiguration.cs",
+              "RelativeDocumentMoniker": "SAWA.infrastructure\\Data\\Config\\PostConfiguration.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\PostConfiguration.cs",
+              "RelativeToolTip": "SAWA.infrastructure\\Data\\Config\\PostConfiguration.cs",
+              "ViewState": "AgIAAAkAAAAAZGZmZmYkwBoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T19:56:08.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppUserConfiguration.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\AppUserConfiguration.cs",
+              "RelativeDocumentMoniker": "SAWA.infrastructure\\Data\\Config\\AppUserConfiguration.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\AppUserConfiguration.cs",
+              "RelativeToolTip": "SAWA.infrastructure\\Data\\Config\\AppUserConfiguration.cs",
+              "ViewState": "AgIAABwAAADAmJmZmZkjwDQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T19:50:47.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HelpRequestConfiguration.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\HelpRequestConfiguration.cs",
+              "RelativeDocumentMoniker": "SAWA.infrastructure\\Data\\Config\\HelpRequestConfiguration.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\HelpRequestConfiguration.cs",
+              "RelativeToolTip": "SAWA.infrastructure\\Data\\Config\\HelpRequestConfiguration.cs",
+              "ViewState": "AgIAABQAAAAAFzMzMzPzvykAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T19:55:06.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DonationConfiguration.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\DonationConfiguration.cs",
+              "RelativeDocumentMoniker": "SAWA.infrastructure\\Data\\Config\\DonationConfiguration.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\DonationConfiguration.cs",
+              "RelativeToolTip": "SAWA.infrastructure\\Data\\Config\\DonationConfiguration.cs",
+              "ViewState": "AgIAABgAAACAXWZmZmYSwC4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T19:54:59.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BranchConfiguration.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\BranchConfiguration.cs",
+              "RelativeDocumentMoniker": "SAWA.infrastructure\\Data\\Config\\BranchConfiguration.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\BranchConfiguration.cs",
+              "RelativeToolTip": "SAWA.infrastructure\\Data\\Config\\BranchConfiguration.cs",
+              "ViewState": "AgIAAAUAAADAMTMzMzMrwB4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T19:54:50.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PhotoConfiguration.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\PhotoConfiguration.cs",
+              "RelativeDocumentMoniker": "SAWA.infrastructure\\Data\\Config\\PhotoConfiguration.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\PhotoConfiguration.cs",
+              "RelativeToolTip": "SAWA.infrastructure\\Data\\Config\\PhotoConfiguration.cs",
+              "ViewState": "AgIAABUAAACAmpmZmZkZwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T19:44:07.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CommentConfiguration.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\CommentConfiguration.cs",
+              "RelativeDocumentMoniker": "SAWA.infrastructure\\Data\\Config\\CommentConfiguration.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.infrastructure\\Data\\Config\\CommentConfiguration.cs",
+              "RelativeToolTip": "SAWA.infrastructure\\Data\\Config\\CommentConfiguration.cs",
+              "ViewState": "AgIAAAoAAAAAvMzMzMz8vx4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T19:35:55.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Post.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Post.cs",
+              "RelativeDocumentMoniker": "SAWA.core\\Models\\Post.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Post.cs",
+              "RelativeToolTip": "SAWA.core\\Models\\Post.cs",
+              "ViewState": "AgIAAAAAAAAAMzMzMzMbwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:56:44.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Photo.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Photo.cs",
+              "RelativeDocumentMoniker": "SAWA.core\\Models\\Photo.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Photo.cs",
+              "RelativeToolTip": "SAWA.core\\Models\\Photo.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:56:32.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Branch.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Branch.cs",
+              "RelativeDocumentMoniker": "SAWA.core\\Models\\Branch.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Branch.cs",
+              "RelativeToolTip": "SAWA.core\\Models\\Branch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:55:19.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Report.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Report.cs",
+              "RelativeDocumentMoniker": "SAWA.core\\Models\\Report.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Report.cs",
+              "RelativeToolTip": "SAWA.core\\Models\\Report.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:56:52.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HelpRequest.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\HelpRequest.cs",
+              "RelativeDocumentMoniker": "SAWA.core\\Models\\HelpRequest.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\HelpRequest.cs",
+              "RelativeToolTip": "SAWA.core\\Models\\HelpRequest.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAABkPQoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:56:22.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Donation.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Donation.cs",
+              "RelativeDocumentMoniker": "SAWA.core\\Models\\Donation.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Donation.cs",
+              "RelativeToolTip": "SAWA.core\\Models\\Donation.cs",
+              "ViewState": "AgIAABMAAADAZWZmZmYkwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:55:58.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "SAWA.core\\Models\\Comment.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\Comment.cs",
+              "RelativeToolTip": "SAWA.core\\Models\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:55:33.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "SAWA.core\\Models\\BaseEntity.cs",
+              "ToolTip": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.core\\Models\\BaseEntity.cs",
+              "RelativeToolTip": "SAWA.core\\Models\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:55:09.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{75504045-d02f-44e5-bf60-5f60df380e8b}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

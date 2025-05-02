@@ -1,0 +1,14 @@
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\bin\Debug\net8.0\SAWA.core.deps.json
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\bin\Debug\net8.0\SAWA.core.runtimeconfig.json
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\bin\Debug\net8.0\SAWA.core.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\bin\Debug\net8.0\SAWA.core.pdb
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.csproj.AssemblyReference.cache
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.GeneratedMSBuildEditorConfig.editorconfig
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.AssemblyInfoInputs.cache
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.AssemblyInfo.cs
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.csproj.CoreCompileInputs.cache
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\refint\SAWA.core.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.pdb
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.genruntimeconfig.cache
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\ref\SAWA.core.dll

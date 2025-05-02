@@ -1,0 +1,17 @@
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\bin\Debug\net8.0\SAWA.infrastructure.deps.json
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\bin\Debug\net8.0\SAWA.infrastructure.runtimeconfig.json
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\bin\Debug\net8.0\SAWA.infrastructure.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\bin\Debug\net8.0\SAWA.infrastructure.pdb
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\bin\Debug\net8.0\SAWA.core.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\bin\Debug\net8.0\SAWA.core.pdb
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.csproj.AssemblyReference.cache
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.AssemblyInfoInputs.cache
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.AssemblyInfo.cs
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.csproj.CoreCompileInputs.cache
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.inf.E5D6BC50.Up2Date
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\refint\SAWA.infrastructure.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.pdb
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.genruntimeconfig.cache
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\ref\SAWA.infrastructure.dll
