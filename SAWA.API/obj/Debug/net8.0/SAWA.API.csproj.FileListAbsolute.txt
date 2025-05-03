@@ -154,3 +154,17 @@ E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Debug\net8.0\refint\SAWA.A
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Debug\net8.0\SAWA.API.pdb
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Debug\net8.0\SAWA.API.genruntimeconfig.cache
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Debug\net8.0\ref\SAWA.API.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Debug\net8.0\SAWA.API.sourcelink.json
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\SAWA.API.staticwebassets.runtime.json
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\AutoMapper.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SAWA.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cf8ec7bed63d254f4b629e063a719ad63ff76b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("SAWA.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SAWA.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

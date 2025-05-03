@@ -1,20 +1,22 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using SAWA.core.Models;
-using SAWA.infrastructure.Data.Config;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SAWA.infrastructure.Data
 {
     public class AppDbContext : IdentityDbContext<AppUser>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        private readonly IServiceProvider _serviceProvider;
+
+        public AppDbContext(DbContextOptions<AppDbContext> options, IServiceProvider serviceProvider) : base(options)
         {
+            _serviceProvider = serviceProvider;
         }
 
         public DbSet<Report> Reports { get; set; }
@@ -25,22 +27,55 @@ namespace SAWA.infrastructure.Data
         public DbSet<HelpRequest> HelpRequests { get; set; }
         public DbSet<Photo> Photos { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //base.OnModelCreating(modelBuilder);
-
-            //modelBuilder.ApplyConfiguration(new PhotoConfiguration());
-            //modelBuilder.ApplyConfiguration(new AppUserConfiguration());
-            //modelBuilder.ApplyConfiguration(new BranchConfiguration());
-            //modelBuilder.ApplyConfiguration(new DonationConfiguration());
-            //modelBuilder.ApplyConfiguration(new HelpRequestConfiguration());
-            //modelBuilder.ApplyConfiguration(new PostConfiguration());
-            //modelBuilder.ApplyConfiguration(new ReportConfiguration());
-            //modelBuilder.ApplyConfiguration(new CommentConfiguration());
-
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+
+        public static async Task SeedRolesAndUsers(IServiceProvider serviceProvider, UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager)
+        {
+            
+
+            // Seed users
+            var admin = await userManager.FindByEmailAsync("admin@example.com");
+            if (admin == null)
+            {
+                var newAdmin = new AppUser
+                {
+                    UserName = "admin@example.com",
+                    Email = "admin@example.com",
+                    FullName = "Admin User"
+                };
+                await userManager.CreateAsync(newAdmin, "Admin@1234");
+                await userManager.AddToRoleAsync(newAdmin, "admin");
+            }
+
+            var regularUser = await userManager.FindByEmailAsync("user@example.com");
+            if (regularUser == null)
+            {
+                var newUser = new AppUser
+                {
+                    UserName = "user@example.com",
+                    Email = "user@example.com",
+                    FullName = "Regular User"
+                };
+                await userManager.CreateAsync(newUser, "User@1234");
+                await userManager.AddToRoleAsync(newUser, "user");
+            }
+
+            var charityUser = await userManager.FindByEmailAsync("charity@example.com");
+            if (charityUser == null)
+            {
+                var newCharity = new AppUser
+                {
+                    UserName = "charity@example.com",
+                    Email = "charity@example.com",
+                    FullName = "Charity User"
+                };
+                await userManager.CreateAsync(newCharity, "Charity@1234");
+                await userManager.AddToRoleAsync(newCharity, "charity");
+            }
         }
     }
 }

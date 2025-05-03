@@ -12,16 +12,15 @@ namespace SAWA.core.Models
         //for user and charity
         public string FullName { get; set; }
         public string Address { get; set; }
-        public int? ProfilePhotoId { get; set; }
-        public Photo ProfilePhoto { get; set; }
+        public string ProfilePhotoURL { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         //for charity only
         public bool? IsApproved { get; set; }
 
         public string? Description { get; set; }
 
-        public int? WallpaperPhotoId { get; set; }
-        public Photo WallpaperPhoto { get; set; }
+        public string? WallpaperPhotoURL { get; set; }
         public string? DocumentURL { get; set; }
 
 

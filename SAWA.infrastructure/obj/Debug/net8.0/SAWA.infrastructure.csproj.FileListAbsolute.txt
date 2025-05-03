@@ -15,3 +15,4 @@ E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\re
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.pdb
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.genruntimeconfig.cache
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\ref\SAWA.infrastructure.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.infrastructure\obj\Debug\net8.0\SAWA.infrastructure.sourcelink.json

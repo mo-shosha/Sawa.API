@@ -21,10 +21,7 @@ namespace SAWA.infrastructure.Data.Config
                    .IsRequired()
                    .HasMaxLength(500);
 
-            builder.HasOne(p => p.User)
-                   .WithOne()
-                   .HasForeignKey<Photo>(p => p.UserId)
-                   .OnDelete(DeleteBehavior.Restrict);
+            
 
             builder.HasOne(p => p.Branch)
                    .WithMany(b => b.Photos)

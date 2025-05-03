@@ -24,15 +24,11 @@ namespace SAWA.infrastructure.Data.Config
             builder.Property(u => u.Address)
                    .HasMaxLength(500);
 
-            builder.HasOne(u => u.ProfilePhoto)
-                   .WithOne()
-                   .HasForeignKey<AppUser>(u => u.ProfilePhotoId)
-                   .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(u => u.ProfilePhotoURL)
+                    .HasMaxLength(1000);
 
-            builder.HasOne(u => u.WallpaperPhoto)
-                   .WithOne()
-                   .HasForeignKey<AppUser>(u => u.WallpaperPhotoId)
-                   .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(u => u.WallpaperPhotoURL)
+                   .HasMaxLength(1000);
 
             builder.HasMany(u => u.DonationsGiven)
                    .WithOne(d => d.User)

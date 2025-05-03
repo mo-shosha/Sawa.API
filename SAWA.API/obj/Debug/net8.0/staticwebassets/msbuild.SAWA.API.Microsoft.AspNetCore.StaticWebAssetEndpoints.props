@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/SAWA.API/Images/Khaled Mostafa/2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Khaled Mostafa\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"370652"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 May 2025 16:49:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SAWA.API/Images/Khaled Mostafa/2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.wtpj3b73f9.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Khaled Mostafa\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wtpj3b73f9"},{"Name":"integrity","Value":"sha256-hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE="},{"Name":"label","Value":"_content/SAWA.API/Images/Khaled Mostafa/2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"370652"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 May 2025 16:49:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SAWA.API/Images/Mohamed shosha/efd0faed-9fdc-4708-93f0-ac25feb0ba1d.bsje3od8me.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Mohamed shosha\efd0faed-9fdc-4708-93f0-ac25feb0ba1d.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"bsje3od8me"},{"Name":"integrity","Value":"sha256-q27aoiGChJVebNdsjKQNONYOMJYWWd6\u002Bl4vOeGwPbjI="},{"Name":"label","Value":"_content/SAWA.API/Images/Mohamed shosha/efd0faed-9fdc-4708-93f0-ac25feb0ba1d.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"109109"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022q27aoiGChJVebNdsjKQNONYOMJYWWd6\u002Bl4vOeGwPbjI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 May 2025 16:39:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SAWA.API/Images/Mohamed shosha/efd0faed-9fdc-4708-93f0-ac25feb0ba1d.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Mohamed shosha\efd0faed-9fdc-4708-93f0-ac25feb0ba1d.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-q27aoiGChJVebNdsjKQNONYOMJYWWd6\u002Bl4vOeGwPbjI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"109109"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022q27aoiGChJVebNdsjKQNONYOMJYWWd6\u002Bl4vOeGwPbjI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 May 2025 16:39:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

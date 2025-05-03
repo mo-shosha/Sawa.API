@@ -12,3 +12,4 @@ E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\refint\SAWA.
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.pdb
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.genruntimeconfig.cache
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\ref\SAWA.core.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.core\obj\Debug\net8.0\SAWA.core.sourcelink.json

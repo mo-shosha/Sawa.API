@@ -172,6 +172,9 @@ namespace SAWA.infrastructure.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -216,8 +219,10 @@ namespace SAWA.infrastructure.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("ProfilePhotoId")
-                        .HasColumnType("int");
+                    b.Property<string>("ProfilePhotoURL")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -229,8 +234,9 @@ namespace SAWA.infrastructure.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<int?>("WallpaperPhotoId")
-                        .HasColumnType("int");
+                    b.Property<string>("WallpaperPhotoURL")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.HasKey("Id");
 
@@ -241,14 +247,6 @@ namespace SAWA.infrastructure.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.HasIndex("ProfilePhotoId")
-                        .IsUnique()
-                        .HasFilter("[ProfilePhotoId] IS NOT NULL");
-
-                    b.HasIndex("WallpaperPhotoId")
-                        .IsUnique()
-                        .HasFilter("[WallpaperPhotoId] IS NOT NULL");
 
                     b.ToTable("AppUsers", (string)null);
                 });
@@ -440,9 +438,6 @@ namespace SAWA.infrastructure.Migrations
                     b.Property<int?>("PostId")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("BranchId");
@@ -452,10 +447,6 @@ namespace SAWA.infrastructure.Migrations
                     b.HasIndex("HelpRequestId");
 
                     b.HasIndex("PostId");
-
-                    b.HasIndex("UserId")
-                        .IsUnique()
-                        .HasFilter("[UserId] IS NOT NULL");
 
                     b.ToTable("Photos", (string)null);
                 });
@@ -566,23 +557,6 @@ namespace SAWA.infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("SAWA.core.Models.AppUser", b =>
-                {
-                    b.HasOne("SAWA.core.Models.Photo", "ProfilePhoto")
-                        .WithOne()
-                        .HasForeignKey("SAWA.core.Models.AppUser", "ProfilePhotoId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("SAWA.core.Models.Photo", "WallpaperPhoto")
-                        .WithOne()
-                        .HasForeignKey("SAWA.core.Models.AppUser", "WallpaperPhotoId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("ProfilePhoto");
-
-                    b.Navigation("WallpaperPhoto");
-                });
-
             modelBuilder.Entity("SAWA.core.Models.Branch", b =>
                 {
                     b.HasOne("SAWA.core.Models.AppUser", "Charity")
@@ -673,11 +647,6 @@ namespace SAWA.infrastructure.Migrations
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("SAWA.core.Models.AppUser", "User")
-                        .WithOne()
-                        .HasForeignKey("SAWA.core.Models.Photo", "UserId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.Navigation("Branch");
 
                     b.Navigation("Donation");
@@ -685,8 +654,6 @@ namespace SAWA.infrastructure.Migrations
                     b.Navigation("HelpRequest");
 
                     b.Navigation("Post");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("SAWA.core.Models.Post", b =>
