@@ -40,6 +40,7 @@ namespace SAWA.API
             builder.Services.AddScoped<IGenerateTokenServices, GenerateTokenServices>();
             builder.Services.AddScoped<IFileManagementService, FileManagementService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IEmailServices, EmailServices>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 

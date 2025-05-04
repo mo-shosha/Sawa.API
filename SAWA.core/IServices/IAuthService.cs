@@ -17,6 +17,6 @@ namespace SAWA.core.IServices
         Task LogoutAsync();
         Task<AppUser> GetUserByEmailAsync(string email);
         Task<AppUser> GetUserByIdAsync(string userId);
-        Task<IdentityResult> ConfirmEmailAsync(string email, string token);
+        Task<IdentityResult> ConfirmEmailAsync(AppUser user, string token);
     }
 }

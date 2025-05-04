@@ -1,6 +1,27 @@
 [
   {
     "ContainingType": "SAWA.API.Controllers.V1.AuthController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/V1/Auth/ConfirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.AuthController",
     "Method": "Login",
     "RelativePath": "api/V1/Auth/login",
     "HttpMethod": "POST",

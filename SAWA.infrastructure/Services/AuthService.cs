@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using SAWA.core.DTO;
 using SAWA.core.Interfaces;
 using SAWA.core.IServices;
@@ -24,6 +25,8 @@ namespace SAWA.infrastructure.Services
         private readonly IMapper _mapper;
         private readonly IFileManagementService _fileManagementService;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IConfiguration _configuration;
+        private readonly IEmailServices _emailService;
         public AuthService(
             UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager,
@@ -31,7 +34,9 @@ namespace SAWA.infrastructure.Services
             RoleManager<IdentityRole> roleManager,
             IMapper mapper,
             IFileManagementService fileManagementService,
-            IUnitOfWork unitOfWork
+            IUnitOfWork unitOfWork,
+            IConfiguration configuration,
+            IEmailServices emailService
             )
             
         {
@@ -42,14 +47,8 @@ namespace SAWA.infrastructure.Services
             _mapper = mapper;
             _fileManagementService = fileManagementService;
             _unitOfWork = unitOfWork;
-        }
-        public async  Task<IdentityResult> ConfirmEmailAsync(string email, string token)
-        {
-            var user = await _userManager.FindByEmailAsync(email);
-            if (user == null)
-                return IdentityResult.Failed(new IdentityError { Description = "User not found" });
-
-            return await _userManager.ConfirmEmailAsync(user, token);
+            _configuration = configuration;
+            _emailService = emailService;
         }
 
         public async Task<AppUser> GetUserByEmailAsync(string email)
@@ -151,6 +150,34 @@ namespace SAWA.infrastructure.Services
                 await _unitOfWork.SaveAsync();  
 
                 await _userManager.AddToRoleAsync(newUser, "User");
+
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+                var confirmationLink = $"{_configuration["Token:Issuer"]}/api/V1/Auth/ConfirmEmail?userId={newUser.Id}&token={Uri.EscapeDataString(token)}";
+
+                _ = Task.Run(async () =>
+                {
+                    await _emailService.SendEmailAsync(
+                        newUser.Email,
+                        "Confirm Your Email",
+                        $@"
+                        <div style='font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 8px; padding: 20px;'>
+                            <h2 style='color: #007bff;'>Confirm Your Email Address</h2>
+                            <p>Hello {newUser.FullName},</p>
+                            <p>Thank you for registering! Please confirm your email address to activate your account.</p>
+                            <p style='text-align: center;'>
+                                <a href='{confirmationLink}' style='display: inline-block; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;'>
+                                    Confirm Email
+                                </a>
+                            </p>
+                            <p>If you did not create an account, please ignore this email.</p>
+                            <p>Thank you,<br/>The Team</p>
+                            <hr style='margin-top: 20px; border: none; border-top: 1px solid #ddd;'/>
+                            <p style='font-size: 12px; color: #888;'>This email was sent to {newUser.Email}. If you have any questions, contact us at support@example.com.</p>
+                        </div>"
+                    );
+                });
+
+
                 return "Success";
             }
             catch (Exception ex)
@@ -159,5 +186,23 @@ namespace SAWA.infrastructure.Services
             }
         }
 
+
+
+        public async Task<IdentityResult> ConfirmEmailAsync(AppUser user, string token)
+        {
+            try
+            {
+                var result = await _userManager.ConfirmEmailAsync(user, token);
+                if (!result.Succeeded)
+                {
+                    throw new Exception("Email confirmation failed");
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error confirming email: {ex.Message}");
+            }
+        }
     }
 }

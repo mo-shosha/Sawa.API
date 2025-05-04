@@ -78,5 +78,30 @@ namespace SAWA.API.Controllers.V1
                 return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.Message}", 500));
             }
         }
+
+
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
+                    return BadRequest(ResponseAPI<string>.Error("Invalid email confirmation request."));
+
+                var user = await _authService.GetUserByIdAsync(userId);
+                 if (user == null)
+                    return NotFound(ResponseAPI<string>.Error("User not found."));
+
+                var result = await _authService.ConfirmEmailAsync(user, token);
+                if (!result.Succeeded)
+                    return BadRequest(ResponseAPI<string>.Error("Email confirmation failed."));
+
+                return Ok(ResponseAPI<string>.Success("Email confirmed successfully."));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ResponseAPI<string>.Error(ex.Message));
+            }
+        }
     }
 }
