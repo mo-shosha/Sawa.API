@@ -20,6 +20,7 @@ namespace SAWA.API.Controllers.V1
             _unitOfWork = unitOfWork;
         }
 
+        [Authorize(Roles = "charity")]
         [HttpPost("Create")]
         public async Task<IActionResult> Create([FromForm] PostCreateDto dto)
         {

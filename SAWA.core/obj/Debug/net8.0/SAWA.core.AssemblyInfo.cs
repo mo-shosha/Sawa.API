@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SAWA.core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b1c741214d28ff792ba485b88fdf59f2d4a344e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fdad1236bd52f1561b324fcb92e14377366d9124")]
 [assembly: System.Reflection.AssemblyProductAttribute("SAWA.core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SAWA.core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

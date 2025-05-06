@@ -19,6 +19,8 @@ namespace SAWA.infrastructure.Repositories
         private readonly IFileManagementService _fileManagementService;
         public IPostRepository postRepository { get; }
 
+        public ICommentRepository CommentRepository { get; }
+
         public UnitOfWork(AppDbContext db, IMapper mapper,IFileManagementService fileManagementService)
         {
             _db = db;
@@ -26,6 +28,7 @@ namespace SAWA.infrastructure.Repositories
             _fileManagementService = fileManagementService;
 
             postRepository = new PostRepository(_db,_mapper,_fileManagementService);
+            CommentRepository = new CommentRepository(_db, _mapper, _fileManagementService);
         }
 
 

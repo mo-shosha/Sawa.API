@@ -10,10 +10,11 @@ namespace SAWA.API.Controllers.V1
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
-
-        public AuthController(IAuthService authService)
+        private readonly ILogger<AuthController> _logger;
+        public AuthController(IAuthService authService, ILogger<AuthController> logger)
         {
             _authService = authService;
+            _logger = logger;
         }
 
         [HttpPost("login")]
@@ -22,17 +23,25 @@ namespace SAWA.API.Controllers.V1
             try
             {
                 if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model data during login attempt.");
                     return BadRequest(ResponseAPI<string>.Error("Invalid model data."));
+                }
 
                 var result = await _authService.LoginAsync(model);
 
                 if (result == null)
+                {
+                    _logger.LogWarning("Invalid login attempt with email: {Email}", model.Email);
                     return Unauthorized(ResponseAPI<string>.Error("Invalid email or password.", 401));
+                }
 
+                _logger.LogInformation("User logged in successfully: {Email}", model.Email);
                 return Ok(ResponseAPI<object>.Success(result, "Login successful."));
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "An error occurred during login.");
                 return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.Message}", 500));
             }
         }
@@ -42,6 +51,7 @@ namespace SAWA.API.Controllers.V1
         {
             if (string.IsNullOrEmpty(model.AccessToken))
             {
+                _logger.LogWarning("Access token is missing during Google login attempt.");
                 return Unauthorized(ResponseAPI<string>.Error("Access token is required.", 400));
             }
 
@@ -49,12 +59,13 @@ namespace SAWA.API.Controllers.V1
 
             if (user == null)
             {
+                _logger.LogWarning("No user found with Google account for access token: {AccessToken}", model.AccessToken);
                 return Unauthorized(ResponseAPI<string>.Error("No user found with this Google account. Please register.", 401));
             }
 
+            _logger.LogInformation("User logged in successfully with Google account.");
             return Ok(ResponseAPI<object>.Success(user, "Login successful."));
         }
-
 
         [HttpPost("RegisterCharity")]
         public async Task<IActionResult> RegisterCharity([FromForm] CharityRegisterDto model)
@@ -62,17 +73,25 @@ namespace SAWA.API.Controllers.V1
             try
             {
                 if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model data during charity registration.");
                     return BadRequest(ResponseAPI<string>.Error("Invalid model data."));
+                }
 
                 var result = await _authService.RegisterCharityAsync(model);
 
-                if (result == null)
+                if (result == null || result != "Success")
+                {
+                    _logger.LogWarning("Error occurred while registering charity: {CharityName}", model.CharityName);
                     return BadRequest(ResponseAPI<string>.Error("Error registering charity. Please check your details and try again."));
+                }
 
+                _logger.LogInformation("Charity registered successfully: {CharityName}", model.CharityName);
                 return Ok(ResponseAPI<string>.Success(null, "Charity registered successfully."));
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "An error occurred during charity registration.");
                 return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.Message}", 500));
             }
         }
@@ -83,21 +102,28 @@ namespace SAWA.API.Controllers.V1
             try
             {
                 if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model data during user registration.");
                     return BadRequest(ResponseAPI<string>.Error("Invalid model data."));
+                }
 
                 var result = await _authService.RegisterUserAsync(model);
 
-                if (result == null)
+                if (result == null || result != "Success")
+                {
+                    _logger.LogWarning("Error occurred while registering user: {Email}", model.Email);
                     return BadRequest(ResponseAPI<string>.Error("Error registering user. Please check your details and try again."));
+                }
 
+                _logger.LogInformation("User registered successfully: {Email}", model.Email);
                 return Ok(ResponseAPI<object>.Success(result, "User registered successfully."));
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "An error occurred during user registration.");
                 return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.Message}", 500));
             }
         }
-
 
         [HttpGet("ConfirmEmail")]
         public async Task<IActionResult> ConfirmEmail(string userId, string token)
@@ -105,22 +131,34 @@ namespace SAWA.API.Controllers.V1
             try
             {
                 if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
+                {
+                    _logger.LogWarning("Invalid email confirmation request. UserId or Token is missing.");
                     return BadRequest(ResponseAPI<string>.Error("Invalid email confirmation request."));
+                }
 
                 var user = await _authService.GetUserByIdAsync(userId);
-                 if (user == null)
+                if (user == null)
+                {
+                    _logger.LogWarning("User not found for email confirmation. UserId: {UserId}", userId);
                     return NotFound(ResponseAPI<string>.Error("User not found."));
+                }
 
                 var result = await _authService.ConfirmEmailAsync(user, token);
                 if (!result.Succeeded)
+                {
+                    _logger.LogWarning("Email confirmation failed for user: {UserId}", userId);
                     return BadRequest(ResponseAPI<string>.Error("Email confirmation failed."));
+                }
 
+                _logger.LogInformation("Email confirmed successfully for user: {UserId}", userId);
                 return Ok(ResponseAPI<string>.Success("Email confirmed successfully."));
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "An error occurred during email confirmation.");
                 return BadRequest(ResponseAPI<string>.Error(ex.Message));
             }
         }
     }
 }
+

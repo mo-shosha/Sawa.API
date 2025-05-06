@@ -162,3 +162,13 @@ E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Release\net8.0\win-x86\ref
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Release\net8.0\win-x86\SAWA.API.pdb
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Release\net8.0\win-x86\SAWA.API.genruntimeconfig.cache
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Release\net8.0\win-x86\ref\SAWA.API.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\NLog.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.AspNetCore.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Extensions.Hosting.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Extensions.Logging.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Formatting.Compact.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Settings.Configuration.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Sinks.Console.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Sinks.Debug.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Sinks.File.dll

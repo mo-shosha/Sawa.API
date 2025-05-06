@@ -2,6 +2,7 @@
 using SAWA.core.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,12 +20,7 @@ namespace SAWA.core.DTO
 
     }
 
-    public record CommentDto
-    {
-        public string Content { get; init; }
-        public int PostId { get; init; }
-        public DateTime CreatedAt { get; init; }
-    }
+    
 
     public record PhotoDto
     {
@@ -34,7 +30,10 @@ namespace SAWA.core.DTO
 
     public record PostCreateDto 
     {
+        [Required]
+        [MaxLength(1000)]
         public string Content { get; set; }
+        [Required]
         public IFormFileCollection Photos { get; set; }
     }
 

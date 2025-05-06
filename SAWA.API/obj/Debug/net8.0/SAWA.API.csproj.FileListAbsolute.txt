@@ -174,3 +174,14 @@ E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Google.Apis.C
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Newtonsoft.Json.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\System.Management.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\NLog.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Serilog.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Debug\net8.0\Serilog.Sinks.File.dll

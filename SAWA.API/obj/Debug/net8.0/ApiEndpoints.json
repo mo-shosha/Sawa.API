@@ -185,6 +185,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CommentController",
+    "Method": "get",
+    "RelativePath": "api/V1/Comment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommentController",
+    "Method": "CreateComment",
+    "RelativePath": "api/V1/Comment/CreateComment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Content",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PostId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommentController",
+    "Method": "DeleteComment",
+    "RelativePath": "api/V1/Comment/DeleteComment/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SAWA.API.Controllers.V1.PostController",
     "Method": "Create",
     "RelativePath": "api/v1/Post/Create",

@@ -8,6 +8,8 @@ using SAWA.core.Models;
 using SAWA.infrastructure.Data;
 using SAWA.infrastructure.Repositories;
 using SAWA.infrastructure.Services;
+using Serilog;
+
 
 namespace SAWA.API
 {
@@ -17,7 +19,11 @@ namespace SAWA.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.File("wwwroot/Logs/log-.txt", rollingInterval: RollingInterval.Day)
+                .CreateLogger();
 
+            builder.Host.UseSerilog();
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -25,8 +31,9 @@ namespace SAWA.API
             builder.Services.AddCors(options =>
                 options.AddPolicy("CORSPolicy", policy =>
                 {
-                    policy.AllowAnyHeader()
-                          .AllowCredentials();
+                     policy.AllowAnyOrigin()
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
                 })
             );
 

@@ -9,6 +9,7 @@ namespace SAWA.core.Interfaces
     public interface IUnitOfWork:IDisposable
     {
         public IPostRepository postRepository { get; }
+        public ICommentRepository CommentRepository { get; }
         public Task SaveAsync();
     }
 }
