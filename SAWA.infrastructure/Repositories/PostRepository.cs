@@ -58,6 +58,7 @@ namespace SAWA.infrastructure.Repositories
             var posts = await _db.Posts
                     .Include(p => p.Photos)
                     .Include(p => p.Comments)
+                    .ThenInclude(c => c.User)
                     .Include(p => p.Charity)
                     .OrderByDescending(p => p.CreatedAt)
                     .ToListAsync();

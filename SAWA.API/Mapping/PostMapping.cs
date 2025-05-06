@@ -25,10 +25,7 @@ namespace SAWA.API.Mapping
                 .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImgName))
                 .ForMember(dest => dest.PostId, opt => opt.MapFrom(src => src.PostId));
 
-            CreateMap<Comment, CommentDto>()
-                .ForMember(dest => dest.PostId, opt => opt.MapFrom(src => src.PostId));
 
-            CreateMap<CommentDto, Comment>();
         }
     }
 }

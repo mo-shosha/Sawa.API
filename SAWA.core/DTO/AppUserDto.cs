@@ -23,8 +23,6 @@ namespace SAWA.core.DTO
     }
     public record BaseRegisterDto
     {
-        [Required]
-        public string UserName { get; init; }
 
         [Required, EmailAddress]
         public string Email { get; init; }
@@ -38,7 +36,7 @@ namespace SAWA.core.DTO
         [Required, DataType(DataType.Password), Compare("Password")]
         public string ConfirmPassword { get; init; }
 
-        public IFormFile? ProfilePhoto { get; init; }
+        //public IFormFile? ProfilePhoto { get; init; }
 
         [Required]
         public string Address { get; init; }
@@ -55,20 +53,20 @@ namespace SAWA.core.DTO
         [Required]
         public string CharityName { get; init; }
 
-        [Required]
-        public IFormFile? WallpaperPhoto { get; init; }
+        //[Required]
+        //public IFormFile? WallpaperPhoto { get; init; }
 
-        [Required]
-        public string CharityType { get; init; }
+        //[Required]
+        //public string CharityType { get; init; }
 
         [Required]
         public string Description { get; init; }
 
         [Required]
-        public IFormFile WebsiteDocument { get; init; }
+        public IFormFile Document { get; init; }
 
-        [Required]
-        public string RegistrationNumber { get; init; }
+        //[Required]
+        //public string RegistrationNumber { get; init; }
 
         [Required]
         public string Country { get; init; }
@@ -78,10 +76,10 @@ namespace SAWA.core.DTO
 
     public record UserLoginDto // Data received from user login
     {
-        [Required]
+        [Required, EmailAddress]
         public string Email { get; init; }
 
-        [Required]
+        [Required, DataType(DataType.Password)]
         public string Password { get; init; }
 
     }

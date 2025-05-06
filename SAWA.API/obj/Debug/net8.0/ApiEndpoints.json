@@ -66,37 +66,17 @@
         "IsRequired": false
       },
       {
-        "Name": "WallpaperPhoto",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "CharityType",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "Description",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "WebsiteDocument",
+        "Name": "Document",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       },
       {
-        "Name": "RegistrationNumber",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "Country",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "UserName",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -118,11 +98,6 @@
       {
         "Name": "ConfirmPassword",
         "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ProfilePhoto",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       },
       {
@@ -147,11 +122,6 @@
         "IsRequired": false
       },
       {
-        "Name": "UserName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "Email",
         "Type": "System.String",
         "IsRequired": false
@@ -172,26 +142,11 @@
         "IsRequired": false
       },
       {
-        "Name": "ProfilePhoto",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
         "Name": "Address",
         "Type": "System.String",
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CommentController",
-    "Method": "get",
-    "RelativePath": "api/V1/Comment",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

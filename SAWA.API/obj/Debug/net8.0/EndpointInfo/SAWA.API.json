@@ -79,44 +79,27 @@
                 "required": [
                   "Address",
                   "CharityName",
-                  "CharityType",
                   "ConfirmPassword",
                   "Country",
                   "Description",
+                  "Document",
                   "Email",
                   "Password",
-                  "PhoneNumber",
-                  "RegistrationNumber",
-                  "UserName",
-                  "WallpaperPhoto",
-                  "WebsiteDocument"
+                  "PhoneNumber"
                 ],
                 "type": "object",
                 "properties": {
                   "CharityName": {
                     "type": "string"
                   },
-                  "WallpaperPhoto": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "CharityType": {
-                    "type": "string"
-                  },
                   "Description": {
                     "type": "string"
                   },
-                  "WebsiteDocument": {
+                  "Document": {
                     "type": "string",
                     "format": "binary"
                   },
-                  "RegistrationNumber": {
-                    "type": "string"
-                  },
                   "Country": {
-                    "type": "string"
-                  },
-                  "UserName": {
                     "type": "string"
                   },
                   "Email": {
@@ -135,10 +118,6 @@
                     "type": "string",
                     "format": "password"
                   },
-                  "ProfilePhoto": {
-                    "type": "string",
-                    "format": "binary"
-                  },
                   "Address": {
                     "type": "string"
                   }
@@ -148,25 +127,13 @@
                 "CharityName": {
                   "style": "form"
                 },
-                "WallpaperPhoto": {
-                  "style": "form"
-                },
-                "CharityType": {
-                  "style": "form"
-                },
                 "Description": {
                   "style": "form"
                 },
-                "WebsiteDocument": {
-                  "style": "form"
-                },
-                "RegistrationNumber": {
+                "Document": {
                   "style": "form"
                 },
                 "Country": {
-                  "style": "form"
-                },
-                "UserName": {
                   "style": "form"
                 },
                 "Email": {
@@ -179,9 +146,6 @@
                   "style": "form"
                 },
                 "ConfirmPassword": {
-                  "style": "form"
-                },
-                "ProfilePhoto": {
                   "style": "form"
                 },
                 "Address": {
@@ -213,15 +177,11 @@
                   "Email",
                   "FullName",
                   "Password",
-                  "PhoneNumber",
-                  "UserName"
+                  "PhoneNumber"
                 ],
                 "type": "object",
                 "properties": {
                   "FullName": {
-                    "type": "string"
-                  },
-                  "UserName": {
                     "type": "string"
                   },
                   "Email": {
@@ -240,10 +200,6 @@
                     "type": "string",
                     "format": "password"
                   },
-                  "ProfilePhoto": {
-                    "type": "string",
-                    "format": "binary"
-                  },
                   "Address": {
                     "type": "string"
                   }
@@ -251,9 +207,6 @@
               },
               "encoding": {
                 "FullName": {
-                  "style": "form"
-                },
-                "UserName": {
                   "style": "form"
                 },
                 "Email": {
@@ -266,9 +219,6 @@
                   "style": "form"
                 },
                 "ConfirmPassword": {
-                  "style": "form"
-                },
-                "ProfilePhoto": {
                   "style": "form"
                 },
                 "Address": {
@@ -376,18 +326,6 @@
               "format": "int32"
             }
           }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/V1/Comment": {
-      "get": {
-        "tags": [
-          "Comment"
         ],
         "responses": {
           "200": {
@@ -564,11 +502,13 @@
         "properties": {
           "email": {
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "format": "email"
           },
           "password": {
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "format": "password"
           }
         },
         "additionalProperties": false

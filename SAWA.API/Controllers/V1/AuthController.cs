@@ -108,7 +108,6 @@ namespace SAWA.API.Controllers.V1
                 }
 
                 var result = await _authService.RegisterUserAsync(model);
-
                 if (result == null || result != "Success")
                 {
                     _logger.LogWarning("Error occurred while registering user: {Email}", model.Email);

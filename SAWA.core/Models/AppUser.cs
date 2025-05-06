@@ -12,7 +12,7 @@ namespace SAWA.core.Models
         //for user and charity
         public string FullName { get; set; }
         public string Address { get; set; }
-        public string ProfilePhotoURL { get; set; }
+        public string? ProfilePhotoURL { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         //for charity only
