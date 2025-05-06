@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="site24690" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\projects\ in\ back\\Advansed_SE\\SAWA\.API\\SAWA\.API\\obj\\Release\\net8\.0\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

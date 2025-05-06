@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Auth;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -202,6 +204,56 @@ namespace SAWA.infrastructure.Services
             catch (Exception ex)
             {
                 throw new Exception($"Error confirming email: {ex.Message}");
+            }
+        }
+
+
+        public async Task<AppUserDto> LoginWithGoogleAsync(string accessToken)
+        {
+            try
+            {
+                var payload = await VerifyGoogleTokenAsync(accessToken);
+
+                if (payload == null)
+                {
+                    return null;
+                }
+                var user = await _userManager.Users
+                                              .Where(u => u.Email == payload.Email)
+                                              .FirstOrDefaultAsync();
+
+                if (user == null)
+                {
+                    return null;  
+                }
+
+                var roles = await _userManager.GetRolesAsync(user);
+                var token = await _tokenService.GetAndCreateToken(user);
+
+                AppUserDto appUser = _mapper.Map<AppUserDto>(user);
+                appUser.Roles = roles.ToList();
+                appUser.Token = token;
+                appUser.ExpireAt = DateTime.Now.AddHours(30);
+
+                return appUser;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        private async Task<GoogleJsonWebSignature.Payload> VerifyGoogleTokenAsync(string accessToken)
+        {
+            try
+            {
+                var payload = await GoogleJsonWebSignature.ValidateAsync(accessToken);
+
+                return payload; 
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
     }

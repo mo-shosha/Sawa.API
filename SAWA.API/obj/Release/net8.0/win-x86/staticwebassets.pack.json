@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Khaled Mostafa\\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png",
+      "PackagePath": "staticwebassets\\Images\\Khaled Mostafa\\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Mohamed Reda\\6770512d-4cb9-4c76-90f3-0811e5c84160.png",
+      "PackagePath": "staticwebassets\\Images\\Mohamed Reda\\6770512d-4cb9-4c76-90f3-0811e5c84160.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Mohamed Reda\\8040ecd1-3a27-473d-9123-9a43e7b79cb2.png",
+      "PackagePath": "staticwebassets\\Images\\Mohamed Reda\\8040ecd1-3a27-473d-9123-9a43e7b79cb2.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Mohamed shosha\\8bb3d217-ea71-44c6-a28d-9ea89afd71f5.png",
+      "PackagePath": "staticwebassets\\Images\\Mohamed shosha\\8bb3d217-ea71-44c6-a28d-9ea89afd71f5.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Mohamed shosha\\efd0faed-9fdc-4708-93f0-ac25feb0ba1d.jpg",
+      "PackagePath": "staticwebassets\\Images\\Mohamed shosha\\efd0faed-9fdc-4708-93f0-ac25feb0ba1d.jpg"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Posts\\82441e2b-7cad-466c-bfb6-be5176922186.png",
+      "PackagePath": "staticwebassets\\Images\\Posts\\82441e2b-7cad-466c-bfb6-be5176922186.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Posts\\9eb39435-f682-4144-9fd7-26a09992a432.jpg",
+      "PackagePath": "staticwebassets\\Images\\Posts\\9eb39435-f682-4144-9fd7-26a09992a432.jpg"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Posts\\fa93e1d7-8907-4ba3-bef0-40b1feb99afd.png",
+      "PackagePath": "staticwebassets\\Images\\Posts\\fa93e1d7-8907-4ba3-bef0-40b1feb99afd.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\string string\\03a634c7-46d9-41c8-aab4-0b8ff738769f.png",
+      "PackagePath": "staticwebassets\\Images\\string string\\03a634c7-46d9-41c8-aab4-0b8ff738769f.png"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.SAWA.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.SAWA.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.build.SAWA.API.props",
+      "PackagePath": "build\\SAWA.API.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.buildMultiTargeting.SAWA.API.props",
+      "PackagePath": "buildMultiTargeting\\SAWA.API.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.buildTransitive.SAWA.API.props",
+      "PackagePath": "buildTransitive\\SAWA.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

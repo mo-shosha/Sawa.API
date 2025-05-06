@@ -1,0 +1,17 @@
+﻿using SAWA.core.DTO;
+using SAWA.core.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SAWA.core.Interfaces
+{
+    public interface IPostRepository:IGenericRepository<Post>
+    {
+        Task CreatePostAsync(PostCreateDto model);
+        Task<List<PostDto>> GetAllPostsWithPhotosAndCommentsAsync();
+        Task<PostDto> GetPostWithPhotosAndCommentsAsync(int id);
+    }
+}

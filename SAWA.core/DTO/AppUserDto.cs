@@ -46,12 +46,8 @@ namespace SAWA.core.DTO
     public record UserRegisterDto:BaseRegisterDto // Data received from user registration
     {
         [Required]
-        public string FirstName { get; init; }
+        public string FullName { get; init; }
 
-        [Required]
-        public string LastName { get; init; }
-
-       
     }
 
     public record CharityRegisterDto : BaseRegisterDto // Data received from charity registration
@@ -122,6 +118,13 @@ namespace SAWA.core.DTO
         public string ConfirmNewPassword { get; init; }
     }
 
-    
+
+    public record GoogleLoginDto
+    {
+        [Required]
+        public string AccessToken { get; set; }
+    }
+
+
 
 }

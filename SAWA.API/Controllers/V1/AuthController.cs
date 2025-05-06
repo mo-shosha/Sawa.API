@@ -37,6 +37,25 @@ namespace SAWA.API.Controllers.V1
             }
         }
 
+        [HttpPost("LoginWithGoogle")]
+        public async Task<IActionResult> LoginWithGoogle([FromBody] GoogleLoginDto model)
+        {
+            if (string.IsNullOrEmpty(model.AccessToken))
+            {
+                return Unauthorized(ResponseAPI<string>.Error("Access token is required.", 400));
+            }
+
+            var user = await _authService.LoginWithGoogleAsync(model.AccessToken);
+
+            if (user == null)
+            {
+                return Unauthorized(ResponseAPI<string>.Error("No user found with this Google account. Please register.", 401));
+            }
+
+            return Ok(ResponseAPI<object>.Success(user, "Login successful."));
+        }
+
+
         [HttpPost("RegisterCharity")]
         public async Task<IActionResult> RegisterCharity([FromForm] CharityRegisterDto model)
         {

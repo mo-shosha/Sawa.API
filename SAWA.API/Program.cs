@@ -65,17 +65,20 @@ namespace SAWA.API
             var app = builder.Build();
 
             // Configure the HTTP request pipeline
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            //if (app.Environment.IsDevelopment())
+            
+            app.UseSwagger();
+            app.UseSwaggerUI();
+            
 
             // Use custom middleware for exception handling
             app.UseMiddleware<ExceptionMiddleware>();
 
             // Additional middlewares
             app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
+
             app.UseAuthentication();
             app.UseAuthorization();
 

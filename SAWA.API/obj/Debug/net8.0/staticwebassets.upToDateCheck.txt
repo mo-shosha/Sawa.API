@@ -1,5 +1,0 @@
-wwwroot\Images\Khaled Mostafa\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png
-wwwroot\Images\Mohamed Reda\6770512d-4cb9-4c76-90f3-0811e5c84160.png
-wwwroot\Images\Mohamed shosha\8bb3d217-ea71-44c6-a28d-9ea89afd71f5.png
-wwwroot\Images\Mohamed shosha\efd0faed-9fdc-4708-93f0-ac25feb0ba1d.jpg
-wwwroot\Images\string string\03a634c7-46d9-41c8-aab4-0b8ff738769f.png
