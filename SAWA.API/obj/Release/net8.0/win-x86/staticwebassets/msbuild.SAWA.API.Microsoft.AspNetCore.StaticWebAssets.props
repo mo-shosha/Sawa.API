@@ -264,8 +264,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>blqxncj8dt</Fingerprint>
-      <Integrity>IaQ5T05iZU67b0i3mHwu00b3+BrTWj/7CoHqkW0jBP4=</Integrity>
+      <Fingerprint>mw9kncjvxb</Fingerprint>
+      <Integrity>JoaQ09wqDBgBaRMHhojpRFuXWmHttmIMgTTKOkesJhw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250508.txt'))</OriginalItemSpec>

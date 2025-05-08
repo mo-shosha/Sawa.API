@@ -168,17 +168,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wtpj3b73f9"},{"Name":"integrity","Value":"sha256-hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE="},{"Name":"label","Value":"_content/SAWA.API/Images/string string/03a634c7-46d9-41c8-aab4-0b8ff738769f.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"370652"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 04 May 2025 07:46:48 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/SAWA.API/Logs/log-20250508.blqxncj8dt.txt">
+    <StaticWebAssetEndpoint Include="_content/SAWA.API/Logs/log-20250508.mw9kncjvxb.txt">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250508.txt'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"blqxncj8dt"},{"Name":"integrity","Value":"sha256-IaQ5T05iZU67b0i3mHwu00b3\u002BBrTWj/7CoHqkW0jBP4="},{"Name":"label","Value":"_content/SAWA.API/Logs/log-20250508.txt"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"101420"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022IaQ5T05iZU67b0i3mHwu00b3\u002BBrTWj/7CoHqkW0jBP4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 13:29:55 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mw9kncjvxb"},{"Name":"integrity","Value":"sha256-JoaQ09wqDBgBaRMHhojpRFuXWmHttmIMgTTKOkesJhw="},{"Name":"label","Value":"_content/SAWA.API/Logs/log-20250508.txt"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"103748"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022JoaQ09wqDBgBaRMHhojpRFuXWmHttmIMgTTKOkesJhw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 14:09:46 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SAWA.API/Logs/log-20250508.txt">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250508.txt'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-IaQ5T05iZU67b0i3mHwu00b3\u002BBrTWj/7CoHqkW0jBP4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"101420"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022IaQ5T05iZU67b0i3mHwu00b3\u002BBrTWj/7CoHqkW0jBP4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 13:29:55 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-JoaQ09wqDBgBaRMHhojpRFuXWmHttmIMgTTKOkesJhw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"103748"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022JoaQ09wqDBgBaRMHhojpRFuXWmHttmIMgTTKOkesJhw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 14:09:46 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>
