@@ -21,6 +21,8 @@ namespace SAWA.infrastructure.Repositories
 
         public ICommentRepository CommentRepository { get; }
 
+        public IBranchesRepository branchesRepository { get; }
+
         public UnitOfWork(AppDbContext db, IMapper mapper,IFileManagementService fileManagementService)
         {
             _db = db;
@@ -29,6 +31,7 @@ namespace SAWA.infrastructure.Repositories
 
             postRepository = new PostRepository(_db,_mapper,_fileManagementService);
             CommentRepository = new CommentRepository(_db, _mapper, _fileManagementService);
+            branchesRepository = new BranchesRepository(_db, _mapper, _fileManagementService);
         }
 
 

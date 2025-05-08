@@ -5,6 +5,7 @@ using SAWA.API.Healper;
 using SAWA.API.Mapping;
 using SAWA.core.DTO;
 using SAWA.core.Interfaces;
+using SAWA.infrastructure.Repositories;
 using System.Security.Claims;
 
 namespace SAWA.API.Controllers.V1
@@ -107,10 +108,10 @@ namespace SAWA.API.Controllers.V1
                 if (userId == null || roles.Count == 0)
                     return Unauthorized(ResponseAPI<string>.Error("Invalid token data."));
 
-                // Check if user is the creator OR an admin
+                //Check if user is the creator OR an admin
                 if (roles.Contains("admin") || post.CharityId == userId)
                 {
-                    await _unitOfWork.postRepository.DeleteAsync(id);
+                    await _unitOfWork.postRepository.DeletePostAsync(id);
                     await _unitOfWork.SaveAsync();
                     return Ok(ResponseAPI<string>.Success("Post deleted successfully."));
                 }
@@ -122,8 +123,33 @@ namespace SAWA.API.Controllers.V1
                 return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
             }
         }
-    
-        
-    
+
+
+        [HttpGet("charity/{username}")]
+        public async Task<IActionResult> GetCharityPosts(string username)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(username))
+                {
+                    return BadRequest(ResponseAPI<string>.Error("Username is required."));
+                }
+
+                var posts = await _unitOfWork.postRepository.GetCharityPostsWithPhotosAndCommentsAsync(username);
+
+                if (posts == null || !posts.Any())
+                {
+                    return NotFound(ResponseAPI<string>.Error($"No posts found for charity with username: {username}"));
+                }
+
+                return Ok(ResponseAPI<IEnumerable<PostDto>>.Success(posts, "Posts retrieved successfully."));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+            }
+        }
+
+
     }
 }

@@ -13,5 +13,8 @@ namespace SAWA.core.Interfaces
         Task CreatePostAsync(PostCreateDto model);
         Task<List<PostDto>> GetAllPostsWithPhotosAndCommentsAsync();
         Task<PostDto> GetPostWithPhotosAndCommentsAsync(int id);
+        Task<List<PostDto>> GetCharityPostsWithPhotosAndCommentsAsync(string UserName);
+
+        Task<bool> DeletePostAsync(int id);
     }
 }

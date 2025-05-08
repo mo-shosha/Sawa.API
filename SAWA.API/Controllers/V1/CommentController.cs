@@ -79,5 +79,43 @@ public class CommentController : ControllerBase
             return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
         }
     }
-    
+
+
+    [Authorize]
+    [HttpPut("EditComment/{id:int}")]
+    public async Task<IActionResult> EditComment(CommentUpdateDto model, int id)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ResponseAPI<string>.Error("Invalid data."));
+        }
+
+        try
+        {
+            var comment = await _unitOfWork.CommentRepository.GetByIdAsync(id);
+            if (comment == null)
+            {
+                return NotFound(ResponseAPI<string>.Error("Comment not found."));
+            }
+
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var roles = User.FindAll(ClaimTypes.Role).Select(c => c.Value).ToList();
+
+            if (comment.UserId != userId && !roles.Contains("admin"))
+            {
+                return StatusCode(403, ResponseAPI<string>.Error("You are not allowed to edit this comment."));
+            }
+
+            comment.Content = model.Content;
+
+            await _unitOfWork.CommentRepository.UpdateAsync(comment);
+
+            return Ok(ResponseAPI<string>.Success("Comment updated successfully."));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+        }
+    }
+
 }

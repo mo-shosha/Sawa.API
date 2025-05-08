@@ -10,6 +10,7 @@ namespace SAWA.core.Interfaces
     {
         public IPostRepository postRepository { get; }
         public ICommentRepository CommentRepository { get; }
+        public IBranchesRepository branchesRepository { get; }
         public Task SaveAsync();
     }
 }

@@ -150,6 +150,99 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SAWA.API.Controllers.V1.BranchController",
+    "Method": "Create",
+    "RelativePath": "api/v1/Branch/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Photos",
+        "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.BranchController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/Branch/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.BranchController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/Branch/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.BranchController",
+    "Method": "Update",
+    "RelativePath": "api/v1/Branch/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NewPhotos",
+        "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CommentController",
     "Method": "CreateComment",
     "RelativePath": "api/V1/Comment/CreateComment",
@@ -186,6 +279,43 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommentController",
+    "Method": "EditComment",
+    "RelativePath": "api/V1/Comment/EditComment/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SAWA.core.DTO.CommentUpdateDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.PostController",
+    "Method": "GetCharityPosts",
+    "RelativePath": "api/v1/Post/charity/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

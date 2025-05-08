@@ -12,6 +12,7 @@ namespace SAWA.core.DTO
     public record PostDto
     {
         public int Id { get; init; }
+        public string UserName { get; init; }
         public string CharityName { get; init; }
         public DateTime CreateAt { get; init; }
         public string Content { get;init; }
@@ -26,7 +27,6 @@ namespace SAWA.core.DTO
     public record PhotoDto
     {
         public string ImgName { get; set; }
-        public int PostId { get; set; }
     }
 
     public record PostCreateDto 

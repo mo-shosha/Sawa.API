@@ -24,6 +24,12 @@ namespace SAWA.core.DTO
         public int PostId { get; set; }
         public string UserId { get; set; }
     }
+    public record CommentUpdateDto
+    {
+        [Required]
+        [MaxLength(1000)]
+        public string Content { get; set; }
+    }
 
 
 }

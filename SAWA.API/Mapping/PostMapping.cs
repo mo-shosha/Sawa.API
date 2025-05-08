@@ -9,8 +9,9 @@ namespace SAWA.API.Mapping
         public PostMapping()
         {
             CreateMap<Post, PostDto>()
-                .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.Charity.UserName))
+                .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.Charity.FullName))
                 .ForMember(dest => dest.User_PhotoUrl, opt => opt.MapFrom(src => src.Charity.ProfilePhotoURL))
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Charity.UserName))
                 .ForMember(dest => dest.Photos, opt => opt.MapFrom(src => src.Photos))
                 .ForMember(dest => dest.Comments, opt => opt.MapFrom(src => src.Comments));
 
@@ -19,12 +20,12 @@ namespace SAWA.API.Mapping
                 .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(_ => DateTime.UtcNow));
 
             CreateMap<Photo, PhotoDto>()
-                .ForMember(dest => dest.ImgName, opt => opt.MapFrom(src => src.ImageUrl))
-                .ForMember(dest => dest.PostId, opt => opt.MapFrom(src => src.PostId ?? 0));
+                .ForMember(dest => dest.ImgName, opt => opt.MapFrom(src => src.ImageUrl));
+            //.ForMember(dest => dest.PostId, opt => opt.MapFrom(src => src.PostId ?? 0));
 
             CreateMap<PhotoDto, Photo>()
-                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImgName))
-                .ForMember(dest => dest.PostId, opt => opt.MapFrom(src => src.PostId));
+                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImgName));
+                //.ForMember(dest => dest.PostId, opt => opt.MapFrom(src => src.PostId));
 
 
         }

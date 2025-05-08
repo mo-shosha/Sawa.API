@@ -67,6 +67,24 @@ namespace SAWA.infrastructure.Repositories
             return _mapper.Map<List<PostDto>>(posts);
         }
 
+        public async Task<List<PostDto>> GetCharityPostsWithPhotosAndCommentsAsync(string userName)
+        {
+            var post = await _db.Posts
+                .Include(p => p.Photos)
+                .Include(p => p.Comments)
+                .ThenInclude(c => c.User)
+                .Include(p => p.Charity)
+                .Where(p => p.Charity.UserName == userName)
+                .OrderByDescending(p => p.CreatedAt)
+                .ToListAsync();
+
+            if (post == null)
+                return null;
+
+            return _mapper.Map<List<PostDto>>(post);
+        }
+
+
         public async Task<PostDto> GetPostWithPhotosAndCommentsAsync(int id)
         {
             var post = await _db.Posts
@@ -80,6 +98,32 @@ namespace SAWA.infrastructure.Repositories
 
             return _mapper.Map<PostDto>(post);
         }
+
+        public async Task<bool> DeletePostAsync(int id)
+        {
+            var post = await _db.Posts
+                .Include(p => p.Photos)
+                .Include(p => p.Comments)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (post == null)
+                return false;
+
+            foreach (var photo in post.Photos)
+            {
+                 _fileManagementService.DeleteImageAsync(photo.ImageUrl);
+            }
+
+            _db.Photos.RemoveRange(post.Photos);
+
+            _db.Comments.RemoveRange(post.Comments);
+
+            _db.Posts.Remove(post);
+
+            await _db.SaveChangesAsync();
+            return true;
+        }
+
 
     }
 }

@@ -14,5 +14,6 @@ namespace SAWA.core.Models
         public string Address { get; set; }
         public List<Photo> Photos { get; set; } = new List<Photo>();
         public DateTime CreatedAt { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }
