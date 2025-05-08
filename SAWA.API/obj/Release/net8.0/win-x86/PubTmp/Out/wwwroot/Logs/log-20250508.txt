@@ -714,22 +714,3 @@ WHERE [Id] = @p2;
 2025-05-08 16:29:55.466 +03:00 [INF] Executed action SAWA.API.Controllers.V1.BranchController.Delete (SAWA.API) in 1085.6411ms
 2025-05-08 16:29:55.466 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.BranchController.Delete (SAWA.API)'
 2025-05-08 16:29:55.466 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7029/api/v1/Branch/Delete/3 - 200 null application/json; charset=utf-8 1097.9053ms
-2025-05-08 17:09:29.999 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
-2025-05-08 17:09:30.751 +03:00 [INF] Now listening on: https://localhost:7029
-2025-05-08 17:09:30.751 +03:00 [INF] Now listening on: http://localhost:5090
-2025-05-08 17:09:31.506 +03:00 [INF] Application started. Press Ctrl+C to shut down.
-2025-05-08 17:09:31.508 +03:00 [INF] Hosting environment: Development
-2025-05-08 17:09:31.508 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
-2025-05-08 17:09:32.310 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
-2025-05-08 17:09:32.913 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 626.0078ms
-2025-05-08 17:09:32.963 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
-2025-05-08 17:09:32.970 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 6.6718ms
-2025-05-08 17:09:33.000 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
-2025-05-08 17:09:33.119 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 119.7619ms
-2025-05-08 17:09:33.349 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
-2025-05-08 17:09:33.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.736ms
-2025-05-08 17:09:46.153 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7029/api/v1/Branch/Delete/3 - null null
-2025-05-08 17:09:46.534 +03:00 [INF] Authorization failed. These requirements were not met:
-RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin|charity)
-2025-05-08 17:09:46.543 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
-2025-05-08 17:09:46.544 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7029/api/v1/Branch/Delete/3 - 401 0 null 390.8961ms

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SNWYmx8J2M8jGRWcNOZcn/eu6hUI7lKToywIXKpFyJ4=",
+  "Hash": "FZiF6SiRfXdFYgUtSvUKSyT9ORkOnHCJVYwVJg88uVU=",
   "Source": "SAWA.API",
   "BasePath": "_content/SAWA.API",
   "Mode": "Default",
@@ -36,6 +36,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\branches\\013a6089-3ba0-4722-974e-8f396206170e.png"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\branches\\2d9b86b4-2368-48ee-8c82-b04f5afe3ebb.png",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/branches/2d9b86b4-2368-48ee-8c82-b04f5afe3ebb#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wtpj3b73f9",
+      "Integrity": "hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\branches\\2d9b86b4-2368-48ee-8c82-b04f5afe3ebb.png"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\branches\\c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/branches/c89db29e-84a9-4ff9-b8dd-9fcbfba445f4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bsje3od8me",
+      "Integrity": "q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\branches\\c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg"
     },
     {
       "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Khaled Mostafa\\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png",
@@ -283,8 +325,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "10b3yyv68y",
-      "Integrity": "jwukPeb7YV3/RUkES7K6DUG2r6hy4w8f/JuMsXRameY=",
+      "Fingerprint": "blqxncj8dt",
+      "Integrity": "IaQ5T05iZU67b0i3mHwu00b3+BrTWj/7CoHqkW0jBP4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Logs\\log-20250508.txt"
@@ -370,6 +412,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/branches/2d9b86b4-2368-48ee-8c82-b04f5afe3ebb.png",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\branches\\2d9b86b4-2368-48ee-8c82-b04f5afe3ebb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "370652"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:29:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/branches/2d9b86b4-2368-48ee-8c82-b04f5afe3ebb.wtpj3b73f9.png",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\branches\\2d9b86b4-2368-48ee-8c82-b04f5afe3ebb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "370652"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:29:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wtpj3b73f9"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/branches/2d9b86b4-2368-48ee-8c82-b04f5afe3ebb.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/branches/c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.bsje3od8me.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\branches\\c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "109109"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:29:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bsje3od8me"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/branches/c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/branches/c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\branches\\c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "109109"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 13:29:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI="
         }
       ]
     },
@@ -1276,7 +1482,7 @@
       ]
     },
     {
-      "Route": "Logs/log-20250508.10b3yyv68y.txt",
+      "Route": "Logs/log-20250508.blqxncj8dt.txt",
       "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250508.txt",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1286,7 +1492,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "92398"
+          "Value": "101420"
         },
         {
           "Name": "Content-Type",
@@ -1294,11 +1500,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jwukPeb7YV3/RUkES7K6DUG2r6hy4w8f/JuMsXRameY=\""
+          "Value": "\"IaQ5T05iZU67b0i3mHwu00b3+BrTWj/7CoHqkW0jBP4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 13:26:33 GMT"
+          "Value": "Thu, 08 May 2025 13:29:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1308,7 +1514,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "10b3yyv68y"
+          "Value": "blqxncj8dt"
         },
         {
           "Name": "label",
@@ -1316,7 +1522,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jwukPeb7YV3/RUkES7K6DUG2r6hy4w8f/JuMsXRameY="
+          "Value": "sha256-IaQ5T05iZU67b0i3mHwu00b3+BrTWj/7CoHqkW0jBP4="
         }
       ]
     },
@@ -1331,7 +1537,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "92398"
+          "Value": "101420"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1545,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jwukPeb7YV3/RUkES7K6DUG2r6hy4w8f/JuMsXRameY=\""
+          "Value": "\"IaQ5T05iZU67b0i3mHwu00b3+BrTWj/7CoHqkW0jBP4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 13:26:33 GMT"
+          "Value": "Thu, 08 May 2025 13:29:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,7 +1559,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jwukPeb7YV3/RUkES7K6DUG2r6hy4w8f/JuMsXRameY="
+          "Value": "sha256-IaQ5T05iZU67b0i3mHwu00b3+BrTWj/7CoHqkW0jBP4="
         }
       ]
     }

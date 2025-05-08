@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using SAWA.API.Healper;
 using SAWA.core.DTO;
 using SAWA.core.Interfaces;
@@ -78,18 +79,38 @@ namespace SAWA.API.Controllers.V1
             }
         }
 
-
+        [Authorize(Roles = "admin,charity")]
         [HttpDelete("Delete/{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
             try
             {
-                var result = await _unitOfWork.branchesRepository.DeleteBrachAsync(id);
+                if (id == 0 || id == null)
+                {
+                    return BadRequest(ResponseAPI<string>.Error($"Invalid Id with value : {id}"));
+                }
 
-                if (!result)
-                    return BadRequest(ResponseAPI<string>.Error("Failed to delete branch or its photos."));
+                var branch =await _unitOfWork.branchesRepository.GetByIdAsync(id);
 
-                return Ok(ResponseAPI<string>.Success("Branch deleted successfully."));
+
+                // Get current user ID and roles from token
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var roles = User.FindAll(ClaimTypes.Role).Select(c => c.Value).ToList();
+
+                if (userId == null || roles.Count == 0)
+                    return Unauthorized(ResponseAPI<string>.Error("Invalid token data."));
+
+                //Check if user is the creator OR an admin
+                if (roles.Contains("admin") || branch.CharityId == userId)
+                {
+                    var result = await _unitOfWork.branchesRepository.DeleteBrachAsync(id);
+
+                    if (!result)
+                        return BadRequest(ResponseAPI<string>.Error("Failed to delete branch or its photos."));
+                    return Ok(ResponseAPI<string>.Success("Branch deleted successfully."));
+                }
+
+                return StatusCode(403, ResponseAPI<string>.Error("You are not allowed to delete this branch."));
             }
             catch (Exception ex)
             {
