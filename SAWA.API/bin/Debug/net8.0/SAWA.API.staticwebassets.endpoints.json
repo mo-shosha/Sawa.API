@@ -905,7 +905,7 @@
       ]
     },
     {
-      "Route": "Logs/log-20250506.q1jc7fjvjj.txt",
+      "Route": "Logs/log-20250506.36w7bzxd3y.txt",
       "AssetFile": "Logs/log-20250506.txt",
       "Selectors": [],
       "ResponseHeaders": [
@@ -919,7 +919,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "159134"
+          "Value": "172654"
         },
         {
           "Name": "Content-Type",
@@ -927,21 +927,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bt7CwxuxoKwdzFy2YWr/S4/9kPLaS43u7JmNyGZZVyo=\""
+          "Value": "\"m0V5GM05XQ0EZCDyXYpPkk28vP+KawsnIw/SGgwk8yY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 13:47:55 GMT"
+          "Value": "Tue, 06 May 2025 13:51:50 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "q1jc7fjvjj"
+          "Value": "36w7bzxd3y"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-bt7CwxuxoKwdzFy2YWr/S4/9kPLaS43u7JmNyGZZVyo="
+          "Value": "sha256-m0V5GM05XQ0EZCDyXYpPkk28vP+KawsnIw/SGgwk8yY="
         },
         {
           "Name": "label",
@@ -964,7 +964,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "159134"
+          "Value": "172654"
         },
         {
           "Name": "Content-Type",
@@ -972,17 +972,99 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bt7CwxuxoKwdzFy2YWr/S4/9kPLaS43u7JmNyGZZVyo=\""
+          "Value": "\"m0V5GM05XQ0EZCDyXYpPkk28vP+KawsnIw/SGgwk8yY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 13:47:55 GMT"
+          "Value": "Tue, 06 May 2025 13:51:50 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-bt7CwxuxoKwdzFy2YWr/S4/9kPLaS43u7JmNyGZZVyo="
+          "Value": "sha256-m0V5GM05XQ0EZCDyXYpPkk28vP+KawsnIw/SGgwk8yY="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250508.o855mp3054.txt",
+      "AssetFile": "Logs/log-20250508.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5861"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OEwMObZ+/LL0pRCcNCXfnqvdGrg94WpgESG6iTxv5kk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 04:50:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o855mp3054"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OEwMObZ+/LL0pRCcNCXfnqvdGrg94WpgESG6iTxv5kk="
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/log-20250508.txt"
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250508.txt",
+      "AssetFile": "Logs/log-20250508.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5861"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OEwMObZ+/LL0pRCcNCXfnqvdGrg94WpgESG6iTxv5kk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 04:50:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OEwMObZ+/LL0pRCcNCXfnqvdGrg94WpgESG6iTxv5kk="
         }
       ]
     }

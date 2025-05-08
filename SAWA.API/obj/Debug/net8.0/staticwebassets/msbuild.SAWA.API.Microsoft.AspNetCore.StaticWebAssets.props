@@ -210,11 +210,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q1jc7fjvjj</Fingerprint>
-      <Integrity>bt7CwxuxoKwdzFy2YWr/S4/9kPLaS43u7JmNyGZZVyo=</Integrity>
+      <Fingerprint>36w7bzxd3y</Fingerprint>
+      <Integrity>m0V5GM05XQ0EZCDyXYpPkk28vP+KawsnIw/SGgwk8yY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250506.txt'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250508.txt'))">
+      <SourceType>Package</SourceType>
+      <SourceId>SAWA.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SAWA.API</BasePath>
+      <RelativePath>Logs/log-20250508.txt</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>o855mp3054</Fingerprint>
+      <Integrity>OEwMObZ+/LL0pRCcNCXfnqvdGrg94WpgESG6iTxv5kk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250508.txt'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

@@ -17,6 +17,7 @@ namespace SAWA.core.DTO
         public string Content { get;init; }
         public List<PhotoDto> Photos { get; init; }
         public ICollection<CommentDto> Comments { get; set; }
+        public string User_PhotoUrl { get; init; }
 
     }
 

@@ -10,6 +10,7 @@ namespace SAWA.API.Mapping
         {
             CreateMap<Post, PostDto>()
                 .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.Charity.UserName))
+                .ForMember(dest => dest.User_PhotoUrl, opt => opt.MapFrom(src => src.Charity.ProfilePhotoURL))
                 .ForMember(dest => dest.Photos, opt => opt.MapFrom(src => src.Photos))
                 .ForMember(dest => dest.Comments, opt => opt.MapFrom(src => src.Comments));
 

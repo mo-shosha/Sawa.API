@@ -10,3 +10,4 @@ wwwroot\Images\SAWA\a7a59114-018d-4f96-94e6-ddda3c5b953f.jpg
 wwwroot\Images\SAWA\e8d41b1a-f171-4022-8584-7cfe1c0d0a54.png
 wwwroot\Images\string string\03a634c7-46d9-41c8-aab4-0b8ff738769f.png
 wwwroot\Logs\log-20250506.txt
+wwwroot\Logs\log-20250508.txt

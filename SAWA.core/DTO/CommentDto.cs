@@ -14,6 +14,7 @@ namespace SAWA.core.DTO
         public int PostId { get; init; }
         public DateTime CreatedAt { get; init; }
         public string User_FullName { get; init; }
+        public string User_PhotoUrl { get; init; }
     }
     public class CommentCreateDto
     {
@@ -21,7 +22,7 @@ namespace SAWA.core.DTO
         [MaxLength(1000)]
         public string Content { get; set; }
         public int PostId { get; set; }
-        public string? UserId { get; set; }
+        public string UserId { get; set; }
     }
 
 
