@@ -20,11 +20,11 @@ namespace SAWA.API.Middleware
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
                     ValidateIssuer = true,
-                    ValidateAudience = true,
+                    ValidateAudience = false,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = configuration["Token:Issuer"],
-                    ValidAudience = configuration["Token:Audience"],
+                    //ValidAudience = configuration["Token:Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:Secret"]))
                 };
             })

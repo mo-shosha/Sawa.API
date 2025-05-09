@@ -306,6 +306,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SAWA.API.Controllers.V1.HelpRequestController",
+    "Method": "CreateHelpRequest",
+    "RelativePath": "api/V1/HelpRequest/CreateHelpRequest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CharityUserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Photos",
+        "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.HelpRequestController",
+    "Method": "UpdateHelpRequest",
+    "RelativePath": "api/V1/HelpRequest/UpdateHelpRequest",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateStatusDt",
+        "Type": "SAWA.core.DTO.HelpRequestUpdateStatusDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SAWA.API.Controllers.V1.PostController",
     "Method": "GetCharityPosts",
     "RelativePath": "api/v1/Post/charity/{username}",

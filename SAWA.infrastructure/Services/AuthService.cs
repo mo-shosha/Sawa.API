@@ -96,7 +96,7 @@ namespace SAWA.infrastructure.Services
 
         public async Task LogoutAsync()
         {
-            
+            await _signInManager.SignOutAsync();
         }
 
         public async Task<string> RegisterCharityAsync(CharityRegisterDto model)
@@ -240,7 +240,6 @@ namespace SAWA.infrastructure.Services
         }
 
 
-
         private async Task SendConfirmationEmailAsync(AppUser user)
         {
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -275,6 +274,14 @@ namespace SAWA.infrastructure.Services
                 "Confirm Your Email",
                 emailBody
             );
+        }
+
+
+        public async Task<AppUser> GetUserByUserNameAsync(string username)
+        {
+            return await _userManager.Users
+                                     .Where(u => u.UserName == username)
+                                     .FirstOrDefaultAsync();
         }
 
     }

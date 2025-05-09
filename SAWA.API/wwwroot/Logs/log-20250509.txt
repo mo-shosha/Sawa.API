@@ -1,0 +1,809 @@
+2025-05-09 09:23:51.596 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 09:23:53.632 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 09:23:53.632 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 09:23:54.727 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 09:23:54.729 +03:00 [INF] Hosting environment: Development
+2025-05-09 09:23:54.729 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 09:23:56.241 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 09:23:57.833 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 1634.516ms
+2025-05-09 09:23:57.839 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 09:23:57.847 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 09:23:58.195 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 355.9382ms
+2025-05-09 09:23:58.614 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 767.0238ms
+2025-05-09 09:23:58.919 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 09:23:59.086 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 170.2849ms
+2025-05-09 09:24:42.516 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=----WebKitFormBoundaryPVXsFlbgYPdN5jlH 371280
+2025-05-09 09:24:43.787 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:24:43.951 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 09:25:01.132 +03:00 [ERR] Failed executing DbCommand (538ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 09:25:01.558 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+Cannot insert the value NULL into column 'UserId', table 'db18546.dbo.HelpRequests'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:fdc209ec-bf45-4e3b-acb1-386f723cc77b
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+Cannot insert the value NULL into column 'UserId', table 'db18546.dbo.HelpRequests'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:fdc209ec-bf45-4e3b-acb1-386f723cc77b
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 09:25:01.608 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 09:25:01.660 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 17640.9713ms
+2025-05-09 09:25:01.663 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:25:01.723 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 19207.6893ms
+2025-05-09 09:29:58.932 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 09:30:00.551 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 09:30:00.552 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 09:30:00.919 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 09:30:00.930 +03:00 [INF] Hosting environment: Development
+2025-05-09 09:30:00.930 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 09:30:02.022 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 09:30:03.698 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 1727.2993ms
+2025-05-09 09:30:03.779 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 09:30:03.800 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 21.0566ms
+2025-05-09 09:30:03.921 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 09:30:04.134 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 213.604ms
+2025-05-09 09:30:04.762 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 09:30:04.888 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 127.6088ms
+2025-05-09 09:32:34.116 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 09:32:35.574 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 09:32:35.576 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 09:32:36.304 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 09:32:36.306 +03:00 [INF] Hosting environment: Development
+2025-05-09 09:32:36.306 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 09:32:37.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 09:32:38.791 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 1485.5192ms
+2025-05-09 09:32:38.817 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 09:32:38.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 09:32:38.869 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 52.7233ms
+2025-05-09 09:32:39.152 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 335.7508ms
+2025-05-09 09:32:39.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 09:32:39.520 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 95.6719ms
+2025-05-09 09:33:07.028 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=----WebKitFormBoundaryOTrQcxwPOaJsHR6V 371282
+2025-05-09 09:33:07.769 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:33:08.115 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 09:34:14.820 +03:00 [ERR] Failed executing DbCommand (417ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 09:34:15.400 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+Cannot insert the value NULL into column 'UserId', table 'db18546.dbo.HelpRequests'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:aa66a514-1875-4235-abe3-de7a35d4c6b1
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+Cannot insert the value NULL into column 'UserId', table 'db18546.dbo.HelpRequests'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:aa66a514-1875-4235-abe3-de7a35d4c6b1
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 09:34:43.136 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 09:34:43.229 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 95072.3336ms
+2025-05-09 09:34:43.232 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:34:43.258 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 96234.132ms
+2025-05-09 09:46:28.691 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 09:46:29.777 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 09:46:29.777 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 09:46:29.871 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 09:46:29.872 +03:00 [INF] Hosting environment: Development
+2025-05-09 09:46:29.872 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 09:46:32.058 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 09:46:32.888 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 858.6685ms
+2025-05-09 09:46:32.896 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 09:46:32.896 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 09:46:32.943 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 45.8333ms
+2025-05-09 09:46:33.047 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 151.3199ms
+2025-05-09 09:46:33.275 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 09:46:33.315 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.219ms
+2025-05-09 09:46:51.023 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=----WebKitFormBoundaryBNvIz2i03jQ9NByH 371281
+2025-05-09 09:46:51.740 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:46:51.818 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 09:47:47.069 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 09:47:47.163 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 09:47:47.182 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 55357.3445ms
+2025-05-09 09:47:47.183 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:47:47.233 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 56209.9926ms
+2025-05-09 09:47:47.260 +03:00 [ERR] Failed executing DbCommand (189ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 09:47:47.281 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'SAWA.infrastructure.Data.AppDbContext'.
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-05-09 09:48:08.382 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=----WebKitFormBoundaryg7NY2AY72Aj0zAAy 371281
+2025-05-09 09:48:08.410 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:48:08.410 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 09:48:42.177 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 09:48:42.182 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 33771.7413ms
+2025-05-09 09:48:42.182 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:48:42.197 +03:00 [ERR] An error occurred using the connection to database 'db18546' on server 'db18546.public.databaseasp.net'.
+2025-05-09 09:48:42.206 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 33823.5766ms
+2025-05-09 09:48:42.210 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=27869; handshake=166; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:7211c730-92ae-4ac2-b755-39a885f2b532
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=27869; handshake=166; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:7211c730-92ae-4ac2-b755-39a885f2b532
+Error Number:-2,State:0,Class:11
+2025-05-09 09:48:43.172 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 09:48:43.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 31.2411ms
+2025-05-09 09:48:43.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 09:48:43.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 09:48:43.305 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 1.8315ms
+2025-05-09 09:48:43.326 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.2372ms
+2025-05-09 09:48:43.468 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 09:48:43.486 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/favicon-32x32.png - null null
+2025-05-09 09:48:43.505 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.1265ms
+2025-05-09 09:48:43.538 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-05-09 09:48:43.538 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/favicon-32x32.png - 200 628 image/png 53.0889ms
+2025-05-09 09:49:06.674 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=----WebKitFormBoundaryBwlOhNWGd4JxO3FB 371278
+2025-05-09 09:49:06.689 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:49:06.700 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 09:49:11.976 +03:00 [INF] Executed DbCommand (181ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 09:49:45.109 +03:00 [ERR] Failed executing DbCommand (233ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 09:49:45.257 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+Cannot insert the value NULL into column 'UserId', table 'db18546.dbo.HelpRequests'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:0de999cf-ab1a-44bd-8fe0-7d7c3527ac9d
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+Cannot insert the value NULL into column 'UserId', table 'db18546.dbo.HelpRequests'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:0de999cf-ab1a-44bd-8fe0-7d7c3527ac9d
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 09:49:45.613 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 09:49:45.615 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 38914.7532ms
+2025-05-09 09:49:45.615 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 09:49:45.616 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 38944.9525ms
+2025-05-09 10:44:58.762 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 10:44:59.446 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 10:44:59.446 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 10:44:59.581 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 10:44:59.582 +03:00 [INF] Hosting environment: Development
+2025-05-09 10:44:59.582 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 10:45:01.518 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 10:45:02.515 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 1034.1594ms
+2025-05-09 10:45:02.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 10:45:02.543 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 6.7296ms
+2025-05-09 10:45:02.551 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 10:45:02.714 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 163.5292ms
+2025-05-09 10:45:03.081 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 10:45:03.136 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.3466ms
+2025-05-09 10:47:50.410 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=----WebKitFormBoundaryXPJcPEBKTBR6PkER 371277
+2025-05-09 10:47:51.041 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 10:47:51.051 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 10:47:51.051 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 401 0 null 715.9785ms
+2025-05-09 11:39:36.959 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 11:39:39.347 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 11:39:39.347 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 11:39:39.607 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 11:39:39.608 +03:00 [INF] Hosting environment: Development
+2025-05-09 11:39:39.608 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 11:39:42.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 11:39:43.572 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 683.0364ms
+2025-05-09 11:39:43.574 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 11:39:43.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 8.6625ms
+2025-05-09 11:39:43.605 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 11:39:43.751 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 146.2467ms
+2025-05-09 11:39:43.872 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 11:39:43.905 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.7885ms
+2025-05-09 11:40:10.672 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/Auth/login - application/json 58
+2025-05-09 11:40:11.068 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:40:11.111 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 11:40:15.728 +03:00 [INF] Executed DbCommand (488ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 11:40:15.764 +03:00 [WRN] Invalid login attempt with email: user@gmail.com
+2025-05-09 11:40:15.817 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 11:40:15.827 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 4710.4059ms
+2025-05-09 11:40:15.827 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:40:15.847 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/Auth/login - 401 null application/json; charset=utf-8 5174.8644ms
+2025-05-09 11:40:56.248 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/Auth/login - application/json 60
+2025-05-09 11:40:56.255 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:40:56.255 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 11:40:56.434 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 11:40:57.484 +03:00 [INF] Executed DbCommand (108ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-05-09 11:40:57.632 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:40:57.746 +03:00 [INF] Executed DbCommand (106ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-05-09 11:40:57.864 +03:00 [INF] Executed DbCommand (103ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-05-09 11:40:57.940 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-05-09 11:40:58.044 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:40:58.190 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:40:58.282 +03:00 [INF] User logged in successfully: user@example.com
+2025-05-09 11:40:58.286 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 11:40:58.319 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 2063.8125ms
+2025-05-09 11:40:58.319 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:40:58.320 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 2073.7219ms
+2025-05-09 11:41:09.936 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/Auth/login - application/json 63
+2025-05-09 11:41:09.938 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-05-09 11:41:09.938 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-05-09 11:41:09.941 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/Auth/login - 405 0 null 5.3206ms
+2025-05-09 11:41:18.873 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 63
+2025-05-09 11:41:18.873 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:41:18.873 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 11:41:19.095 +03:00 [INF] Executed DbCommand (110ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 11:41:19.318 +03:00 [INF] Executed DbCommand (114ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-05-09 11:41:19.444 +03:00 [INF] Executed DbCommand (126ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:41:19.584 +03:00 [INF] Executed DbCommand (138ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-05-09 11:41:19.687 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-05-09 11:41:19.688 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-05-09 11:41:19.807 +03:00 [INF] Executed DbCommand (118ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:41:19.910 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:41:19.911 +03:00 [INF] User logged in successfully: user@example.com
+2025-05-09 11:41:19.911 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 11:41:19.912 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 1038.4602ms
+2025-05-09 11:41:19.912 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:41:19.913 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 1040.391ms
+2025-05-09 11:42:16.202 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=----WebKitFormBoundarywm2NZAwrWhA28NbD 553
+2025-05-09 11:42:16.227 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 11:42:16.232 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 11:42:16.232 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 401 0 null 32.0134ms
+2025-05-09 11:42:36.791 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - null 0
+2025-05-09 11:42:36.879 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-09 11:42:36.973 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-05-09 11:42:36.974 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 11:42:36.975 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 11:42:36.975 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 401 0 null 183.7354ms
+2025-05-09 11:42:53.648 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - null 0
+2025-05-09 11:42:53.689 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-09 11:42:53.692 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2025-05-09 11:42:53.693 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 11:42:53.693 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 11:42:53.693 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 401 0 null 45.1959ms
+2025-05-09 11:43:07.206 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 63
+2025-05-09 11:43:07.206 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:43:07.206 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 11:43:07.318 +03:00 [INF] Executed DbCommand (110ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 11:43:07.540 +03:00 [INF] Executed DbCommand (119ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-05-09 11:43:07.645 +03:00 [INF] Executed DbCommand (105ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:43:07.751 +03:00 [INF] Executed DbCommand (105ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-05-09 11:43:07.862 +03:00 [INF] Executed DbCommand (109ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-05-09 11:43:07.906 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-05-09 11:43:08.009 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:43:08.111 +03:00 [INF] Executed DbCommand (101ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:43:08.112 +03:00 [INF] User logged in successfully: user@example.com
+2025-05-09 11:43:08.112 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 11:43:08.113 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 906.5583ms
+2025-05-09 11:43:08.113 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:43:08.114 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 907.9982ms
+2025-05-09 11:43:20.435 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - null 0
+2025-05-09 11:43:20.436 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-09 11:43:20.437 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2025-05-09 11:43:20.437 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 11:43:20.437 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 11:43:20.437 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 401 0 null 1.6002ms
+2025-05-09 11:44:41.862 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - null 0
+2025-05-09 11:44:41.863 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-09 11:44:41.863 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2025-05-09 11:44:41.864 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 11:44:41.864 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 11:44:41.864 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 401 0 null 2.1617ms
+2025-05-09 11:45:31.604 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - null 0
+2025-05-09 11:45:31.605 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-09 11:45:31.606 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2025-05-09 11:45:31.606 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 11:45:31.606 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 11:45:31.606 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 401 0 null 2.1241ms
+2025-05-09 11:49:32.147 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 11:49:32.789 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 11:49:32.789 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 11:49:32.872 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 11:49:32.873 +03:00 [INF] Hosting environment: Development
+2025-05-09 11:49:32.873 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 11:49:34.931 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 11:49:35.440 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 521.8969ms
+2025-05-09 11:49:35.450 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 11:49:35.457 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 6.6182ms
+2025-05-09 11:49:35.466 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 11:49:35.619 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 152.3484ms
+2025-05-09 11:49:35.723 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 11:49:35.754 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.1041ms
+2025-05-09 11:49:42.328 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 63
+2025-05-09 11:49:42.692 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:49:42.733 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 11:49:47.979 +03:00 [INF] Executed DbCommand (270ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 11:49:48.534 +03:00 [INF] Executed DbCommand (105ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-05-09 11:49:48.679 +03:00 [INF] Executed DbCommand (116ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:49:48.806 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-05-09 11:49:48.975 +03:00 [INF] Executed DbCommand (148ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-05-09 11:49:49.009 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-05-09 11:49:49.123 +03:00 [INF] Executed DbCommand (105ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:49:49.232 +03:00 [INF] Executed DbCommand (106ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 11:49:49.328 +03:00 [INF] User logged in successfully: user@example.com
+2025-05-09 11:49:49.340 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 11:49:49.374 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 6632.8825ms
+2025-05-09 11:49:49.374 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:49:49.386 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 7057.5197ms
+2025-05-09 11:50:07.413 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - null 0
+2025-05-09 11:50:07.562 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:50:07.571 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 11:50:07.644 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-09 11:50:07.666 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 95.0234ms
+2025-05-09 11:50:07.666 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:50:07.667 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 400 null application/problem+json; charset=utf-8 253.7984ms
+2025-05-09 11:51:19.762 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - application/json 31
+2025-05-09 11:51:19.774 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:51:19.774 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 11:51:19.805 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-09 11:51:19.805 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 30.9627ms
+2025-05-09 11:51:19.805 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:51:19.805 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 400 null application/problem+json; charset=utf-8 43.0588ms
+2025-05-09 11:51:36.400 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - application/json 251
+2025-05-09 11:51:36.403 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:51:36.403 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 11:51:36.413 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-09 11:51:36.413 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 10.1411ms
+2025-05-09 11:51:36.413 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:51:36.414 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 400 null application/problem+json; charset=utf-8 13.5584ms
+2025-05-09 11:53:25.528 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------767282618852147164168445 516
+2025-05-09 11:53:25.557 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:53:25.557 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 11:53:25.673 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-09 11:53:25.674 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 116.5136ms
+2025-05-09 11:53:25.674 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:53:25.675 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 400 null application/problem+json; charset=utf-8 148.2765ms
+2025-05-09 11:54:44.901 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------496030921884857777340494 23259
+2025-05-09 11:54:44.915 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:54:44.916 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 11:55:47.136 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 11:55:56.042 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 71125.3342ms
+2025-05-09 11:55:56.045 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:55:58.499 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 401 null application/json; charset=utf-8 73599.051ms
+2025-05-09 11:58:24.196 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 11:58:24.542 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 11:58:24.543 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 11:58:24.602 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 11:58:24.602 +03:00 [INF] Hosting environment: Development
+2025-05-09 11:58:24.602 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 11:58:26.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 11:58:27.242 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 595.3464ms
+2025-05-09 11:58:27.249 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 11:58:27.253 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 11:58:27.258 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 8.4408ms
+2025-05-09 11:58:27.388 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 135.7097ms
+2025-05-09 11:58:27.598 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 11:58:27.692 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 98.5561ms
+2025-05-09 11:58:39.291 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------990554576368069348468105 23259
+2025-05-09 11:58:39.830 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:58:39.891 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 11:58:41.388 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 11:58:41.402 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 1505.9366ms
+2025-05-09 11:58:41.402 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 11:58:41.405 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 403 null application/json; charset=utf-8 2113.8686ms
+2025-05-09 11:59:42.011 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 69
+2025-05-09 11:59:42.014 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:59:42.022 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 11:59:46.225 +03:00 [INF] Executed DbCommand (240ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 11:59:46.258 +03:00 [WRN] Invalid login attempt with email: charity@example.com
+2025-05-09 11:59:46.292 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 11:59:46.292 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 4270.4196ms
+2025-05-09 11:59:46.293 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:59:46.298 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 401 null application/json; charset=utf-8 4286.3944ms
+2025-05-09 11:59:50.036 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 67
+2025-05-09 11:59:50.040 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:59:50.041 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 11:59:50.262 +03:00 [INF] Executed DbCommand (103ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 11:59:50.262 +03:00 [WRN] Invalid login attempt with email: charity@gmail.com
+2025-05-09 11:59:50.263 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 11:59:50.263 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 222.2615ms
+2025-05-09 11:59:50.263 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 11:59:50.263 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 401 null application/json; charset=utf-8 227.8341ms
+2025-05-09 12:00:10.776 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 67
+2025-05-09 12:00:10.777 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 12:00:10.777 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 12:00:10.934 +03:00 [INF] Executed DbCommand (112ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 12:00:11.740 +03:00 [INF] Executed DbCommand (101ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-05-09 12:00:11.936 +03:00 [INF] Executed DbCommand (98ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 12:00:12.062 +03:00 [INF] Executed DbCommand (118ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-05-09 12:00:12.185 +03:00 [INF] Executed DbCommand (104ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-05-09 12:00:12.240 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-05-09 12:00:12.340 +03:00 [INF] Executed DbCommand (96ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 12:00:12.446 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 12:00:12.620 +03:00 [INF] User logged in successfully: swagger@gmail.com
+2025-05-09 12:00:12.621 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 12:00:12.645 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 1868.3107ms
+2025-05-09 12:00:12.645 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 12:00:12.646 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 1870.3922ms

@@ -7,14 +7,13 @@ namespace SAWA.core.DTO
 {
     public record AppUserDto // Data returned when user logs in
     {
-        public string Id { get; init; }
         public string UserName { get; init; }
         public string Email { get; init; }
         public string PhoneNumber { get; init; }
         public string FullName { get; init; }
-        public string? ProfilePhotoUrl { get; init; }
+        public string ProfilePhotoUrl { get; init; }
 
-        public string? WallpaperPhotoUrl { get; init; }
+        public string WallpaperPhotoUrl { get; init; }
         public DateTime CreatedAt { get; init; }
         public bool IsEmailConfirmed { get; init; }
         public IList<string> Roles { get; set; }
