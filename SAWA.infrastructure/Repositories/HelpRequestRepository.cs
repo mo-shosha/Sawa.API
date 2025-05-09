@@ -46,6 +46,9 @@ namespace SAWA.infrastructure.Repositories
 
             await _db.HelpRequests.AddAsync(helpRequest);
 
+
+            await _db.SaveChangesAsync();
+
             if (createDto.Photos != null && createDto.Photos.Count > 0)
             {
                 var photoUrls = await _fileManagementService.AddImagesAsync(createDto.Photos,"HelpRequest");

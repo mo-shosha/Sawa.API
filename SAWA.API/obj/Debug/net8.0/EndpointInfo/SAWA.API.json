@@ -92,6 +92,10 @@
                   "CharityName": {
                     "type": "string"
                   },
+                  "WallpaperPhoto": {
+                    "type": "string",
+                    "format": "binary"
+                  },
                   "Description": {
                     "type": "string"
                   },
@@ -118,6 +122,10 @@
                     "type": "string",
                     "format": "password"
                   },
+                  "ProfilePhoto": {
+                    "type": "string",
+                    "format": "binary"
+                  },
                   "Address": {
                     "type": "string"
                   }
@@ -125,6 +133,9 @@
               },
               "encoding": {
                 "CharityName": {
+                  "style": "form"
+                },
+                "WallpaperPhoto": {
                   "style": "form"
                 },
                 "Description": {
@@ -146,6 +157,9 @@
                   "style": "form"
                 },
                 "ConfirmPassword": {
+                  "style": "form"
+                },
+                "ProfilePhoto": {
                   "style": "form"
                 },
                 "Address": {
@@ -200,6 +214,10 @@
                     "type": "string",
                     "format": "password"
                   },
+                  "ProfilePhoto": {
+                    "type": "string",
+                    "format": "binary"
+                  },
                   "Address": {
                     "type": "string"
                   }
@@ -219,6 +237,9 @@
                   "style": "form"
                 },
                 "ConfirmPassword": {
+                  "style": "form"
+                },
+                "ProfilePhoto": {
                   "style": "form"
                 },
                 "Address": {

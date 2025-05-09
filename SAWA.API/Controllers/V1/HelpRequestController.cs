@@ -44,8 +44,9 @@ namespace SAWA.API.Controllers.V1
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.InnerException?.Message ?? ex.Message}"));
             }
+
         }
 
 

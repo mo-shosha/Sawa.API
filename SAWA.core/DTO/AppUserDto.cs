@@ -35,7 +35,7 @@ namespace SAWA.core.DTO
         [Required, DataType(DataType.Password), Compare("Password")]
         public string ConfirmPassword { get; init; }
 
-        //public IFormFile? ProfilePhoto { get; init; }
+        public IFormFile? ProfilePhoto { get; init; }
 
         [Required]
         public string Address { get; init; }
@@ -53,7 +53,7 @@ namespace SAWA.core.DTO
         public string CharityName { get; init; }
 
         //[Required]
-        //public IFormFile? WallpaperPhoto { get; init; }
+        public IFormFile? WallpaperPhoto { get; init; }
 
         //[Required]
         //public string CharityType { get; init; }

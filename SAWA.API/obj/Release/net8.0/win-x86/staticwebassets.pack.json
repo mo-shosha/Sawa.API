@@ -1,6 +1,26 @@
 {
   "Files": [
     {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\2efaed86-2118-471a-a3ef-546b3932eee1.png",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\2efaed86-2118-471a-a3ef-546b3932eee1.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\8784e76b-44a7-465f-808b-87f7bb6348d7.png",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\8784e76b-44a7-465f-808b-87f7bb6348d7.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\919783ad-4fed-4baf-92f4-99c13098e935.png",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\919783ad-4fed-4baf-92f4-99c13098e935.png"
+    },
+    {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Khaled Mostafa\\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png",
       "PackagePath": "staticwebassets\\Images\\Khaled Mostafa\\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png"
     },
@@ -57,8 +77,8 @@
       "PackagePath": "staticwebassets\\Images\\string string\\03a634c7-46d9-41c8-aab4-0b8ff738769f.png"
     },
     {
-      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250508.txt",
-      "PackagePath": "staticwebassets\\Logs\\log-20250508.txt"
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250509.txt",
+      "PackagePath": "staticwebassets\\Logs\\log-20250509.txt"
     },
     {
       "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.SAWA.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

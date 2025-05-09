@@ -66,6 +66,11 @@
         "IsRequired": false
       },
       {
+        "Name": "WallpaperPhoto",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
         "Name": "Description",
         "Type": "System.String",
         "IsRequired": false
@@ -98,6 +103,11 @@
       {
         "Name": "ConfirmPassword",
         "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProfilePhoto",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       },
       {
@@ -139,6 +149,11 @@
       {
         "Name": "ConfirmPassword",
         "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProfilePhoto",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       },
       {

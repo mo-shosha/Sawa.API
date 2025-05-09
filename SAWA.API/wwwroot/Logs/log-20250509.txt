@@ -807,3 +807,983 @@ WHERE [a].[UserId] = @__userId_0
 2025-05-09 12:00:12.645 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 1868.3107ms
 2025-05-09 12:00:12.645 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
 2025-05-09 12:00:12.646 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 1870.3922ms
+2025-05-09 16:30:18.927 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 16:30:19.673 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 16:30:19.674 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 16:30:19.788 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 16:30:19.789 +03:00 [INF] Hosting environment: Development
+2025-05-09 16:30:19.789 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 16:30:23.408 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 16:30:24.206 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 809.6757ms
+2025-05-09 16:30:24.220 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 16:30:24.229 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 8.604ms
+2025-05-09 16:30:24.447 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 16:30:24.765 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 318.0831ms
+2025-05-09 16:30:24.936 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 16:30:25.028 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.488ms
+2025-05-09 16:31:57.655 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 63
+2025-05-09 16:31:58.001 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 16:31:58.089 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 16:32:04.569 +03:00 [INF] Executed DbCommand (357ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 16:32:05.354 +03:00 [INF] Executed DbCommand (150ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-05-09 16:32:05.700 +03:00 [INF] Executed DbCommand (199ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 16:32:05.924 +03:00 [INF] Executed DbCommand (211ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-05-09 16:32:06.053 +03:00 [INF] Executed DbCommand (106ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-05-09 16:32:06.079 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-05-09 16:32:06.199 +03:00 [INF] Executed DbCommand (115ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 16:32:06.450 +03:00 [INF] Executed DbCommand (248ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 16:32:06.560 +03:00 [INF] User logged in successfully: selim@gmail.com
+2025-05-09 16:32:06.599 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 16:32:06.672 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 8574.8894ms
+2025-05-09 16:32:06.675 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 16:32:06.686 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 9031.0355ms
+2025-05-09 16:33:38.517 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 16:33:38.553 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 35.5094ms
+2025-05-09 16:33:38.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 16:33:38.648 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 16:33:38.649 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.2179ms
+2025-05-09 16:33:38.677 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.2603ms
+2025-05-09 16:33:38.751 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 16:33:38.784 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.4051ms
+2025-05-09 16:33:50.485 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------887881287271445322033660 23259
+2025-05-09 16:33:50.620 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:33:50.638 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:33:50.876 +03:00 [INF] Executed DbCommand (110ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:33:51.666 +03:00 [ERR] Failed executing DbCommand (143ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:33:51.911 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:737ef43c-5ced-4299-9e8e-29f9aa5df56e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:737ef43c-5ced-4299-9e8e-29f9aa5df56e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:33:52.361 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 16:33:52.363 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 1725.021ms
+2025-05-09 16:33:52.364 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:33:52.365 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 1879.5859ms
+2025-05-09 16:34:44.383 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------797832201302513143949097 23259
+2025-05-09 16:34:44.395 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:34:44.395 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:35:02.707 +03:00 [INF] Executed DbCommand (109ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:35:35.933 +03:00 [ERR] Failed executing DbCommand (127ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:35:36.034 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:737ef43c-5ced-4299-9e8e-29f9aa5df56e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:737ef43c-5ced-4299-9e8e-29f9aa5df56e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:35:54.717 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 16:35:57.960 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 73564.8676ms
+2025-05-09 16:35:57.962 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:35:57.962 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 73579.7422ms
+2025-05-09 16:36:04.719 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------538155475773686648104283 23259
+2025-05-09 16:36:04.721 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:36:04.721 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:36:09.862 +03:00 [INF] Executed DbCommand (109ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:36:55.013 +03:00 [ERR] Failed executing DbCommand (122ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:36:55.118 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:737ef43c-5ced-4299-9e8e-29f9aa5df56e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:737ef43c-5ced-4299-9e8e-29f9aa5df56e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:37:22.362 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 16:37:22.366 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 77644.3577ms
+2025-05-09 16:37:22.366 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:37:22.367 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 77648.2282ms
+2025-05-09 16:38:33.249 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------550033989532156500053151 23259
+2025-05-09 16:38:33.251 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:38:33.252 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:38:39.528 +03:00 [INF] Executed DbCommand (109ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:38:44.021 +03:00 [ERR] Failed executing DbCommand (129ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:38:44.120 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:737ef43c-5ced-4299-9e8e-29f9aa5df56e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:737ef43c-5ced-4299-9e8e-29f9aa5df56e
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:38:51.978 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 16:38:53.576 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 20324.1451ms
+2025-05-09 16:38:53.576 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:38:55.411 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 22161.9606ms
+2025-05-09 16:43:14.267 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 16:43:15.071 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 16:43:15.071 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 16:43:15.155 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 16:43:15.155 +03:00 [INF] Hosting environment: Development
+2025-05-09 16:43:15.155 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 16:43:17.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 16:43:17.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 734.2981ms
+2025-05-09 16:43:17.969 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 16:43:17.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 8.1637ms
+2025-05-09 16:43:18.020 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 16:43:18.176 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 157.1027ms
+2025-05-09 16:43:18.496 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 16:43:18.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.8721ms
+2025-05-09 16:43:22.738 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------685151025308715236415224 23259
+2025-05-09 16:43:23.131 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:43:23.265 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:43:39.311 +03:00 [INF] Executed DbCommand (213ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:44:03.636 +03:00 [ERR] Failed executing DbCommand (134ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:44:03.822 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d757a0b3-3f93-4900-80f3-eb3150db460f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d757a0b3-3f93-4900-80f3-eb3150db460f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:44:04.174 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 16:44:04.213 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 40943.3411ms
+2025-05-09 16:44:04.214 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:44:04.222 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 41484.295ms
+2025-05-09 16:45:00.835 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------216065321786593205748049 23259
+2025-05-09 16:45:00.849 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:45:00.849 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:45:09.887 +03:00 [INF] Executed DbCommand (108ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:45:32.901 +03:00 [ERR] Failed executing DbCommand (123ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:45:33.004 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d757a0b3-3f93-4900-80f3-eb3150db460f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d757a0b3-3f93-4900-80f3-eb3150db460f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:45:33.242 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 16:45:33.244 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 32394.1445ms
+2025-05-09 16:45:33.244 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:45:33.244 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 32409.8413ms
+2025-05-09 16:48:31.412 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------573289108062108220445799 23259
+2025-05-09 16:48:31.420 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:48:31.420 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:48:52.150 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 16:48:52.831 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 16:48:52.831 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 16:48:53.233 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 16:48:53.234 +03:00 [INF] Hosting environment: Development
+2025-05-09 16:48:53.234 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 16:48:53.942 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 16:48:54.379 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 446.4717ms
+2025-05-09 16:48:54.388 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 16:48:54.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 16:48:54.399 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 11.3751ms
+2025-05-09 16:48:54.458 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.6738ms
+2025-05-09 16:48:54.608 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 16:48:54.636 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.3167ms
+2025-05-09 16:49:11.469 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------558876660803904995470706 23259
+2025-05-09 16:49:12.016 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:49:12.082 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:49:23.972 +03:00 [INF] Executed DbCommand (312ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:51:08.278 +03:00 [ERR] Failed executing DbCommand (2,931ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:51:14.414 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:668c404e-f90b-46b8-ad72-673886924dd5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:668c404e-f90b-46b8-ad72-673886924dd5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:51:14.564 +03:00 [ERR] Failed executing DbCommand (127ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:51:14.667 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:668c404e-f90b-46b8-ad72-673886924dd5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:668c404e-f90b-46b8-ad72-673886924dd5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:51:14.954 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 16:51:14.968 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 122882.3798ms
+2025-05-09 16:51:14.969 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:51:14.979 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 123510.4073ms
+2025-05-09 16:51:30.345 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 16:51:30.372 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 27.6965ms
+2025-05-09 16:51:30.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 16:51:30.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 16:51:30.406 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.4868ms
+2025-05-09 16:51:30.439 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.5843ms
+2025-05-09 16:51:30.560 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 16:51:30.596 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.0387ms
+2025-05-09 16:51:33.200 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------160516276997209907138190 23259
+2025-05-09 16:51:33.206 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:51:33.213 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:51:37.250 +03:00 [INF] Executed DbCommand (113ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:51:47.352 +03:00 [ERR] Failed executing DbCommand (918ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:51:47.659 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:668c404e-f90b-46b8-ad72-673886924dd5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:668c404e-f90b-46b8-ad72-673886924dd5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:51:47.885 +03:00 [ERR] Failed executing DbCommand (127ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:51:47.988 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:668c404e-f90b-46b8-ad72-673886924dd5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'db18546.dbo.AppUsers'; column does not allow nulls. INSERT fails.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HelpRequests_AppUsers_CharityId". The conflict occurred in database "db18546", table "dbo.AppUsers", column 'Id'.
+The statement has been terminated.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:668c404e-f90b-46b8-ad72-673886924dd5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:51:48.192 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 16:51:48.194 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 14980.6084ms
+2025-05-09 16:51:48.195 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:51:48.195 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 500 null application/json; charset=utf-8 14995.342ms
+2025-05-09 16:51:57.242 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 16:51:57.251 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 10.3843ms
+2025-05-09 16:51:57.264 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 16:51:57.264 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 16:51:57.268 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.671ms
+2025-05-09 16:51:57.287 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.8434ms
+2025-05-09 16:51:57.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 16:51:57.471 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.8136ms
+2025-05-09 16:52:16.062 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------396573667652933935171145 23259
+2025-05-09 16:52:16.070 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:52:16.075 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:52:19.932 +03:00 [INF] Executed DbCommand (112ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:52:24.028 +03:00 [ERR] Failed executing DbCommand (636ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 500), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (Size = 200), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 1000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 256), @p22='?' (Size = 1000), @p23='?' (Size = 500), @p24='?' (Size = 450), @p25='?' (DbType = DateTime2), @p26='?' (Size = 1000), @p27='?' (Size = 50), @p28='?' (DbType = Int32), @p29='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [CreatedAt], [Description], [DocumentURL], [Email], [EmailConfirmed], [FullName], [IsApproved], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProfilePhotoURL], [SecurityStamp], [TwoFactorEnabled], [UserName], [WallpaperPhotoURL])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p23, @p24, @p25, @p26, @p27, @p28, @p29);
+2025-05-09 16:52:24.063 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:52:24.067 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-09 16:52:24.074 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[SAWA.core.DTO.HelpRequestDto, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-09 16:52:24.092 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 8016.9885ms
+2025-05-09 16:52:24.092 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:52:24.131 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 200 null application/json; charset=utf-8 8068.0884ms
+2025-05-09 16:54:43.241 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 16:54:43.910 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 16:54:43.910 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 16:54:43.993 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 16:54:43.994 +03:00 [INF] Hosting environment: Development
+2025-05-09 16:54:43.994 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 16:54:45.975 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 16:54:47.109 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 1203.9583ms
+2025-05-09 16:54:47.132 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 16:54:47.145 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 13.2192ms
+2025-05-09 16:54:47.183 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 16:54:47.335 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 151.8769ms
+2025-05-09 16:54:47.589 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 16:54:47.630 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.6719ms
+2025-05-09 16:54:51.103 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------923909919784906693439055 23259
+2025-05-09 16:54:51.608 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:54:51.649 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 16:55:30.569 +03:00 [INF] Executed DbCommand (202ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 16:55:47.677 +03:00 [INF] Executed DbCommand (151ms) [Parameters=[@p0='?' (Size = 500), @p1='?' (Size = 450), @p2='?' (DbType = DateTime2), @p3='?' (Size = 1000), @p4='?' (Size = 50), @p5='?' (DbType = Int32), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-05-09 16:55:54.420 +03:00 [INF] Executed DbCommand (108ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 500), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Photos] ([BranchId], [DonationId], [HelpRequestId], [ImageUrl], [PostId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-05-09 16:56:00.365 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[SAWA.core.DTO.HelpRequestDto, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-09 16:56:02.348 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 70693.3598ms
+2025-05-09 16:56:02.349 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 16:56:02.362 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 200 null application/json; charset=utf-8 71259.122ms
+2025-05-09 16:57:47.277 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - application/json 38
+2025-05-09 16:57:47.292 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 16:57:47.300 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 16:57:47.300 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - 401 0 null 25.6137ms
+2025-05-09 16:58:09.219 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - null null
+2025-05-09 16:58:09.221 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-05-09 16:58:09.222 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-05-09 16:58:09.223 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - 405 0 null 3.6789ms
+2025-05-09 16:58:48.175 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - application/json 42
+2025-05-09 16:58:48.180 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-05-09 16:58:48.180 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-05-09 16:58:48.181 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - 405 0 null 7.1065ms
+2025-05-09 16:59:10.529 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - application/json 42
+2025-05-09 16:59:10.609 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-05-09 16:59:10.609 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-05-09 16:59:10.610 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - 405 0 null 80.9864ms
+2025-05-09 17:00:29.906 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - application/json 42
+2025-05-09 17:00:29.907 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-05-09 17:00:29.907 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-05-09 17:00:29.907 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - 405 0 null 0.9406ms
+2025-05-09 17:00:36.041 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 63
+2025-05-09 17:00:36.042 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 17:00:36.049 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 17:00:36.348 +03:00 [INF] Executed DbCommand (113ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 17:00:36.921 +03:00 [INF] Executed DbCommand (101ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-05-09 17:00:37.109 +03:00 [INF] Executed DbCommand (100ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 17:00:37.219 +03:00 [INF] Executed DbCommand (101ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-05-09 17:00:37.339 +03:00 [INF] Executed DbCommand (100ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-05-09 17:00:37.491 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-05-09 17:00:37.623 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 17:00:37.726 +03:00 [INF] Executed DbCommand (99ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 17:00:37.793 +03:00 [INF] User logged in successfully: selim@gmail.com
+2025-05-09 17:00:37.793 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 17:00:37.801 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 1752.2748ms
+2025-05-09 17:00:37.802 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 17:00:37.802 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 1761.1267ms
+2025-05-09 17:00:51.445 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - application/json 42
+2025-05-09 17:00:51.457 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.UpdateHelpRequest (SAWA.API)'
+2025-05-09 17:00:51.461 +03:00 [INF] Route matched with {action = "UpdateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateHelpRequest(SAWA.core.DTO.HelpRequestUpdateStatusDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 17:01:06.836 +03:00 [INF] Executed DbCommand (107ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CharityId], [h].[CreatedAt], [h].[Description], [h].[Phone], [h].[Status], [h].[UserId]
+FROM [HelpRequests] AS [h]
+WHERE [h].[Id] = @__id_0
+2025-05-09 17:01:20.412 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__updateStatusDto_RequestId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[Address], [h].[CharityId], [h].[CreatedAt], [h].[Description], [h].[Phone], [h].[Status], [h].[UserId]
+FROM [HelpRequests] AS [h]
+WHERE [h].[Id] = @__updateStatusDto_RequestId_0
+2025-05-09 17:01:24.444 +03:00 [INF] Executed DbCommand (107ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 500), @p1='?' (Size = 450), @p2='?' (DbType = DateTime2), @p3='?' (Size = 1000), @p4='?' (Size = 50), @p5='?' (DbType = Int32), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [HelpRequests] SET [Address] = @p0, [CharityId] = @p1, [CreatedAt] = @p2, [Description] = @p3, [Phone] = @p4, [Status] = @p5, [UserId] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2025-05-09 17:01:30.311 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[SAWA.core.DTO.HelpRequestDto, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-09 17:01:33.909 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.UpdateHelpRequest (SAWA.API) in 42447.5159ms
+2025-05-09 17:01:33.909 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.UpdateHelpRequest (SAWA.API)'
+2025-05-09 17:01:33.910 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - 200 null application/json; charset=utf-8 42464.5828ms

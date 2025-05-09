@@ -17,7 +17,7 @@ namespace SAWA.API.Mapping
 
             CreateMap<HelpRequestCreateDto, HelpRequest>()
                 .ForMember(dest => dest.Photos, opt => opt.Ignore())  
-                .ForMember(dest => dest.Charity, opt => opt.MapFrom(src => new AppUser { UserName = src.CharityUserName }))
+                .ForMember(dest => dest.Charity, opt => opt.Ignore())
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
                 .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.Phone))
                 .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address));

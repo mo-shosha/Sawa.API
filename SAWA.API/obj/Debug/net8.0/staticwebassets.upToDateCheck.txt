@@ -1,11 +1,17 @@
 wwwroot\Images\branches\013a6089-3ba0-4722-974e-8f396206170e.png
 wwwroot\Images\branches\2d9b86b4-2368-48ee-8c82-b04f5afe3ebb.png
 wwwroot\Images\branches\c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg
+wwwroot\Images\HelpRequest\082c35d9-e634-4e75-85dc-526801374bca.jpg
 wwwroot\Images\HelpRequest\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png
+wwwroot\Images\HelpRequest\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg
 wwwroot\Images\HelpRequest\2efaed86-2118-471a-a3ef-546b3932eee1.png
+wwwroot\Images\HelpRequest\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg
 wwwroot\Images\HelpRequest\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png
+wwwroot\Images\HelpRequest\73fd5e69-e023-4abe-938b-4d4b62612504.jpg
 wwwroot\Images\HelpRequest\8784e76b-44a7-465f-808b-87f7bb6348d7.png
 wwwroot\Images\HelpRequest\919783ad-4fed-4baf-92f4-99c13098e935.png
+wwwroot\Images\HelpRequest\a4742a5a-c5a2-473c-9fcd-9fd170817651.jpg
+wwwroot\Images\HelpRequest\db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.jpg
 wwwroot\Images\Khaled Mostafa\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png
 wwwroot\Images\Mohamed Reda\6770512d-4cb9-4c76-90f3-0811e5c84160.png
 wwwroot\Images\Mohamed Reda\8040ecd1-3a27-473d-9123-9a43e7b79cb2.png
