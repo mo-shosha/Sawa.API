@@ -1787,3 +1787,254 @@ WHERE [Id] = @p7;
 2025-05-09 17:01:33.909 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.UpdateHelpRequest (SAWA.API) in 42447.5159ms
 2025-05-09 17:01:33.909 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.UpdateHelpRequest (SAWA.API)'
 2025-05-09 17:01:33.910 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7029/api/V1/HelpRequest/UpdateHelpRequest - 200 null application/json; charset=utf-8 42464.5828ms
+2025-05-09 23:06:31.788 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 23:06:32.520 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 23:06:32.521 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 23:06:32.582 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 23:06:32.582 +03:00 [INF] Hosting environment: Development
+2025-05-09 23:06:32.583 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 23:06:35.407 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 23:06:36.365 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 1039.4475ms
+2025-05-09 23:06:36.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 23:06:36.395 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.8011ms
+2025-05-09 23:06:36.511 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 23:06:36.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 170.5902ms
+2025-05-09 23:06:36.864 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 23:06:36.910 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.9554ms
+2025-05-09 23:07:41.806 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/api/V1/HelpRequest/charity - null null
+2025-05-09 23:07:42.106 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Charity)
+2025-05-09 23:07:42.111 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 23:07:42.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/api/V1/HelpRequest/charity - 401 0 null 305.7669ms
+2025-05-09 23:08:18.215 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/charity - null null
+2025-05-09 23:08:18.430 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Charity)
+2025-05-09 23:08:18.433 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-05-09 23:08:18.445 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/charity - 403 0 null 230.5997ms
+2025-05-09 23:08:41.133 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/User - null null
+2025-05-09 23:08:41.142 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2025-05-09 23:08:41.142 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-05-09 23:08:41.143 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/User - 403 0 null 10.3548ms
+2025-05-09 23:09:18.373 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/User - null null
+2025-05-09 23:09:18.382 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2025-05-09 23:09:18.382 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-05-09 23:09:18.386 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/User - 403 0 null 15.2461ms
+2025-05-09 23:09:51.905 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 63
+2025-05-09 23:09:51.919 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 23:09:51.981 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 23:09:57.277 +03:00 [INF] Executed DbCommand (214ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 23:09:57.774 +03:00 [INF] Executed DbCommand (105ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-05-09 23:09:57.907 +03:00 [INF] Executed DbCommand (103ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 23:09:58.019 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-05-09 23:09:58.143 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-05-09 23:09:58.168 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-05-09 23:09:58.273 +03:00 [INF] Executed DbCommand (99ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 23:09:58.380 +03:00 [INF] Executed DbCommand (101ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 23:09:58.451 +03:00 [INF] User logged in successfully: selim@gmail.com
+2025-05-09 23:09:58.462 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 23:09:58.484 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 6497.9987ms
+2025-05-09 23:09:58.485 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 23:09:58.494 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 6589.1549ms
+2025-05-09 23:10:08.653 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/User - null null
+2025-05-09 23:10:08.654 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2025-05-09 23:10:08.654 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-05-09 23:10:08.655 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/User - 403 0 null 1.8739ms
+2025-05-09 23:10:19.347 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/User - null null
+2025-05-09 23:10:19.348 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2025-05-09 23:10:19.349 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-05-09 23:10:19.349 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/User - 403 0 null 1.8302ms
+2025-05-09 23:10:31.969 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/api/V1/HelpRequest/user - null null
+2025-05-09 23:10:31.973 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2025-05-09 23:10:31.973 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 23:10:31.974 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/api/V1/HelpRequest/user - 401 0 null 11.1402ms
+2025-05-09 23:10:40.763 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/user - null null
+2025-05-09 23:10:40.765 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2025-05-09 23:10:40.765 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-05-09 23:10:40.765 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/user - 403 0 null 1.6604ms
+2025-05-09 23:10:53.696 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/user - null null
+2025-05-09 23:10:53.697 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2025-05-09 23:10:53.697 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-05-09 23:10:53.697 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/user - 403 0 null 1.2678ms
+2025-05-09 23:11:39.284 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 23:11:40.252 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-09 23:11:40.252 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-09 23:11:40.634 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 23:11:40.635 +03:00 [INF] Hosting environment: Development
+2025-05-09 23:11:40.635 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-09 23:11:42.507 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 23:11:43.291 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 811.6275ms
+2025-05-09 23:11:43.371 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 23:11:43.379 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 8.0874ms
+2025-05-09 23:11:43.396 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 23:11:43.555 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 159.2124ms
+2025-05-09 23:11:44.014 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 23:11:44.067 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.4829ms
+2025-05-09 23:11:46.601 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/user - null null
+2025-05-09 23:11:47.257 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.GetAllUserHelpRequests (SAWA.API)'
+2025-05-09 23:11:47.340 +03:00 [INF] Route matched with {action = "GetAllUserHelpRequests", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserHelpRequests() on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 23:12:04.469 +03:00 [INF] Executed DbCommand (249ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CharityId], [h].[CreatedAt], [h].[Description], [h].[Phone], [h].[Status], [h].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL], [a0].[Id], [a0].[AccessFailedCount], [a0].[Address], [a0].[ConcurrencyStamp], [a0].[CreatedAt], [a0].[Description], [a0].[DocumentURL], [a0].[Email], [a0].[EmailConfirmed], [a0].[FullName], [a0].[IsApproved], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[ProfilePhotoURL], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[WallpaperPhotoURL]
+FROM [HelpRequests] AS [h]
+INNER JOIN [AppUsers] AS [a] ON [h].[UserId] = [a].[Id]
+INNER JOIN [AppUsers] AS [a0] ON [h].[CharityId] = [a0].[Id]
+WHERE [h].[UserId] = @__userId_0
+2025-05-09 23:12:13.003 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SAWA.core.DTO.HelpRequestUserResponse, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-09 23:12:15.965 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.GetAllUserHelpRequests (SAWA.API) in 28614.6677ms
+2025-05-09 23:12:15.966 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.GetAllUserHelpRequests (SAWA.API)'
+2025-05-09 23:12:15.994 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/user - 200 null application/json; charset=utf-8 29393.5518ms
+2025-05-09 23:12:52.480 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------898823275315356936284653 23259
+2025-05-09 23:12:52.487 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 23:12:52.501 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 23:12:56.321 +03:00 [INF] Executed DbCommand (114ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 23:12:56.715 +03:00 [INF] Executed DbCommand (124ms) [Parameters=[@p0='?' (Size = 500), @p1='?' (Size = 450), @p2='?' (DbType = DateTime2), @p3='?' (Size = 1000), @p4='?' (Size = 50), @p5='?' (DbType = Int32), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-05-09 23:12:56.975 +03:00 [INF] Executed DbCommand (106ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 500), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Photos] ([BranchId], [DonationId], [HelpRequestId], [ImageUrl], [PostId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-05-09 23:12:56.992 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[SAWA.core.DTO.HelpRequestDto, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-09 23:12:57.003 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 4501.3212ms
+2025-05-09 23:12:57.003 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 23:12:57.005 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 200 null application/json; charset=utf-8 4524.6801ms
+2025-05-09 23:13:00.594 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - multipart/form-data; boundary=--------------------------045705982261969576861457 23259
+2025-05-09 23:13:00.606 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 23:13:00.606 +03:00 [INF] Route matched with {action = "CreateHelpRequest", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateHelpRequest(SAWA.core.DTO.HelpRequestCreateDto) on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 23:13:04.319 +03:00 [INF] Executed DbCommand (112ms) [Parameters=[@__username_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[UserName] = @__username_0
+2025-05-09 23:13:04.428 +03:00 [INF] Executed DbCommand (106ms) [Parameters=[@p0='?' (Size = 500), @p1='?' (Size = 450), @p2='?' (DbType = DateTime2), @p3='?' (Size = 1000), @p4='?' (Size = 50), @p5='?' (DbType = Int32), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [HelpRequests] ([Address], [CharityId], [CreatedAt], [Description], [Phone], [Status], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-05-09 23:13:04.537 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 500), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Photos] ([BranchId], [DonationId], [HelpRequestId], [ImageUrl], [PostId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-05-09 23:13:04.539 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[SAWA.core.DTO.HelpRequestDto, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-09 23:13:04.539 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API) in 3932.0429ms
+2025-05-09 23:13:04.539 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.CreateHelpRequest (SAWA.API)'
+2025-05-09 23:13:04.539 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/HelpRequest/CreateHelpRequest - 200 null application/json; charset=utf-8 3945.2888ms
+2025-05-09 23:13:08.582 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/user - null null
+2025-05-09 23:13:08.583 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.GetAllUserHelpRequests (SAWA.API)'
+2025-05-09 23:13:08.583 +03:00 [INF] Route matched with {action = "GetAllUserHelpRequests", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserHelpRequests() on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 23:13:13.944 +03:00 [INF] Executed DbCommand (127ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CharityId], [h].[CreatedAt], [h].[Description], [h].[Phone], [h].[Status], [h].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL], [a0].[Id], [a0].[AccessFailedCount], [a0].[Address], [a0].[ConcurrencyStamp], [a0].[CreatedAt], [a0].[Description], [a0].[DocumentURL], [a0].[Email], [a0].[EmailConfirmed], [a0].[FullName], [a0].[IsApproved], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[ProfilePhotoURL], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[WallpaperPhotoURL]
+FROM [HelpRequests] AS [h]
+INNER JOIN [AppUsers] AS [a] ON [h].[UserId] = [a].[Id]
+INNER JOIN [AppUsers] AS [a0] ON [h].[CharityId] = [a0].[Id]
+WHERE [h].[UserId] = @__userId_0
+2025-05-09 23:13:14.363 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SAWA.core.DTO.HelpRequestUserResponse, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-09 23:13:14.364 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.GetAllUserHelpRequests (SAWA.API) in 5780.2403ms
+2025-05-09 23:13:14.364 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.GetAllUserHelpRequests (SAWA.API)'
+2025-05-09 23:13:14.364 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/user - 200 null application/json; charset=utf-8 5782.1132ms
+2025-05-09 23:14:46.438 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - application/json 63
+2025-05-09 23:14:46.440 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 23:14:46.448 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SAWA.core.DTO.UserLoginDto) on controller SAWA.API.Controllers.V1.AuthController (SAWA.API).
+2025-05-09 23:14:46.598 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [AppUsers] AS [a]
+WHERE [a].[Email] = @__model_Email_0
+2025-05-09 23:14:46.941 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-05-09 23:14:47.059 +03:00 [INF] Executed DbCommand (101ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 23:14:47.168 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-05-09 23:14:47.287 +03:00 [INF] Executed DbCommand (100ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-05-09 23:14:47.324 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-05-09 23:14:47.429 +03:00 [INF] Executed DbCommand (101ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 23:14:47.554 +03:00 [INF] Executed DbCommand (103ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-09 23:14:47.604 +03:00 [INF] User logged in successfully: user@example.com
+2025-05-09 23:14:47.604 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 23:14:47.613 +03:00 [INF] Executed action SAWA.API.Controllers.V1.AuthController.Login (SAWA.API) in 1164.2438ms
+2025-05-09 23:14:47.613 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.AuthController.Login (SAWA.API)'
+2025-05-09 23:14:47.614 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Auth/login - 200 null application/json; charset=utf-8 1176.3193ms
+2025-05-09 23:15:09.054 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/charity - null null
+2025-05-09 23:15:09.056 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Charity)
+2025-05-09 23:15:09.062 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-05-09 23:15:09.063 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/charity - 403 0 null 8.272ms
+2025-05-09 23:15:21.678 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-09 23:15:21.804 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 127.4266ms
+2025-05-09 23:15:21.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-09 23:15:21.880 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-09 23:15:21.886 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.3443ms
+2025-05-09 23:15:21.933 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.5887ms
+2025-05-09 23:15:22.250 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-09 23:15:22.321 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 71.1431ms
+2025-05-09 23:15:22.352 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/charity - null null
+2025-05-09 23:15:22.353 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.HelpRequestController.GetAllCharityHelpRequests (SAWA.API)'
+2025-05-09 23:15:22.360 +03:00 [INF] Route matched with {action = "GetAllCharityHelpRequests", controller = "HelpRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCharityHelpRequests() on controller SAWA.API.Controllers.V1.HelpRequestController (SAWA.API).
+2025-05-09 23:15:22.615 +03:00 [INF] Executed DbCommand (224ms) [Parameters=[@__charityId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[Address], [h].[CharityId], [h].[CreatedAt], [h].[Description], [h].[Phone], [h].[Status], [h].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL], [a0].[Id], [a0].[AccessFailedCount], [a0].[Address], [a0].[ConcurrencyStamp], [a0].[CreatedAt], [a0].[Description], [a0].[DocumentURL], [a0].[Email], [a0].[EmailConfirmed], [a0].[FullName], [a0].[IsApproved], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[ProfilePhotoURL], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[WallpaperPhotoURL]
+FROM [HelpRequests] AS [h]
+INNER JOIN [AppUsers] AS [a] ON [h].[UserId] = [a].[Id]
+INNER JOIN [AppUsers] AS [a0] ON [h].[CharityId] = [a0].[Id]
+WHERE [h].[CharityId] = @__charityId_0
+2025-05-09 23:15:22.621 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SAWA.core.DTO.HelpRequestCharityResponse, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-09 23:15:22.623 +03:00 [INF] Executed action SAWA.API.Controllers.V1.HelpRequestController.GetAllCharityHelpRequests (SAWA.API) in 263.01ms
+2025-05-09 23:15:22.623 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.HelpRequestController.GetAllCharityHelpRequests (SAWA.API)'
+2025-05-09 23:15:22.624 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/HelpRequest/charity - 200 null application/json; charset=utf-8 272.0358ms

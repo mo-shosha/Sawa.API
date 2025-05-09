@@ -54,6 +54,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\branches\c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>SAWA.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SAWA.API</BasePath>
+      <RelativePath>Images/HelpRequest/008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>51ke2jkuqo</Fingerprint>
+      <Integrity>6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\082c35d9-e634-4e75-85dc-526801374bca.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>SAWA.API</SourceId>
@@ -462,8 +480,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>58zre99c57</Fingerprint>
-      <Integrity>FQ0e5YrnNNJBIpG8/TRrp3aYbqqIld8GTLM5XnBVR4w=</Integrity>
+      <Fingerprint>hflpho17ch</Fingerprint>
+      <Integrity>Q+YHXPkn5hXhbBFXEDwFsPEkxDgUKqmVos6L4PYYOCU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250509.txt'))</OriginalItemSpec>

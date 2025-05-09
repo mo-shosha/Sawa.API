@@ -12,5 +12,7 @@ namespace SAWA.core.Interfaces
     {
         Task<HelpRequestDto> AddHelpRequestAsync(HelpRequestCreateDto createDto, string UserId);
         Task<HelpRequestDto> UpdateHelpRequestStatusAsync(HelpRequestUpdateStatusDto updateStatusDto);
+        Task<IEnumerable<HelpRequestCharityResponse>> GetAllCharityHelpRequest(string CharityId);
+        Task<IEnumerable<HelpRequestUserResponse>> GetAllUserHelpRequest(string CharityId);
     }
 }

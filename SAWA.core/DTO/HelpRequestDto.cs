@@ -18,7 +18,7 @@ namespace SAWA.core.DTO
         public string Address { get; set; }
         public List<string> PhotoUrls { get; set; } = new();
         public DateTime CreatedAt { get; set; }
-        public HelpRequestStatus Status { get; set; }
+        public string Status { get; set; }
     }
 
     public record HelpRequestCreateDto
@@ -34,6 +34,25 @@ namespace SAWA.core.DTO
     {
         public int RequestId { get; set; }
         public HelpRequestStatus NewStatus { get; set; }
+    }
+
+    public record HelpRequestResponse
+    {
+        public int Id { get; set; }
+        public string Description { get; set; }
+        public string Address { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public string Status { get; set; }
+    }
+    public record HelpRequestUserResponse: HelpRequestResponse // return in control panels for user
+    {
+        public string CharityName { get; set; }
+    }
+
+    public record HelpRequestCharityResponse: HelpRequestResponse // return in control panels for Charity
+    {
+        public string UserName { get; set; }
+        
     }
 
 }

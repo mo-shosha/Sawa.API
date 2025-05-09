@@ -66,11 +66,6 @@
         "IsRequired": false
       },
       {
-        "Name": "WallpaperPhoto",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
         "Name": "Description",
         "Type": "System.String",
         "IsRequired": false
@@ -103,11 +98,6 @@
       {
         "Name": "ConfirmPassword",
         "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ProfilePhoto",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       },
       {
@@ -149,11 +139,6 @@
       {
         "Name": "ConfirmPassword",
         "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ProfilePhoto",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       },
       {
@@ -322,6 +307,16 @@
   },
   {
     "ContainingType": "SAWA.API.Controllers.V1.HelpRequestController",
+    "Method": "GetAllCharityHelpRequests",
+    "RelativePath": "api/V1/HelpRequest/charity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.HelpRequestController",
     "Method": "CreateHelpRequest",
     "RelativePath": "api/V1/HelpRequest/CreateHelpRequest",
     "HttpMethod": "POST",
@@ -370,6 +365,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.HelpRequestController",
+    "Method": "GetAllUserHelpRequests",
+    "RelativePath": "api/V1/HelpRequest/user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

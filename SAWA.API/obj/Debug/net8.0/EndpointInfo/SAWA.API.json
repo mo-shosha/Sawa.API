@@ -92,10 +92,6 @@
                   "CharityName": {
                     "type": "string"
                   },
-                  "WallpaperPhoto": {
-                    "type": "string",
-                    "format": "binary"
-                  },
                   "Description": {
                     "type": "string"
                   },
@@ -122,10 +118,6 @@
                     "type": "string",
                     "format": "password"
                   },
-                  "ProfilePhoto": {
-                    "type": "string",
-                    "format": "binary"
-                  },
                   "Address": {
                     "type": "string"
                   }
@@ -133,9 +125,6 @@
               },
               "encoding": {
                 "CharityName": {
-                  "style": "form"
-                },
-                "WallpaperPhoto": {
                   "style": "form"
                 },
                 "Description": {
@@ -157,9 +146,6 @@
                   "style": "form"
                 },
                 "ConfirmPassword": {
-                  "style": "form"
-                },
-                "ProfilePhoto": {
                   "style": "form"
                 },
                 "Address": {
@@ -214,10 +200,6 @@
                     "type": "string",
                     "format": "password"
                   },
-                  "ProfilePhoto": {
-                    "type": "string",
-                    "format": "binary"
-                  },
                   "Address": {
                     "type": "string"
                   }
@@ -237,9 +219,6 @@
                   "style": "form"
                 },
                 "ConfirmPassword": {
-                  "style": "form"
-                },
-                "ProfilePhoto": {
                   "style": "form"
                 },
                 "Address": {
@@ -632,6 +611,30 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/V1/HelpRequest/charity": {
+      "get": {
+        "tags": [
+          "HelpRequest"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/V1/HelpRequest/user": {
+      "get": {
+        "tags": [
+          "HelpRequest"
+        ],
         "responses": {
           "200": {
             "description": "OK"

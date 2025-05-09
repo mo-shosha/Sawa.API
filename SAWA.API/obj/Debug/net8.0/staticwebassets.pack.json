@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg"
+    },
+    {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\082c35d9-e634-4e75-85dc-526801374bca.jpg",
       "PackagePath": "staticwebassets\\Images\\HelpRequest\\082c35d9-e634-4e75-85dc-526801374bca.jpg"
     },

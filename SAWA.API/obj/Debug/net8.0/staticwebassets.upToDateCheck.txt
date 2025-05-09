@@ -1,6 +1,7 @@
 wwwroot\Images\branches\013a6089-3ba0-4722-974e-8f396206170e.png
 wwwroot\Images\branches\2d9b86b4-2368-48ee-8c82-b04f5afe3ebb.png
 wwwroot\Images\branches\c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg
+wwwroot\Images\HelpRequest\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg
 wwwroot\Images\HelpRequest\082c35d9-e634-4e75-85dc-526801374bca.jpg
 wwwroot\Images\HelpRequest\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png
 wwwroot\Images\HelpRequest\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg

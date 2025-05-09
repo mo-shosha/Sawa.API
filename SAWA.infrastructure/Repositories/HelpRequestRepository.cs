@@ -74,6 +74,29 @@ namespace SAWA.infrastructure.Repositories
             return result;
         }
 
+        public async Task<IEnumerable<HelpRequestCharityResponse>> GetAllCharityHelpRequest(string charityId)
+        {
+            var helpRequests = await _db.HelpRequests
+                .Include(hr => hr.User)
+                .Include(hr => hr.Charity)
+                .Where(hr => hr.CharityId == charityId)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<HelpRequestCharityResponse>>(helpRequests);
+        }
+
+        public async Task<IEnumerable<HelpRequestUserResponse>> GetAllUserHelpRequest(string userId)
+        {
+            var helpRequests = await _db.HelpRequests
+                .Include(hr => hr.User)
+                .Include(hr => hr.Charity)
+                .Where(hr => hr.UserId == userId)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<HelpRequestUserResponse>>(helpRequests);
+        }
+
+
         public async Task<HelpRequestDto> UpdateHelpRequestStatusAsync(HelpRequestUpdateStatusDto updateStatusDto)
         {
             var helpRequest = await _db.HelpRequests
