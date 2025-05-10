@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oGEX7DxdWcOLoCSTJ1J4BfYPQRQZCr7JxBa3/arHXME=",
+  "Hash": "ip/h9uKO2uLw3LNzRlXlNTBFYvvvwXAe7R6gcOkJRjY=",
   "Source": "SAWA.API",
   "BasePath": "_content/SAWA.API",
   "Mode": "Default",
@@ -80,6 +80,48 @@
       "OriginalItemSpec": "wwwroot\\Images\\branches\\c89db29e-84a9-4ff9-b8dd-9fcbfba445f4.jpg"
     },
     {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/HelpRequest/008b1fe3-4b02-4529-bf52-fbb4f3d2cc97#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51ke2jkuqo",
+      "Integrity": "6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\082c35d9-e634-4e75-85dc-526801374bca.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/HelpRequest/082c35d9-e634-4e75-85dc-526801374bca#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51ke2jkuqo",
+      "Integrity": "6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\082c35d9-e634-4e75-85dc-526801374bca.jpg"
+    },
+    {
       "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png",
       "SourceId": "SAWA.API",
       "SourceType": "Discovered",
@@ -99,6 +141,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/HelpRequest/2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51ke2jkuqo",
+      "Integrity": "6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\234dde90-b2b6-48d0-84f0-f4f657685cda.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/HelpRequest/234dde90-b2b6-48d0-84f0-f4f657685cda#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51ke2jkuqo",
+      "Integrity": "6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\234dde90-b2b6-48d0-84f0-f4f657685cda.jpg"
     },
     {
       "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\2efaed86-2118-471a-a3ef-546b3932eee1.png",
@@ -122,6 +206,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\2efaed86-2118-471a-a3ef-546b3932eee1.png"
     },
     {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/HelpRequest/5c92af93-8afd-4809-bc22-6b0a2dd2ae96#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51ke2jkuqo",
+      "Integrity": "6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg"
+    },
+    {
       "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png",
       "SourceId": "SAWA.API",
       "SourceType": "Discovered",
@@ -141,6 +246,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/HelpRequest/7044b33c-b407-41b2-a04c-20af97fcd7c6#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51ke2jkuqo",
+      "Integrity": "6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\73fd5e69-e023-4abe-938b-4d4b62612504.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/HelpRequest/73fd5e69-e023-4abe-938b-4d4b62612504#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51ke2jkuqo",
+      "Integrity": "6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\73fd5e69-e023-4abe-938b-4d4b62612504.jpg"
     },
     {
       "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\8784e76b-44a7-465f-808b-87f7bb6348d7.png",
@@ -183,6 +330,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\919783ad-4fed-4baf-92f4-99c13098e935.png"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\a4742a5a-c5a2-473c-9fcd-9fd170817651.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/HelpRequest/a4742a5a-c5a2-473c-9fcd-9fd170817651#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51ke2jkuqo",
+      "Integrity": "6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\a4742a5a-c5a2-473c-9fcd-9fd170817651.jpg"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.jpg",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Images/HelpRequest/db7a4f1a-5c78-40f4-9680-cceee2a4e1bd#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51ke2jkuqo",
+      "Integrity": "6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HelpRequest\\db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.jpg"
     },
     {
       "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Khaled Mostafa\\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png",
@@ -416,12 +605,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\string string\\03a634c7-46d9-41c8-aab4-0b8ff738769f.png"
     },
     {
-      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250509.txt",
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\string\\32499203-a207-49a2-bc49-f25866c6619b.jpg",
       "SourceId": "SAWA.API",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
       "BasePath": "_content/SAWA.API",
-      "RelativePath": "Logs/log-20250509#[.{fingerprint}]?.txt",
+      "RelativePath": "Images/string/32499203-a207-49a2-bc49-f25866c6619b#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -430,11 +619,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "19e5aio4j7",
-      "Integrity": "ZSkV75gEVMMWxm3NMvppK5TEu5O3UJ1waPDe+cq2zLc=",
+      "Fingerprint": "bsje3od8me",
+      "Integrity": "q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Logs\\log-20250509.txt"
+      "OriginalItemSpec": "wwwroot\\Images\\string\\32499203-a207-49a2-bc49-f25866c6619b.jpg"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250510.txt",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Logs/log-20250510#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c250tjoyfx",
+      "Integrity": "XH2tV9VtUMermDjQjVor3P7XBgjt8ahkbFqvIw7bxA0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Logs\\log-20250510.txt"
     }
   ],
   "Endpoints": [
@@ -685,6 +895,170 @@
       ]
     },
     {
+      "Route": "Images/HelpRequest/008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.51ke2jkuqo.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:55:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51ke2jkuqo"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/HelpRequest/008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:55:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/082c35d9-e634-4e75-85dc-526801374bca.51ke2jkuqo.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\082c35d9-e634-4e75-85dc-526801374bca.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51ke2jkuqo"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/HelpRequest/082c35d9-e634-4e75-85dc-526801374bca.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/082c35d9-e634-4e75-85dc-526801374bca.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\082c35d9-e634-4e75-85dc-526801374bca.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
       "Route": "Images/HelpRequest/0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png",
       "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png",
       "Selectors": [],
@@ -763,6 +1137,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.51ke2jkuqo.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:35:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51ke2jkuqo"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/HelpRequest/2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:35:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/234dde90-b2b6-48d0-84f0-f4f657685cda.51ke2jkuqo.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\234dde90-b2b6-48d0-84f0-f4f657685cda.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 20:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51ke2jkuqo"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/HelpRequest/234dde90-b2b6-48d0-84f0-f4f657685cda.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/234dde90-b2b6-48d0-84f0-f4f657685cda.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\234dde90-b2b6-48d0-84f0-f4f657685cda.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 20:13:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
         }
       ]
     },
@@ -849,6 +1387,88 @@
       ]
     },
     {
+      "Route": "Images/HelpRequest/5c92af93-8afd-4809-bc22-6b0a2dd2ae96.51ke2jkuqo.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:51:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51ke2jkuqo"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/HelpRequest/5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:51:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
       "Route": "Images/HelpRequest/5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png",
       "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png",
       "Selectors": [],
@@ -927,6 +1547,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/7044b33c-b407-41b2-a04c-20af97fcd7c6.51ke2jkuqo.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 20:12:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51ke2jkuqo"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/HelpRequest/7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 20:12:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/73fd5e69-e023-4abe-938b-4d4b62612504.51ke2jkuqo.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\73fd5e69-e023-4abe-938b-4d4b62612504.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:52:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51ke2jkuqo"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/HelpRequest/73fd5e69-e023-4abe-938b-4d4b62612504.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/73fd5e69-e023-4abe-938b-4d4b62612504.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\73fd5e69-e023-4abe-938b-4d4b62612504.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:52:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
         }
       ]
     },
@@ -1091,6 +1875,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-hChHHJr83qUVDWLshIZw29IjpNRhq26K92om4O7HYGE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/a4742a5a-c5a2-473c-9fcd-9fd170817651.51ke2jkuqo.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\a4742a5a-c5a2-473c-9fcd-9fd170817651.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:33:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51ke2jkuqo"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/HelpRequest/a4742a5a-c5a2-473c-9fcd-9fd170817651.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/a4742a5a-c5a2-473c-9fcd-9fd170817651.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\a4742a5a-c5a2-473c-9fcd-9fd170817651.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:33:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.51ke2jkuqo.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:36:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51ke2jkuqo"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/HelpRequest/db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
+        }
+      ]
+    },
+    {
+      "Route": "Images/HelpRequest/db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 13:36:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco="
         }
       ]
     },
@@ -1997,8 +2945,8 @@
       ]
     },
     {
-      "Route": "Logs/log-20250509.19e5aio4j7.txt",
-      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250509.txt",
+      "Route": "Images/string/32499203-a207-49a2-bc49-f25866c6619b.bsje3od8me.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\string\\32499203-a207-49a2-bc49-f25866c6619b.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2007,19 +2955,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "109005"
+          "Value": "109109"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/plain"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"ZSkV75gEVMMWxm3NMvppK5TEu5O3UJ1waPDe+cq2zLc=\""
+          "Value": "\"q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 09:00:12 GMT"
+          "Value": "Fri, 09 May 2025 22:31:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2029,21 +2977,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "19e5aio4j7"
+          "Value": "bsje3od8me"
         },
         {
           "Name": "label",
-          "Value": "Logs/log-20250509.txt"
+          "Value": "Images/string/32499203-a207-49a2-bc49-f25866c6619b.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ZSkV75gEVMMWxm3NMvppK5TEu5O3UJ1waPDe+cq2zLc="
+          "Value": "sha256-q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI="
         }
       ]
     },
     {
-      "Route": "Logs/log-20250509.txt",
-      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250509.txt",
+      "Route": "Images/string/32499203-a207-49a2-bc49-f25866c6619b.jpg",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\string\\32499203-a207-49a2-bc49-f25866c6619b.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2052,7 +3000,44 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "109005"
+          "Value": "109109"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 22:31:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250510.c250tjoyfx.txt",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250510.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15508"
         },
         {
           "Name": "Content-Type",
@@ -2060,11 +3045,56 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZSkV75gEVMMWxm3NMvppK5TEu5O3UJ1waPDe+cq2zLc=\""
+          "Value": "\"XH2tV9VtUMermDjQjVor3P7XBgjt8ahkbFqvIw7bxA0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 09:00:12 GMT"
+          "Value": "Sat, 10 May 2025 00:18:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c250tjoyfx"
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/log-20250510.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XH2tV9VtUMermDjQjVor3P7XBgjt8ahkbFqvIw7bxA0="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250510.txt",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250510.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15508"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XH2tV9VtUMermDjQjVor3P7XBgjt8ahkbFqvIw7bxA0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 00:18:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2074,7 +3104,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZSkV75gEVMMWxm3NMvppK5TEu5O3UJ1waPDe+cq2zLc="
+          "Value": "sha256-XH2tV9VtUMermDjQjVor3P7XBgjt8ahkbFqvIw7bxA0="
         }
       ]
     }

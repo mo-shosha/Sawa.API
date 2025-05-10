@@ -263,6 +263,30 @@
         }
       }
     },
+    "/api/V1/Auth/me": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/V1/Auth/charities": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/Branch/Create": {
       "post": {
         "tags": [
@@ -521,6 +545,132 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Donations/monetary": {
+      "post": {
+        "tags": [
+          "Donations"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MonetaryDonationRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MonetaryDonationRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MonetaryDonationRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Donations/item": {
+      "post": {
+        "tags": [
+          "Donations"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "CharityUserName": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "Photos": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "Address": {
+                    "type": "string"
+                  },
+                  "Phone": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "CharityUserName": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "Photos": {
+                  "style": "form"
+                },
+                "Address": {
+                  "style": "form"
+                },
+                "Phone": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Donations/charity": {
+      "get": {
+        "tags": [
+          "Donations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Donations/user": {
+      "get": {
+        "tags": [
+          "Donations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Donations/stripe": {
+      "post": {
+        "tags": [
+          "Donations"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -855,6 +1005,28 @@
           },
           "newStatus": {
             "$ref": "#/components/schemas/HelpRequestStatus"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MonetaryDonationRequestDto": {
+        "type": "object",
+        "properties": {
+          "charityUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "stripeSessionId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -28,6 +28,7 @@ namespace SAWA.infrastructure.Repositories
 
         public IHelpRequestRepository helpRequestRepository{ get; }
 
+        public IDonationRepository donationRepository { get; }
         public UnitOfWork(AppDbContext db, IMapper mapper,IFileManagementService fileManagementService, UserManager<AppUser> userManager)
         {
             _db = db;
@@ -39,6 +40,7 @@ namespace SAWA.infrastructure.Repositories
             CommentRepository = new CommentRepository(_db, _mapper, _fileManagementService);
             branchesRepository = new BranchesRepository(_db, _mapper, _fileManagementService);
             helpRequestRepository=new HelpRequestRepository(_db, _mapper, _fileManagementService,_userManager);
+            donationRepository=new DonationRepository(_db, _mapper, _fileManagementService, _userManager);
         }
 
 

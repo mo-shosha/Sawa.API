@@ -111,6 +111,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[48.1.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -233,6 +237,10 @@
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[48.1.0, )"
             }
           },
           "imports": [
@@ -357,6 +365,10 @@
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[48.1.0, )"
             }
           },
           "imports": [

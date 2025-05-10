@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SAWA.infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+556d766c5b42f51e4e2248b6e3060902d0f84c5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+602e1e2275fd16e633c07ad1aeea0977e28c44e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SAWA.infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SAWA.infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

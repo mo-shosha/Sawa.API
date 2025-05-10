@@ -5,9 +5,12 @@ wwwroot\Images\HelpRequest\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg
 wwwroot\Images\HelpRequest\082c35d9-e634-4e75-85dc-526801374bca.jpg
 wwwroot\Images\HelpRequest\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png
 wwwroot\Images\HelpRequest\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg
+wwwroot\Images\HelpRequest\234dde90-b2b6-48d0-84f0-f4f657685cda.jpg
 wwwroot\Images\HelpRequest\2efaed86-2118-471a-a3ef-546b3932eee1.png
+wwwroot\Images\HelpRequest\44d69971-a7a5-4d93-a122-8d4aa2e59ea8.jpg
 wwwroot\Images\HelpRequest\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg
 wwwroot\Images\HelpRequest\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png
+wwwroot\Images\HelpRequest\7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg
 wwwroot\Images\HelpRequest\73fd5e69-e023-4abe-938b-4d4b62612504.jpg
 wwwroot\Images\HelpRequest\8784e76b-44a7-465f-808b-87f7bb6348d7.png
 wwwroot\Images\HelpRequest\919783ad-4fed-4baf-92f4-99c13098e935.png
@@ -24,4 +27,5 @@ wwwroot\Images\Posts\fa93e1d7-8907-4ba3-bef0-40b1feb99afd.png
 wwwroot\Images\SAWA\a7a59114-018d-4f96-94e6-ddda3c5b953f.jpg
 wwwroot\Images\SAWA\e8d41b1a-f171-4022-8584-7cfe1c0d0a54.png
 wwwroot\Images\string string\03a634c7-46d9-41c8-aab4-0b8ff738769f.png
-wwwroot\Logs\log-20250509.txt
+wwwroot\Images\string\32499203-a207-49a2-bc49-f25866c6619b.jpg
+wwwroot\Logs\log-20250510.txt

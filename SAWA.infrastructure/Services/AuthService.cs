@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Claims;
 
 namespace SAWA.infrastructure.Services
 {
@@ -105,6 +106,10 @@ namespace SAWA.infrastructure.Services
             {
                 AppUser newCharity = _mapper.Map<AppUser>(model);
 
+                if (await _userManager.FindByNameAsync(model.CharityName) != null)
+                {
+                    return "Error: The charity name already exists. Please choose a different name.";
+                }
                 if (model.Document != null)
                 {
                     newCharity.DocumentURL = await _fileManagementService.AddImagesAsync(model.Document, model.CharityName);
@@ -144,7 +149,10 @@ namespace SAWA.infrastructure.Services
             try
             {
                 AppUser newUser = _mapper.Map<AppUser>(model);
-
+                if (await _userManager.FindByNameAsync(model.FullName) != null)
+                {
+                    return "Error: The username already exists. Please choose a different username.";
+                }
                 //if (model.ProfilePhoto != null)
                 //{
                 //    newUser.ProfilePhotoURL = await _fileManagementService.AddImagesAsync(model.ProfilePhoto, newUser.FullName);
@@ -283,6 +291,33 @@ namespace SAWA.infrastructure.Services
                                      .Where(u => u.UserName == username)
                                      .FirstOrDefaultAsync();
         }
+
+        public async Task<AppUserDto> GetCurrentUserAsync(ClaimsPrincipal user)
+        {
+            var UserName = _userManager.GetUserName(user);  
+            var appUser = await _userManager.Users
+                                            .FirstOrDefaultAsync(u => u.UserName == UserName);
+            if (appUser == null)
+                return null;
+
+            var roles = await _userManager.GetRolesAsync(appUser);
+            var token = await _tokenService.GetAndCreateToken(appUser);
+
+            var result = _mapper.Map<AppUserDto>(appUser);
+            result.Token = token;
+            result.ExpireAt = DateTime.Now.AddHours(30);
+            result.Roles = roles.ToList();
+
+            return result;
+        }
+
+        public async Task<List<CharityDto>> GetAllCharitiesAsync()
+        {
+            var charityUsers = await _userManager.GetUsersInRoleAsync("Charity");
+
+            return _mapper.Map<List<CharityDto>>(charityUsers);
+        }
+
 
     }
 }

@@ -126,6 +126,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\234dde90-b2b6-48d0-84f0-f4f657685cda.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>SAWA.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SAWA.API</BasePath>
+      <RelativePath>Images/HelpRequest/234dde90-b2b6-48d0-84f0-f4f657685cda.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>51ke2jkuqo</Fingerprint>
+      <Integrity>6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\234dde90-b2b6-48d0-84f0-f4f657685cda.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\2efaed86-2118-471a-a3ef-546b3932eee1.png'))">
       <SourceType>Package</SourceType>
       <SourceId>SAWA.API</SourceId>
@@ -143,6 +161,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\2efaed86-2118-471a-a3ef-546b3932eee1.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\44d69971-a7a5-4d93-a122-8d4aa2e59ea8.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>SAWA.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SAWA.API</BasePath>
+      <RelativePath>Images/HelpRequest/44d69971-a7a5-4d93-a122-8d4aa2e59ea8.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>51ke2jkuqo</Fingerprint>
+      <Integrity>6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\44d69971-a7a5-4d93-a122-8d4aa2e59ea8.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg'))">
       <SourceType>Package</SourceType>
@@ -179,6 +215,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>SAWA.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SAWA.API</BasePath>
+      <RelativePath>Images/HelpRequest/7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>51ke2jkuqo</Fingerprint>
+      <Integrity>6YrK+/z/XZF90ZHfatLBw9kmRL1+JecWfumKXQn7uco=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\HelpRequest\73fd5e69-e023-4abe-938b-4d4b62612504.jpg'))">
       <SourceType>Package</SourceType>
@@ -468,23 +522,41 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\string string\03a634c7-46d9-41c8-aab4-0b8ff738769f.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250509.txt'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\string\32499203-a207-49a2-bc49-f25866c6619b.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>SAWA.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SAWA.API</BasePath>
-      <RelativePath>Logs/log-20250509.txt</RelativePath>
+      <RelativePath>Images/string/32499203-a207-49a2-bc49-f25866c6619b.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hflpho17ch</Fingerprint>
-      <Integrity>Q+YHXPkn5hXhbBFXEDwFsPEkxDgUKqmVos6L4PYYOCU=</Integrity>
+      <Fingerprint>bsje3od8me</Fingerprint>
+      <Integrity>q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250509.txt'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\string\32499203-a207-49a2-bc49-f25866c6619b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250510.txt'))">
+      <SourceType>Package</SourceType>
+      <SourceId>SAWA.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SAWA.API</BasePath>
+      <RelativePath>Logs/log-20250510.txt</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>zf8yjuvx0j</Fingerprint>
+      <Integrity>P7qjUXBKHJ8eE3Ky+akD9NTGE+eZFr7avNPPwkEweoc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Logs\log-20250510.txt'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

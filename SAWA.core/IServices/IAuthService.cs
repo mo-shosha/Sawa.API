@@ -4,6 +4,7 @@ using SAWA.core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,5 +22,9 @@ namespace SAWA.core.IServices
         Task<IdentityResult> ConfirmEmailAsync(AppUser user, string token);
 
         Task<AppUser> GetUserByUserNameAsync(string username);
+
+        Task<AppUserDto> GetCurrentUserAsync(ClaimsPrincipal user);
+        Task<List<CharityDto>> GetAllCharitiesAsync();
+
     }
 }

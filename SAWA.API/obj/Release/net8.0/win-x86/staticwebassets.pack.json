@@ -1,16 +1,44 @@
 {
   "Files": [
     {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\008b1fe3-4b02-4529-bf52-fbb4f3d2cc97.jpg"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\082c35d9-e634-4e75-85dc-526801374bca.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\082c35d9-e634-4e75-85dc-526801374bca.jpg"
+    },
+    {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png",
       "PackagePath": "staticwebassets\\Images\\HelpRequest\\0b441f7b-c0c5-4cc6-9772-d0af922e7c08.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\2127a965-f4c0-4ea7-9f0e-9b93f2cf1d7a.jpg"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\234dde90-b2b6-48d0-84f0-f4f657685cda.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\234dde90-b2b6-48d0-84f0-f4f657685cda.jpg"
     },
     {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\2efaed86-2118-471a-a3ef-546b3932eee1.png",
       "PackagePath": "staticwebassets\\Images\\HelpRequest\\2efaed86-2118-471a-a3ef-546b3932eee1.png"
     },
     {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg"
+    },
+    {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png",
       "PackagePath": "staticwebassets\\Images\\HelpRequest\\5f2c38f1-a58a-4895-80e7-8dd69c4c2e83.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\7044b33c-b407-41b2-a04c-20af97fcd7c6.jpg"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\73fd5e69-e023-4abe-938b-4d4b62612504.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\73fd5e69-e023-4abe-938b-4d4b62612504.jpg"
     },
     {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\8784e76b-44a7-465f-808b-87f7bb6348d7.png",
@@ -19,6 +47,14 @@
     {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\919783ad-4fed-4baf-92f4-99c13098e935.png",
       "PackagePath": "staticwebassets\\Images\\HelpRequest\\919783ad-4fed-4baf-92f4-99c13098e935.png"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\a4742a5a-c5a2-473c-9fcd-9fd170817651.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\a4742a5a-c5a2-473c-9fcd-9fd170817651.jpg"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\db7a4f1a-5c78-40f4-9680-cceee2a4e1bd.jpg"
     },
     {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\Khaled Mostafa\\2b034941-d2b8-4dff-9704-2d1f3a0cb3b7.png",
@@ -77,8 +113,12 @@
       "PackagePath": "staticwebassets\\Images\\string string\\03a634c7-46d9-41c8-aab4-0b8ff738769f.png"
     },
     {
-      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250509.txt",
-      "PackagePath": "staticwebassets\\Logs\\log-20250509.txt"
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\string\\32499203-a207-49a2-bc49-f25866c6619b.jpg",
+      "PackagePath": "staticwebassets\\Images\\string\\32499203-a207-49a2-bc49-f25866c6619b.jpg"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250510.txt",
+      "PackagePath": "staticwebassets\\Logs\\log-20250510.txt"
     },
     {
       "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.SAWA.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

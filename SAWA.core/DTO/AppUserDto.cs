@@ -124,4 +124,14 @@ namespace SAWA.core.DTO
 
 
 
+    public record CharityDto
+    {
+        public string UserName { get; set; }
+        public string CharityName { get; set; }
+        public string PhotoUrl { get; set; }
+        public string Address { get; set; }
+
+    }
+
+
 }

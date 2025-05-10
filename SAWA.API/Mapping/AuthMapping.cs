@@ -37,6 +37,12 @@ namespace SAWA.API.Mapping
                 .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(_ => DateTime.Now))
                 .ForMember(dest => dest.ProfilePhotoURL, opt => opt.Ignore())
                 .ForMember(dest => dest.WallpaperPhotoURL, opt => opt.Ignore()).ReverseMap();
+
+            CreateMap<AppUser, CharityDto>()
+            .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
+            .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.FullName))  
+            .ForMember(dest => dest.PhotoUrl, opt => opt.MapFrom(src => src.ProfilePhotoURL))
+            .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address)).ReverseMap();
         }
     }
 }

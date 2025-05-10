@@ -36,8 +36,8 @@ namespace SAWA.API.Controllers.V1
                 {
                     return BadRequest(ResponseAPI<string>.Error("No photos provided."));
                 }
-
-                await _unitOfWork.postRepository.CreatePostAsync(dto);
+                var CharityId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                await _unitOfWork.postRepository.CreatePostAsync(dto, CharityId);
                 return Ok(ResponseAPI<string>.Success("Post created successfully."));
             }
             catch (Exception ex)

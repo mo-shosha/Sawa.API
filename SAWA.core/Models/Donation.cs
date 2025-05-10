@@ -29,7 +29,9 @@ namespace SAWA.core.Models
         public DonationType Type { get; set; }
         public DonationStatus Status { get; set; }
         public DateTime CreatedAt { get; set; }
-        public int Amount { get; set; }
+        public int? Amount { get; set; }
+        public string? StripeSessionId { get; set; }
+
 
         // Data for donor to receive product, not required if monetary
         public string? Address { get; set; }

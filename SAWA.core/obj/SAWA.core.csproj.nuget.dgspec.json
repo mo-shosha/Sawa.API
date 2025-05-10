@@ -98,6 +98,10 @@
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[48.1.0, )"
             }
           },
           "imports": [

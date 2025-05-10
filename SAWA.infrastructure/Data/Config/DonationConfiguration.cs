@@ -20,8 +20,8 @@ namespace SAWA.infrastructure.Data.Config
             builder.Property(d => d.Description)
                    .HasMaxLength(1000);
 
-            builder.Property(d => d.Amount)
-                   .IsRequired();
+            builder.Property(d => d.Amount);
+
             builder.Property(d => d.Address)
                    .HasMaxLength(500)
                    .IsRequired(false);

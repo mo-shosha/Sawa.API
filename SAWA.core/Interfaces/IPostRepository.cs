@@ -10,7 +10,7 @@ namespace SAWA.core.Interfaces
 {
     public interface IPostRepository:IGenericRepository<Post>
     {
-        Task CreatePostAsync(PostCreateDto model);
+        Task CreatePostAsync(PostCreateDto model,string CharityId);
         Task<List<PostDto>> GetAllPostsWithPhotosAndCommentsAsync();
         Task<PostDto> GetPostWithPhotosAndCommentsAsync(int id);
         Task<List<PostDto>> GetCharityPostsWithPhotosAndCommentsAsync(string UserName);

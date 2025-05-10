@@ -2,6 +2,7 @@
 using SAWA.core.DTO;
 using SAWA.core.IServices;
 using SAWA.API.Healper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SAWA.API.Controllers.V1
 {
@@ -42,7 +43,7 @@ namespace SAWA.API.Controllers.V1
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred during login.");
-                return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.Message}", 500));
+                return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.InnerException?.Message ?? ex.Message}", 500));
             }
         }
 
@@ -83,7 +84,7 @@ namespace SAWA.API.Controllers.V1
                 if (result == null || result != "Success")
                 {
                     _logger.LogWarning("Error occurred while registering charity: {CharityName}", model.CharityName);
-                    return BadRequest(ResponseAPI<string>.Error("Error registering charity. Please check your details and try again."));
+                    return BadRequest(ResponseAPI<string>.Error($"Error registering charity. {result}"));
                 }
 
                 _logger.LogInformation("Charity registered successfully: {CharityName}", model.CharityName);
@@ -92,7 +93,7 @@ namespace SAWA.API.Controllers.V1
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred during charity registration.");
-                return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.Message}", 500));
+                return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.InnerException?.Message ?? ex.Message}", 500));
             }
         }
 
@@ -111,7 +112,7 @@ namespace SAWA.API.Controllers.V1
                 if (result == null || result != "Success")
                 {
                     _logger.LogWarning("Error occurred while registering user: {Email}", model.Email);
-                    return BadRequest(ResponseAPI<string>.Error("Error registering user. Please check your details and try again."));
+                    return BadRequest(ResponseAPI<string>.Error($"Error registering charity. {result}"));
                 }
 
                 _logger.LogInformation("User registered successfully: {Email}", model.Email);
@@ -120,7 +121,7 @@ namespace SAWA.API.Controllers.V1
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred during user registration.");
-                return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.Message}", 500));
+                return StatusCode(500, ResponseAPI<string>.Error($"Server error: {ex.InnerException?.Message ?? ex.Message}", 500));
             }
         }
 
@@ -155,9 +156,44 @@ namespace SAWA.API.Controllers.V1
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred during email confirmation.");
-                return BadRequest(ResponseAPI<string>.Error(ex.Message));
+                return BadRequest(ResponseAPI<string>.Error(ex.InnerException?.Message ?? ex.Message));
             }
         }
+
+        [Authorize]
+        [HttpGet("me")]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            try
+            {
+                var user = await _authService.GetCurrentUserAsync(User);
+                if (user == null)
+                    return NotFound(ResponseAPI<string>.Error("User not found."));
+
+                return Ok(ResponseAPI<object>.Success(user, "Current user retrieved successfully."));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Get current user failed");
+                return StatusCode(500, ResponseAPI<string>.Error(ex.InnerException?.Message ?? ex.Message, 500));
+            }
+        }
+
+        [HttpGet("charities")]
+        public async Task<IActionResult> GetAllCharities()
+        {
+            try
+            {
+                var charities = await _authService.GetAllCharitiesAsync();
+                return Ok(ResponseAPI<object>.Success(charities, "Charities retrieved successfully."));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Get all charities failed");
+                return StatusCode(500, ResponseAPI<string>.Error(ex.InnerException?.Message ?? ex.Message, 500));
+            }
+        }
+
     }
 }
 

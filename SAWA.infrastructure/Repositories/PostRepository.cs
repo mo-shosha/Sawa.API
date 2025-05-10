@@ -25,11 +25,11 @@ namespace SAWA.infrastructure.Repositories
             _fileManagementService = fileManagementService;
         }
 
-        public async Task CreatePostAsync(PostCreateDto model)
+        public async Task CreatePostAsync(PostCreateDto model,string CharityId)
         {
             var post = _mapper.Map<Post>(model);
             post.CreatedAt = DateTime.Now;
-            post.CharityId = "9c3780a8-a047-41e1-8fe9-88fe63232b71"; 
+            post.CharityId = CharityId; 
             await _db.Posts.AddAsync(post);
             await _db.SaveChangesAsync(); 
             if (model.Photos != null && model.Photos.Any())

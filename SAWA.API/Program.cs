@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using SAWA.API.Healper;
 using SAWA.API.Middleware;
+using SAWA.core.DTO;
 using SAWA.core.Interfaces;
 using SAWA.core.IServices;
 using SAWA.core.Models;
@@ -9,6 +11,7 @@ using SAWA.infrastructure.Data;
 using SAWA.infrastructure.Repositories;
 using SAWA.infrastructure.Services;
 using Serilog;
+using Stripe;
 
 
 namespace SAWA.API
@@ -26,6 +29,10 @@ namespace SAWA.API
             builder.Host.UseSerilog();
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
             // Add CORS policy
             builder.Services.AddCors(options =>
@@ -48,6 +55,7 @@ namespace SAWA.API
             builder.Services.AddScoped<IFileManagementService, FileManagementService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IEmailServices, EmailServices>();
+            builder.Services.AddScoped<IStripeService, StripeService>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
@@ -86,8 +94,11 @@ namespace SAWA.API
 
             app.UseStaticFiles();
 
+            app.UseCors("CORSPolicy");
+
             app.UseAuthentication();
             app.UseAuthorization();
+
 
             // Map controllers to routes
             app.MapControllers();
