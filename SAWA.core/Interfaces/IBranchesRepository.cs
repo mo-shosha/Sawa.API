@@ -12,6 +12,7 @@ namespace SAWA.core.Interfaces
     {
         Task CreateBranchAsync(BranchCreateDto model, string CharityId);
         Task<IEnumerable<BranchDto>> GetBranchesWithPhotosAsync();
+        Task<IEnumerable<BranchDto>> GetCharitybranchsAsync(string CharityId);
         Task UpdateBranchAsync(int branchId, BranchUpdateDto model);
         Task<bool> DeleteBrachAsync(int id);
 

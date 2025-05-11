@@ -133,5 +133,40 @@ namespace SAWA.core.DTO
 
     }
 
+    public record UpdateUserRoleDto
+    {
+        public string UserId { get; set; }
+        public string NewRole { get; set; }
+    }
 
+    public record CharityReviewDto
+    {
+        public string Id { get; set; }
+        public string CharityName { get; set; }
+        public string Description { get; set; }
+
+        public string DocumentURL { get; set; }
+
+        public string Status { get; set; }
+        public DateTime CreateAt { get; set; }
+        public string Email { get; set; }
+    }
+
+    public record UserDto
+    {
+        public string Id { get; set; }
+        public string FullName { get; set; }
+        public DateTime CreateAt { get; set; }
+        public string Email { get; set; }
+    }
+
+    public record CharityInfoDto
+    {
+        public string CharityName { get; set; }
+        public string Address { get; set; }
+        public string ProfilePhotoURL { get; set; }
+        public string WallpaperPhotoUrl { get; init; }
+        public string Description { get; set; }
+        public string Email { get; set; }
+    }
 }

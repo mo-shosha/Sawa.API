@@ -25,6 +25,17 @@ namespace SAWA.core.IServices
 
         Task<AppUserDto> GetCurrentUserAsync(ClaimsPrincipal user);
         Task<List<CharityDto>> GetAllCharitiesAsync();
+        Task<AppUser> GetCharityByUserName(string UserName);
+        Task<CharityInfoDto> GetCharityByUserNameAsync(string UserName);
 
+        #region Amin
+        Task<IEnumerable<CharityReviewDto>> GetPendingCharitiesAsync();
+        Task<IEnumerable<CharityReviewDto>> GetAllCharitiesAsyncForAdmin();
+        Task<bool> AcceptCharityAsync(string id);
+        Task<IEnumerable<UserDto>> GetAllUsersAsync();
+        Task<bool> DeleteUserAsync(string id);
+        Task<bool> UpdateUserRoleAsync(UpdateUserRoleDto dto);
+
+        #endregion
     }
 }

@@ -179,20 +179,7 @@ namespace SAWA.API.Controllers.V1
             }
         }
 
-        [HttpGet("charities")]
-        public async Task<IActionResult> GetAllCharities()
-        {
-            try
-            {
-                var charities = await _authService.GetAllCharitiesAsync();
-                return Ok(ResponseAPI<object>.Success(charities, "Charities retrieved successfully."));
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Get all charities failed");
-                return StatusCode(500, ResponseAPI<string>.Error(ex.InnerException?.Message ?? ex.Message, 500));
-            }
-        }
+        
 
     }
 }

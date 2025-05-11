@@ -56,7 +56,6 @@ E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Mic
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Microsoft.IdentityModel.Tokens.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Microsoft.OpenApi.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Microsoft.SqlServer.Server.dll
-E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Microsoft.Win32.SystemEvents.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Mono.TextTemplating.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Newtonsoft.Json.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Swashbuckle.AspNetCore.Swagger.dll
@@ -70,7 +69,6 @@ E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Sys
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Composition.Runtime.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Composition.TypedParts.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Configuration.ConfigurationManager.dll
-E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Drawing.Common.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.IdentityModel.Tokens.Jwt.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Management.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Memory.Data.dll
@@ -78,8 +76,6 @@ E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Sys
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Security.Cryptography.Pkcs.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Security.Cryptography.ProtectedData.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Security.Cryptography.Xml.dll
-E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Security.Permissions.dll
-E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\System.Windows.Extensions.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\cs\Microsoft.CodeAnalysis.resources.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\de\Microsoft.CodeAnalysis.resources.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\es\Microsoft.CodeAnalysis.resources.dll
@@ -172,3 +168,4 @@ E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Ser
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Sinks.Console.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Sinks.Debug.dll
 E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Serilog.Sinks.File.dll
+E:\projects in back\Advansed_SE\SAWA.API\SAWA.API\bin\Release\net8.0\win-x86\Stripe.net.dll

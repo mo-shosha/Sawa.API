@@ -39,10 +39,28 @@ namespace SAWA.API.Mapping
                 .ForMember(dest => dest.WallpaperPhotoURL, opt => opt.Ignore()).ReverseMap();
 
             CreateMap<AppUser, CharityDto>()
-            .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
-            .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.FullName))  
-            .ForMember(dest => dest.PhotoUrl, opt => opt.MapFrom(src => src.ProfilePhotoURL))
-            .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address)).ReverseMap();
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
+                .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.FullName))  
+                .ForMember(dest => dest.PhotoUrl, opt => opt.MapFrom(src => src.ProfilePhotoURL))
+                .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address)).ReverseMap();
+
+            CreateMap<AppUser, CharityReviewDto>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.FullName))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+                .ForMember(dest => dest.Status,opt => opt.MapFrom(src => src.IsApproved.HasValue && src.IsApproved.Value ? "Approved" : "Pending"))
+                .ForMember(dest => dest.DocumentURL, opt => opt.MapFrom(src => src.DocumentURL)).ReverseMap();
+
+            CreateMap<AppUser, CharityInfoDto>()
+                .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.FullName))
+                .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address))
+                .ForMember(dest => dest.ProfilePhotoURL, opt => opt.MapFrom(src => src.ProfilePhotoURL))
+                .ForMember(dest => dest.WallpaperPhotoUrl, opt => opt.MapFrom(src => src.WallpaperPhotoURL))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email));
+
+            CreateMap<AppUser, UserDto>().ReverseMap();
         }
     }
 }

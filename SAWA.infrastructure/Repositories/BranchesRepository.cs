@@ -85,7 +85,16 @@ namespace SAWA.infrastructure.Repositories
             return _mapper.Map<List<BranchDto>>(branches);
         }
 
+        public async Task<IEnumerable<BranchDto>> GetCharitybranchsAsync(string CharityId)
+        {
+            var branches = await _db.Branches
+                .Include(b => b.Photos)
+                .Include(b => b.Charity)
+                .Where(b => b.CharityId == CharityId)
+                .ToListAsync();
 
+            return _mapper.Map<List<BranchDto>>(branches);
+        }
 
         public async Task UpdateBranchAsync(int branchId, BranchUpdateDto model)
         {

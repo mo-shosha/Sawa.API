@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\Images\\HelpRequest\\2efaed86-2118-471a-a3ef-546b3932eee1.png"
     },
     {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\44d69971-a7a5-4d93-a122-8d4aa2e59ea8.jpg",
+      "PackagePath": "staticwebassets\\Images\\HelpRequest\\44d69971-a7a5-4d93-a122-8d4aa2e59ea8.jpg"
+    },
+    {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\HelpRequest\\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg",
       "PackagePath": "staticwebassets\\Images\\HelpRequest\\5c92af93-8afd-4809-bc22-6b0a2dd2ae96.jpg"
     },
@@ -115,10 +119,6 @@
     {
       "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Images\\string\\32499203-a207-49a2-bc49-f25866c6619b.jpg",
       "PackagePath": "staticwebassets\\Images\\string\\32499203-a207-49a2-bc49-f25866c6619b.jpg"
-    },
-    {
-      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250510.txt",
-      "PackagePath": "staticwebassets\\Logs\\log-20250510.txt"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.SAWA.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

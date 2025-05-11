@@ -30,6 +30,7 @@ namespace SAWA.infrastructure.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
         private readonly IEmailServices _emailService;
+
         public AuthService(
             UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager,
@@ -318,6 +319,98 @@ namespace SAWA.infrastructure.Services
             return _mapper.Map<List<CharityDto>>(charityUsers);
         }
 
+        public async Task<AppUser> GetCharityByUserName(string UserName)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == UserName);
+            return user;
+        }
 
+        public async Task<CharityInfoDto> GetCharityByUserNameAsync(string UserName)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == UserName);
+
+            if (user == null)
+                return null;
+
+            var charityDto = _mapper.Map<CharityInfoDto>(user);
+            return charityDto;
+        }
+
+
+        #region Amin
+        public async Task<IEnumerable<CharityReviewDto>> GetPendingCharitiesAsync()
+        {
+            var charities = await _userManager.GetUsersInRoleAsync("Charity");
+            var pendingCharities = charities
+                .Where(c => c.IsApproved==false)
+                .ToList();
+
+            return _mapper.Map<IEnumerable<CharityReviewDto>>(pendingCharities);
+        }
+
+        public async Task<IEnumerable<CharityReviewDto>> GetAllCharitiesAsyncForAdmin()
+        {
+            var charities = await _userManager.GetUsersInRoleAsync("Charity");
+            var pendingCharities = charities
+                .ToList();
+
+            return _mapper.Map<IEnumerable<CharityReviewDto>>(pendingCharities);
+        }
+
+        public async Task<bool> AcceptCharityAsync( string id)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == id);
+
+            if (user == null || !await _userManager.IsInRoleAsync(user, "Charity"))
+                return false;
+
+            user.IsApproved = true;
+            await _userManager.UpdateAsync(user);
+            await _unitOfWork.SaveAsync();
+            return true;
+        }
+
+
+        public async Task<IEnumerable<UserDto>> GetAllUsersAsync()
+        {
+            var users = await _userManager.GetUsersInRoleAsync("User");
+            return _mapper.Map<IEnumerable<UserDto>>(users);
+        }
+
+        public async Task<bool> DeleteUserAsync(string id)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == id);
+
+            if (user == null )
+                return false;
+
+            await _userManager.DeleteAsync(user);
+            await _unitOfWork.SaveAsync();
+            return true;
+        }
+
+        public async Task<bool> UpdateUserRoleAsync(UpdateUserRoleDto dto)
+        {
+            var user = await _userManager.FindByIdAsync(dto.UserId);
+            if (user == null)
+                return false;
+
+            var currentRoles = await _userManager.GetRolesAsync(user);
+            var removeResult = await _userManager.RemoveFromRolesAsync(user, currentRoles);
+
+            if (!removeResult.Succeeded)
+                return false;
+
+            if (!await _roleManager.RoleExistsAsync(dto.NewRole))
+            {
+                   return false;
+            }
+
+            var addResult = await _userManager.AddToRoleAsync(user, dto.NewRole);
+            return addResult.Succeeded;
+        }
+
+
+        #endregion
     }
 }
