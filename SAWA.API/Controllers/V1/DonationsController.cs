@@ -59,7 +59,7 @@ namespace SAWA.API.Controllers.V1
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
             }
         }
 
@@ -79,7 +79,7 @@ namespace SAWA.API.Controllers.V1
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred while submitting the item donation: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred while submitting the item donation: {ex.Message}", 500));
             }
         }
 
@@ -95,11 +95,15 @@ namespace SAWA.API.Controllers.V1
             try
             {
                 var donations = await _unitOfWork.donationRepository.GetDonationsByCharityIdAsync(charityId);
+                if (donations == null)
+                {
+                    return NoContent();
+                }
                 return Ok(ResponseAPI<IEnumerable<DonationDto>>.Success(donations, "Charity donations retrieved successfully."));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
             }
         }
 
@@ -115,11 +119,15 @@ namespace SAWA.API.Controllers.V1
             try
             {
                 var donations = await _unitOfWork.donationRepository.GetDonationsByUserIdAsync(userId);
+                if (donations == null)
+                {
+                    return NoContent();
+                }
                 return Ok(ResponseAPI<IEnumerable<DonationDto>>.Success(donations, "User donations retrieved successfully."));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
             }
         }
 

@@ -10,6 +10,6 @@ namespace SAWA.core.Interfaces
 {
     public interface ICommentRepository:IGenericRepository<Comment>
     {
-        Task<string> CreateCommentAsync(CommentCreateDto model);
+        Task<string> CreateCommentAsync(CommentCreateDto model,string UserId);
     }
 }

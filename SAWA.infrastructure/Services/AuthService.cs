@@ -111,6 +111,18 @@ namespace SAWA.infrastructure.Services
                 {
                     return "Error: The charity name already exists. Please choose a different name.";
                 }
+
+                if (await _userManager.FindByEmailAsync(model.Email) != null)
+                {
+                    return "Error: The email address is already associated with another account.";
+                }
+
+                //var existingUserWithPhone = _userManager.Users.FirstOrDefault(u => u.PhoneNumber == model.PhoneNumber);
+                //if (!string.IsNullOrEmpty(model.PhoneNumber) && existingUserWithPhone != null)
+                //{
+                //    return "Error: The phone number is already associated with another account.";
+                //}
+
                 if (model.Document != null)
                 {
                     newCharity.DocumentURL = await _fileManagementService.AddImagesAsync(model.Document, model.CharityName);
@@ -144,6 +156,54 @@ namespace SAWA.infrastructure.Services
             }
         }
 
+        public async Task<bool> UpdateProfileAsync(UserUpdateDto model, string UserId)
+        {
+            var user = await _userManager.FindByIdAsync(UserId);
+            if (user == null) return false;
+
+            if (model.ProfilePhoto != null)
+            {
+                user.ProfilePhotoURL = await _fileManagementService.AddImagesAsync(model.ProfilePhoto, user.FullName);
+            }
+
+            if (model.WallpaperPhoto != null)
+            {
+                user.WallpaperPhotoURL = await _fileManagementService.AddImagesAsync(model.WallpaperPhoto, user.FullName);
+            }
+
+            if (!string.IsNullOrEmpty(model.Email) && user.Email != model.Email)
+            {
+                var emailExists = await _userManager.FindByEmailAsync(model.Email);
+                if (emailExists != null && emailExists.Id != UserId)
+                {
+                    return false;
+                }
+
+                user.Email = model.Email;
+               
+            }
+
+            if (!string.IsNullOrEmpty(model.Phone) && user.PhoneNumber != model.Phone)
+            {
+                user.PhoneNumber = model.Phone;
+
+            }
+
+            if (!string.IsNullOrEmpty(model.Adress) && user.Address != model.Adress)
+            {
+                user.Address = model.Adress;
+
+            }
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+            {
+                return false;
+            }
+
+            await _unitOfWork.SaveAsync();
+            return true;
+        }
+
 
         public async Task<string> RegisterUserAsync(UserRegisterDto model)
         {
@@ -154,6 +214,17 @@ namespace SAWA.infrastructure.Services
                 {
                     return "Error: The username already exists. Please choose a different username.";
                 }
+
+                if (await _userManager.FindByEmailAsync(model.Email) != null)
+                {
+                    return "Error: The email address is already associated with another account.";
+                }
+
+                //var existingUserWithPhone = _userManager.Users.FirstOrDefault(u => u.PhoneNumber == model.PhoneNumber);
+                //if (!string.IsNullOrEmpty(model.PhoneNumber) && existingUserWithPhone != null)
+                //{
+                //    return "Error: The phone number is already associated with another account.";
+                //}
                 //if (model.ProfilePhoto != null)
                 //{
                 //    newUser.ProfilePhotoURL = await _fileManagementService.AddImagesAsync(model.ProfilePhoto, newUser.FullName);
@@ -348,13 +419,20 @@ namespace SAWA.infrastructure.Services
             return _mapper.Map<IEnumerable<CharityReviewDto>>(pendingCharities);
         }
 
-        public async Task<IEnumerable<CharityReviewDto>> GetAllCharitiesAsyncForAdmin()
+        public async Task<IEnumerable<CharityReviewDto>> GetAllCharitiesAsyncForAdmin(string status = null)
         {
             var charities = await _userManager.GetUsersInRoleAsync("Charity");
-            var pendingCharities = charities
-                .ToList();
+            var filteredCharities = charities.AsQueryable();
 
-            return _mapper.Map<IEnumerable<CharityReviewDto>>(pendingCharities);
+            if (!string.IsNullOrEmpty(status))
+            {
+                if (status == "Pending") filteredCharities = filteredCharities.Where(c => c.IsApproved == false);
+                else if(status== "Approved ") filteredCharities = filteredCharities.Where(c => c.IsApproved == true);
+                
+            }
+
+            var result = filteredCharities.ToList();
+            return _mapper.Map<IEnumerable<CharityReviewDto>>(result);
         }
 
         public async Task<bool> AcceptCharityAsync( string id)
@@ -409,6 +487,9 @@ namespace SAWA.infrastructure.Services
             var addResult = await _userManager.AddToRoleAsync(user, dto.NewRole);
             return addResult.Succeeded;
         }
+
+
+
 
 
         #endregion

@@ -17,6 +17,9 @@ public class CommentController : ControllerBase
         _unitOfWork = unitOfWork;
     }
 
+    private string GetUserId() => User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+    [Authorize(Roles = "user")]
     [HttpPost("CreateComment")]
     public async Task<IActionResult> CreateComment([FromForm] CommentCreateDto model)
     {
@@ -27,14 +30,13 @@ public class CommentController : ControllerBase
                 return BadRequest(ModelState);
             }
 
-            string userId = "6221b853-1a78-4028-9e97-e4bf5a230b3d";
-            model.UserId = userId;
+            string userId = GetUserId();
             var post = await _unitOfWork.postRepository.GetPostWithPhotosAndCommentsAsync(model.PostId);
             if (post == null)
             {
                 return BadRequest("post not found");
             }
-            var result = await _unitOfWork.CommentRepository.CreateCommentAsync(model);
+            var result = await _unitOfWork.CommentRepository.CreateCommentAsync(model, userId);
 
             if (result != "Success")
             {
@@ -45,7 +47,7 @@ public class CommentController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(500, new { Message = "Internal Server Error", Error = ex.Message });
+            return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
         }
 
     }
@@ -64,24 +66,24 @@ public class CommentController : ControllerBase
             if (comment == null)
                 return NotFound(ResponseAPI<string>.Error("Post not found."));
 
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var userId = GetUserId();
             var roles = User.FindAll(ClaimTypes.Role).Select(c => c.Value).ToList();
 
-            if (comment.UserId != userId || !roles.Contains("admin"))
+            if (comment.UserId != userId && !roles.Contains("admin"))
             {
-                return StatusCode(403, ResponseAPI<string>.Error("You are not allowed to delete this post."));
+                return StatusCode(403, ResponseAPI<string>.Error("You are not allowed to delete this comment.",403));
             }
             await _unitOfWork.CommentRepository.DeleteAsync(id);
             return Ok(ResponseAPI<string>.Success("Comment deleted successfully."));
         }
         catch (Exception ex)
         {
-            return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+            return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
         }
     }
 
 
-    [Authorize]
+    [Authorize(Roles = "user")]
     [HttpPut("EditComment/{id:int}")]
     public async Task<IActionResult> EditComment(CommentUpdateDto model, int id)
     {
@@ -114,7 +116,7 @@ public class CommentController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+            return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
         }
     }
 

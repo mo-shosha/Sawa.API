@@ -22,7 +22,6 @@ namespace SAWA.core.DTO
         [MaxLength(1000)]
         public string Content { get; set; }
         public int PostId { get; set; }
-        public string UserId { get; set; }
     }
     public record CommentUpdateDto
     {

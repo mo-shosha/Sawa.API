@@ -10,7 +10,7 @@ namespace SAWA.API.Middleware
         private readonly RequestDelegate _next;
         private readonly IMemoryCache _memoryCache;
         private readonly TimeSpan _rateLimitWindow = TimeSpan.FromSeconds(30);
-        private const int _requestLimit = 8;
+        private const int _requestLimit = 80;
 
         public ExceptionMiddleware(RequestDelegate next, IMemoryCache memoryCache)
         {

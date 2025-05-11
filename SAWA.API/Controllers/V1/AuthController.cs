@@ -3,6 +3,7 @@ using SAWA.core.DTO;
 using SAWA.core.IServices;
 using SAWA.API.Healper;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace SAWA.API.Controllers.V1
 {
@@ -88,7 +89,7 @@ namespace SAWA.API.Controllers.V1
                 }
 
                 _logger.LogInformation("Charity registered successfully: {CharityName}", model.CharityName);
-                return Ok(ResponseAPI<string>.Success(null, "Charity registered successfully."));
+                return Ok(ResponseAPI<string>.Success("Charity registered successfully."));
             }
             catch (Exception ex)
             {
@@ -168,7 +169,7 @@ namespace SAWA.API.Controllers.V1
             {
                 var user = await _authService.GetCurrentUserAsync(User);
                 if (user == null)
-                    return NotFound(ResponseAPI<string>.Error("User not found."));
+                    return NotFound(ResponseAPI<string>.Error("User not found.",404));
 
                 return Ok(ResponseAPI<object>.Success(user, "Current user retrieved successfully."));
             }
@@ -179,8 +180,26 @@ namespace SAWA.API.Controllers.V1
             }
         }
 
-        
+        [Authorize]
+        [HttpPut("update-profile")]
+        public async Task<IActionResult> UpdateProfile([FromBody] UserUpdateDto model)
+        {
+            try
+            {
+                var UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var result = await _authService.UpdateProfileAsync(model, UserId);
+                if (!result)
+                {
+                    return BadRequest(ResponseAPI<string>.Error("Failed to update profile. Please check your input or try again."));
+                }
+                return Ok(ResponseAPI<string>.Success("Profile updated successfully."));
+            }
+            catch (Exception ex)
+            {
 
+                return StatusCode(500, ResponseAPI<string>.Error(ex.InnerException?.Message ?? ex.Message, 500));
+            }
+        }
     }
 }
 

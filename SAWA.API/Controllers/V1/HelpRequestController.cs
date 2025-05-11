@@ -46,7 +46,7 @@ namespace SAWA.API.Controllers.V1
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.InnerException?.Message ?? ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.InnerException?.Message ?? ex.Message}",500));
             }
 
         }
@@ -90,7 +90,7 @@ namespace SAWA.API.Controllers.V1
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
             }
         }
 
@@ -106,11 +106,15 @@ namespace SAWA.API.Controllers.V1
                     return Unauthorized(ResponseAPI<string>.Error("Invalid charity token."));
 
                 var requests = await _unitOfWork.helpRequestRepository.GetAllCharityHelpRequest(charityId);
+                if (requests == null)
+                {
+                    return  NoContent();
+                }
                 return Ok(ResponseAPI<IEnumerable<HelpRequestCharityResponse>>.Success(requests, "Charity help requests retrieved successfully."));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.InnerException?.Message ?? ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.InnerException?.Message ?? ex.Message}",500));
             }
         }
 
@@ -125,11 +129,15 @@ namespace SAWA.API.Controllers.V1
                     return Unauthorized(ResponseAPI<string>.Error("Invalid user token."));
 
                 var requests = await _unitOfWork.helpRequestRepository.GetAllUserHelpRequest(userId);
+                if (requests == null)
+                {
+                    return NoContent();
+                }
                 return Ok(ResponseAPI<IEnumerable<HelpRequestUserResponse>>.Success(requests, "User help requests retrieved successfully."));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.InnerException?.Message ?? ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.InnerException?.Message ?? ex.Message}", 500));
             }
         }
 

@@ -42,7 +42,7 @@ namespace SAWA.API.Controllers.V1
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}",500));
             }
         }
 
@@ -60,7 +60,7 @@ namespace SAWA.API.Controllers.V1
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
             }
         }
 
@@ -83,7 +83,7 @@ namespace SAWA.API.Controllers.V1
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
             }
         }
 
@@ -120,7 +120,7 @@ namespace SAWA.API.Controllers.V1
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
             }
         }
 
@@ -139,14 +139,14 @@ namespace SAWA.API.Controllers.V1
 
                 if (posts == null || !posts.Any())
                 {
-                    return NotFound(ResponseAPI<string>.Error($"No posts found for charity with username: {username}"));
+                    return NoContent();
                 }
 
                 return Ok(ResponseAPI<IEnumerable<PostDto>>.Success(posts, "Posts retrieved successfully."));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}"));
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
             }
         }
 

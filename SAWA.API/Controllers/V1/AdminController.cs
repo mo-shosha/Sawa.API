@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SAWA.API.Healper;
 using SAWA.core.DTO;
 using SAWA.core.IServices;
+using SAWA.core.Models;
 
 namespace SAWA.API.Controllers.V1
 {
@@ -18,27 +19,31 @@ namespace SAWA.API.Controllers.V1
             _adminService = adminService;
         }
 
-        [HttpGet("pending-charities")]
-        public async Task<IActionResult> GetPendingCharities()
-        {
-            try
-            {
-                var result = await _adminService.GetPendingCharitiesAsync();
-                return Ok(ResponseAPI<object>.Success(result));
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ResponseAPI<string>.Error(ex.Message));
-            }
-        }
+        //[HttpGet("pending-charities")]
+        //public async Task<IActionResult> GetPendingCharities()
+        //{
+        //    try
+        //    {
+        //        var result = await _adminService.GetPendingCharitiesAsync();
+        //        return Ok(ResponseAPI<object>.Success(result));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, ResponseAPI<string>.Error(ex.Message));
+        //    }
+        //}
 
 
         [HttpGet("charities")]
-        public async Task<IActionResult> GetAllCharities()
+        public async Task<IActionResult> GetAllCharities([FromQuery] string status)
         {
             try
             {
-                var result = await _adminService.GetAllCharitiesAsyncForAdmin();
+                var result = await _adminService.GetAllCharitiesAsyncForAdmin(status);
+                if (result == null)
+                {
+                    return NoContent();
+                }
                 return Ok(ResponseAPI<object>.Success(result));
             }
             catch (Exception ex)
@@ -73,6 +78,10 @@ namespace SAWA.API.Controllers.V1
             try
             {
                 var users = await _adminService.GetAllUsersAsync();
+                if (users == null)
+                {
+                    return NoContent();
+                }
                 return Ok(ResponseAPI<object>.Success(users));
             }
             catch (Exception ex)

@@ -171,4 +171,14 @@ namespace SAWA.core.DTO
         public string UserName { get; set; }
         public string Phone { get; set; }
     }
+
+    public record UserUpdateDto
+    {
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Adress { get; set; }
+        public IFormFile? WallpaperPhoto { get; set; }
+        public IFormFile? ProfilePhoto { get; set; }
+
+    }
 }

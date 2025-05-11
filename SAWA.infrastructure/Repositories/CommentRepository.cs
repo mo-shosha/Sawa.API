@@ -24,11 +24,12 @@ namespace SAWA.infrastructure.Repositories
             _fileManagementService = fileManagementService;
         }
 
-        public async Task<string> CreateCommentAsync(CommentCreateDto model)
+        public async Task<string> CreateCommentAsync(CommentCreateDto model,string UserId)
         {
             try
             {
                 var comment = _mapper.Map<Comment>(model);
+                comment.UserId = UserId;
                 comment.CreatedAt = DateTime.UtcNow;
                 await _db.Comments.AddAsync(comment);
                 await _db.SaveChangesAsync();

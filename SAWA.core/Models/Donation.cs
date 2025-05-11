@@ -25,12 +25,11 @@ namespace SAWA.core.Models
         public AppUser User { get; set; } // The donor
         public string CharityId { get; set; }
         public AppUser Charity { get; set; } // The charity recipient
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public DonationType Type { get; set; }
         public DonationStatus Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public int? Amount { get; set; }
-        public string? StripeSessionId { get; set; }
 
 
         // Data for donor to receive product, not required if monetary

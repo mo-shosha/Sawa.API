@@ -17,6 +17,7 @@ namespace SAWA.core.IServices
         Task<AppUserDto> LoginAsync(UserLoginDto model);
         Task<AppUserDto> LoginWithGoogleAsync(string email);
         Task LogoutAsync();
+        Task<bool> UpdateProfileAsync(UserUpdateDto model, string UserId);
         Task<AppUser> GetUserByEmailAsync(string email);
         Task<AppUser> GetUserByIdAsync(string userId);
         Task<IdentityResult> ConfirmEmailAsync(AppUser user, string token);
@@ -30,7 +31,7 @@ namespace SAWA.core.IServices
 
         #region Amin
         Task<IEnumerable<CharityReviewDto>> GetPendingCharitiesAsync();
-        Task<IEnumerable<CharityReviewDto>> GetAllCharitiesAsyncForAdmin();
+        Task<IEnumerable<CharityReviewDto>> GetAllCharitiesAsyncForAdmin(string status = null);
         Task<bool> AcceptCharityAsync(string id);
         Task<IEnumerable<UserDto>> GetAllUsersAsync();
         Task<bool> DeleteUserAsync(string id);

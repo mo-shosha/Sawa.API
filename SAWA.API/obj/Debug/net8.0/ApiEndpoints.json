@@ -22,17 +22,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SAWA.API.Controllers.V1.AdminController",
-    "Method": "GetPendingCharities",
-    "RelativePath": "api/V1/Admin/pending-charities",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -238,6 +234,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SAWA.API.Controllers.V1.AuthController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/V1/Auth/update-profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SAWA.core.DTO.UserUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SAWA.API.Controllers.V1.BranchController",
     "Method": "Create",
     "RelativePath": "api/V1/Branch/Create",
@@ -388,11 +400,6 @@
       {
         "Name": "PostId",
         "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "UserId",
-        "Type": "System.String",
         "IsRequired": false
       }
     ],

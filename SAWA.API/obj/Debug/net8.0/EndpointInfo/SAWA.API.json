@@ -5,22 +5,19 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/V1/Admin/pending-charities": {
-      "get": {
-        "tags": [
-          "Admin"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/V1/Admin/charities": {
       "get": {
         "tags": [
           "Admin"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -386,6 +383,37 @@
         }
       }
     },
+    "/api/V1/Auth/update-profile": {
+      "put": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/V1/Branch/Create": {
       "post": {
         "tags": [
@@ -615,9 +643,6 @@
                   "PostId": {
                     "type": "integer",
                     "format": "int32"
-                  },
-                  "UserId": {
-                    "type": "string"
                   }
                 }
               },
@@ -626,9 +651,6 @@
                   "style": "form"
                 },
                 "PostId": {
-                  "style": "form"
-                },
-                "UserId": {
                   "style": "form"
                 }
               }
@@ -1162,14 +1184,6 @@
           "amount": {
             "type": "integer",
             "format": "int32"
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "stripeSessionId": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1204,6 +1218,34 @@
             "minLength": 1,
             "type": "string",
             "format": "password"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserUpdateDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "adress": {
+            "type": "string",
+            "nullable": true
+          },
+          "wallpaperPhoto": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "profilePhoto": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
           }
         },
         "additionalProperties": false

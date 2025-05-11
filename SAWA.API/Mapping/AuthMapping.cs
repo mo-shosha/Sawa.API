@@ -63,6 +63,7 @@ namespace SAWA.API.Mapping
                 .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email));
 
             CreateMap<AppUser, UserDto>().ReverseMap();
+
         }
     }
 }
