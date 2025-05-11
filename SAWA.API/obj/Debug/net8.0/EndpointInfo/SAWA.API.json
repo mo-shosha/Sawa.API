@@ -386,7 +386,7 @@
         }
       }
     },
-    "/api/v1/Branch/Create": {
+    "/api/V1/Branch/Create": {
       "post": {
         "tags": [
           "Branch"
@@ -439,7 +439,7 @@
         }
       }
     },
-    "/api/v1/Branch/GetAll": {
+    "/api/V1/Branch/GetAll": {
       "get": {
         "tags": [
           "Branch"
@@ -451,7 +451,7 @@
         }
       }
     },
-    "/api/v1/Branch/GetCharityBranches/{UserName}": {
+    "/api/V1/Branch/GetCharityBranches/{UserName}": {
       "get": {
         "tags": [
           "Branch"
@@ -473,7 +473,7 @@
         }
       }
     },
-    "/api/v1/Branch/Update/{id}": {
+    "/api/V1/Branch/Update/{id}": {
       "put": {
         "tags": [
           "Branch"
@@ -537,7 +537,7 @@
         }
       }
     },
-    "/api/v1/Branch/Delete/{id}": {
+    "/api/V1/Branch/Delete/{id}": {
       "delete": {
         "tags": [
           "Branch"
@@ -707,7 +707,7 @@
         }
       }
     },
-    "/api/Donations/monetary": {
+    "/api/V1/Donations/monetary": {
       "post": {
         "tags": [
           "Donations"
@@ -738,7 +738,7 @@
         }
       }
     },
-    "/api/Donations/item": {
+    "/api/V1/Donations/item": {
       "post": {
         "tags": [
           "Donations"
@@ -797,7 +797,7 @@
         }
       }
     },
-    "/api/Donations/charity": {
+    "/api/V1/Donations/charity": {
       "get": {
         "tags": [
           "Donations"
@@ -809,7 +809,7 @@
         }
       }
     },
-    "/api/Donations/user": {
+    "/api/V1/Donations/user": {
       "get": {
         "tags": [
           "Donations"
@@ -935,7 +935,7 @@
         }
       }
     },
-    "/api/v1/Post/Create": {
+    "/api/V1/Post/Create": {
       "post": {
         "tags": [
           "Post"
@@ -981,7 +981,7 @@
         }
       }
     },
-    "/api/v1/Post/GetAll": {
+    "/api/V1/Post/GetAll": {
       "get": {
         "tags": [
           "Post"
@@ -993,7 +993,7 @@
         }
       }
     },
-    "/api/v1/Post/Get/{id}": {
+    "/api/V1/Post/Get/{id}": {
       "get": {
         "tags": [
           "Post"
@@ -1016,7 +1016,7 @@
         }
       }
     },
-    "/api/v1/Post/Delete/{id}": {
+    "/api/V1/Post/Delete/{id}": {
       "delete": {
         "tags": [
           "Post"
@@ -1039,7 +1039,7 @@
         }
       }
     },
-    "/api/v1/Post/charity/{username}": {
+    "/api/V1/Post/charity/{username}": {
       "get": {
         "tags": [
           "Post"

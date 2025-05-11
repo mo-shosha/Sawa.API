@@ -2461,6 +2461,88 @@
           "Value": "sha256-q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI="
         }
       ]
+    },
+    {
+      "Route": "Logs/log-20250511.rn2t8bmbrf.txt",
+      "AssetFile": "Logs/log-20250511.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15205"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t+Y1B+wbUnYJC0fNAfuhEa0MyJKBapMk9TEKLqFKZ00=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 May 2025 11:31:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rn2t8bmbrf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t+Y1B+wbUnYJC0fNAfuhEa0MyJKBapMk9TEKLqFKZ00="
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/log-20250511.txt"
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250511.txt",
+      "AssetFile": "Logs/log-20250511.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15205"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t+Y1B+wbUnYJC0fNAfuhEa0MyJKBapMk9TEKLqFKZ00=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 May 2025 11:31:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t+Y1B+wbUnYJC0fNAfuhEa0MyJKBapMk9TEKLqFKZ00="
+        }
+      ]
     }
   ]
 }

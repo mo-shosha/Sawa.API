@@ -10,7 +10,7 @@ using System.Security.Claims;
 
 namespace SAWA.API.Controllers.V1
 {
-    [Route("api/v1/[controller]")]
+    [Route("api/V1/[controller]")]
     [ApiController]
     public class PostController : ControllerBase
     {

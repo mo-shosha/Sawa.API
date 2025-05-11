@@ -55,6 +55,8 @@ namespace SAWA.API.Mapping
             CreateMap<AppUser, CharityInfoDto>()
                 .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.FullName))
                 .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address))
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
+                .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.PhoneNumber))
                 .ForMember(dest => dest.ProfilePhotoURL, opt => opt.MapFrom(src => src.ProfilePhotoURL))
                 .ForMember(dest => dest.WallpaperPhotoUrl, opt => opt.MapFrom(src => src.WallpaperPhotoURL))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))

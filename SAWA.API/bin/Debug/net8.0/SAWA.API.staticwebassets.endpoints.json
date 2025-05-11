@@ -2461,6 +2461,88 @@
           "Value": "sha256-q27aoiGChJVebNdsjKQNONYOMJYWWd6+l4vOeGwPbjI="
         }
       ]
+    },
+    {
+      "Route": "Logs/log-20250511.txt",
+      "AssetFile": "Logs/log-20250511.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11445"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WC8CVkJMfNIIqKtDTUwtKy4SDYf5P/4x0Nb2g0iqUhw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 May 2025 09:09:46 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WC8CVkJMfNIIqKtDTUwtKy4SDYf5P/4x0Nb2g0iqUhw="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250511.wesmuipwdh.txt",
+      "AssetFile": "Logs/log-20250511.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11445"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WC8CVkJMfNIIqKtDTUwtKy4SDYf5P/4x0Nb2g0iqUhw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 May 2025 09:09:46 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wesmuipwdh"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WC8CVkJMfNIIqKtDTUwtKy4SDYf5P/4x0Nb2g0iqUhw="
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/log-20250511.txt"
+        }
+      ]
     }
   ]
 }
