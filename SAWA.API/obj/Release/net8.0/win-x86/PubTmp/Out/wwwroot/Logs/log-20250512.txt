@@ -1,0 +1,280 @@
+2025-05-12 08:40:28.236 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-12 08:40:28.856 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-12 08:40:28.856 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-12 08:40:28.921 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-12 08:40:28.922 +03:00 [INF] Hosting environment: Development
+2025-05-12 08:40:28.922 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-12 08:40:59.368 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger - null null
+2025-05-12 08:40:59.927 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger - 301 0 null 567.1284ms
+2025-05-12 08:41:00.035 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-12 08:41:00.150 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 115.023ms
+2025-05-12 08:41:00.299 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/swagger-ui.css - null null
+2025-05-12 08:41:00.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/swagger-ui-bundle.js - null null
+2025-05-12 08:41:00.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/swagger-ui-standalone-preset.js - null null
+2025-05-12 08:41:00.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 08:41:00.347 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-12 08:41:00.348 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 48.2933ms
+2025-05-12 08:41:00.718 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-05-12 08:41:00.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/swagger-ui.css - 200 152034 text/css 419.6318ms
+2025-05-12 08:41:00.755 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-05-12 08:41:00.755 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 455.7631ms
+2025-05-12 08:41:00.863 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-05-12 08:41:00.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 564.0089ms
+2025-05-12 08:41:01.096 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 749.015ms
+2025-05-12 08:41:01.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-12 08:41:01.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.929ms
+2025-05-12 09:14:00.589 +03:00 [INF] Executed DbCommand (122ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-05-12 09:14:00.749 +03:00 [INF] Executed DbCommand (117ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-05-12 09:14:00.854 +03:00 [INF] Executed DbCommand (103ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-05-12 09:14:00.955 +03:00 [INF] Executed DbCommand (101ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-05-12 09:14:01.105 +03:00 [INF] Executed DbCommand (140ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-05-12 09:14:01.126 +03:00 [INF] Applying migration '20250512061316_update_report_table'.
+2025-05-12 09:14:01.420 +03:00 [INF] Executed DbCommand (110ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Reports] ADD [Reason] nvarchar(max) NOT NULL DEFAULT N'';
+2025-05-12 09:14:01.547 +03:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250512061316_update_report_table', N'8.0.15');
+2025-05-12 09:50:04.924 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-12 09:50:05.832 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-12 09:50:05.832 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-12 09:50:05.891 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-12 09:50:05.891 +03:00 [INF] Hosting environment: Development
+2025-05-12 09:50:05.891 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-12 09:50:12.341 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-12 09:50:13.350 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 1019.682ms
+2025-05-12 09:50:14.154 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 09:50:14.160 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.3291ms
+2025-05-12 09:50:14.907 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-12 09:50:16.241 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1334.7686ms
+2025-05-12 09:50:16.747 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-12 09:50:16.773 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.5546ms
+2025-05-12 10:05:24.793 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/api/V1/Post/GetAll - null null
+2025-05-12 10:05:25.583 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.PostController.GetAll (SAWA.API)'
+2025-05-12 10:05:25.623 +03:00 [INF] Route matched with {action = "GetAll", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller SAWA.API.Controllers.V1.PostController (SAWA.API).
+2025-05-12 10:05:28.476 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-05-12 10:05:30.539 +03:00 [INF] Executed DbCommand (203ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CharityId], [p].[Content], [p].[CreatedAt], [a].[Id], [p0].[Id], [p0].[BranchId], [p0].[DonationId], [p0].[HelpRequestId], [p0].[ImageUrl], [p0].[PostId], [t].[Id], [t].[Content], [t].[CreatedAt], [t].[PostId], [t].[UserId], [t].[Id0], [t].[AccessFailedCount], [t].[Address], [t].[ConcurrencyStamp], [t].[CreatedAt0], [t].[Description], [t].[DocumentURL], [t].[Email], [t].[EmailConfirmed], [t].[FullName], [t].[IsApproved], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[ProfilePhotoURL], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[WallpaperPhotoURL], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [Posts] AS [p]
+INNER JOIN [AppUsers] AS [a] ON [p].[CharityId] = [a].[Id]
+LEFT JOIN [Photos] AS [p0] ON [p].[Id] = [p0].[PostId]
+LEFT JOIN (
+    SELECT [c].[Id], [c].[Content], [c].[CreatedAt], [c].[PostId], [c].[UserId], [a0].[Id] AS [Id0], [a0].[AccessFailedCount], [a0].[Address], [a0].[ConcurrencyStamp], [a0].[CreatedAt] AS [CreatedAt0], [a0].[Description], [a0].[DocumentURL], [a0].[Email], [a0].[EmailConfirmed], [a0].[FullName], [a0].[IsApproved], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[ProfilePhotoURL], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName], [a0].[WallpaperPhotoURL]
+    FROM [Comments] AS [c]
+    INNER JOIN [AppUsers] AS [a0] ON [c].[UserId] = [a0].[Id]
+) AS [t] ON [p].[Id] = [t].[PostId]
+ORDER BY [p].[CreatedAt] DESC, [p].[Id], [a].[Id], [p0].[Id], [t].[Id]
+2025-05-12 10:05:30.871 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Collections.Generic.IEnumerable`1[[SAWA.core.DTO.PostDto, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-12 10:05:30.890 +03:00 [INF] Executed action SAWA.API.Controllers.V1.PostController.GetAll (SAWA.API) in 5262.238ms
+2025-05-12 10:05:30.891 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.PostController.GetAll (SAWA.API)'
+2025-05-12 10:05:30.903 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/api/V1/Post/GetAll - 200 null application/json; charset=utf-8 6110.3325ms
+2025-05-12 10:07:19.255 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7029/api/V1/Report/Create - application/json 61
+2025-05-12 10:07:19.282 +03:00 [INF] CORS policy execution successful.
+2025-05-12 10:07:19.323 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-12 10:07:19.351 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-12 10:07:19.355 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7029/api/V1/Report/Create - 401 0 null 99.4265ms
+2025-05-12 10:07:30.303 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Report/Create - application/json 69
+2025-05-12 10:07:30.917 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.ReportController.CreateReport (SAWA.API)'
+2025-05-12 10:07:30.965 +03:00 [INF] Route matched with {action = "CreateReport", controller = "Report"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateReport(SAWA.core.DTO.ReportCreateDto) on controller SAWA.API.Controllers.V1.ReportController (SAWA.API).
+2025-05-12 10:09:12.370 +03:00 [INF] Executed DbCommand (307ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Reports] ([CreatedAt], [Reason], [ReporterId], [TargetId], [Type])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-05-12 10:09:12.553 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SAWA.infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'ReporterId', table 'db18546.dbo.Reports'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+ClientConnectionId:d2906ebf-db63-42f6-85e9-bdd113898375
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'ReporterId', table 'db18546.dbo.Reports'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+ClientConnectionId:d2906ebf-db63-42f6-85e9-bdd113898375
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2025-05-12 10:09:28.080 +03:00 [INF] Executing ObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-12 10:09:32.675 +03:00 [INF] Executed action SAWA.API.Controllers.V1.ReportController.CreateReport (SAWA.API) in 121709.8608ms
+2025-05-12 10:09:32.676 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.ReportController.CreateReport (SAWA.API)'
+2025-05-12 10:09:32.677 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Report/Create - 500 null application/json; charset=utf-8 122374.9927ms
+2025-05-12 10:11:28.118 +03:00 [INF] User profile is available. Using 'C:\Users\dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-12 10:11:29.038 +03:00 [INF] Now listening on: https://localhost:7029
+2025-05-12 10:11:29.038 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-12 10:11:29.691 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-12 10:11:29.693 +03:00 [INF] Hosting environment: Development
+2025-05-12 10:11:29.693 +03:00 [INF] Content root path: E:\projects in back\Advansed_SE\SAWA.API\SAWA.API
+2025-05-12 10:11:30.216 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-12 10:11:30.891 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 685.7689ms
+2025-05-12 10:11:31.060 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 10:11:31.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-12 10:11:31.068 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 8.1494ms
+2025-05-12 10:11:31.165 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.0163ms
+2025-05-12 10:11:32.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-12 10:11:32.917 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.8938ms
+2025-05-12 10:12:33.870 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7029/api/V1/Report/Create - application/json 69
+2025-05-12 10:12:34.536 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.ReportController.CreateReport (SAWA.API)'
+2025-05-12 10:12:34.603 +03:00 [INF] Route matched with {action = "CreateReport", controller = "Report"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateReport(SAWA.core.DTO.ReportCreateDto) on controller SAWA.API.Controllers.V1.ReportController (SAWA.API).
+2025-05-12 10:13:10.233 +03:00 [INF] Executed DbCommand (242ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Reports] ([CreatedAt], [Reason], [ReporterId], [TargetId], [Type])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-05-12 10:13:14.433 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-12 10:13:16.296 +03:00 [INF] Executed action SAWA.API.Controllers.V1.ReportController.CreateReport (SAWA.API) in 41687.3172ms
+2025-05-12 10:13:16.296 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.ReportController.CreateReport (SAWA.API)'
+2025-05-12 10:13:21.128 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7029/api/V1/Report/Create - 200 null application/json; charset=utf-8 47258.8281ms
+2025-05-12 10:14:15.089 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/api/V1/Report/All - null null
+2025-05-12 10:14:15.102 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2025-05-12 10:14:15.110 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-12 10:14:15.110 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/api/V1/Report/All - 401 0 null 21.4174ms
+2025-05-12 10:14:24.652 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - null null
+2025-05-12 10:14:24.659 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14120: JWT is not well formed, there is only one dot (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-12 10:14:24.720 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-12 10:14:24.721 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2025-05-12 10:14:24.723 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-12 10:14:24.724 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - 401 0 null 71.6972ms
+2025-05-12 10:14:57.635 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - null null
+2025-05-12 10:14:57.656 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14120: JWT is not well formed, there is only one dot (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-12 10:14:57.657 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-12 10:14:57.657 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2025-05-12 10:14:57.658 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-12 10:14:57.658 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - 401 0 null 24.0451ms
+2025-05-12 10:15:24.265 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - null null
+2025-05-12 10:15:24.266 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14120: JWT is not well formed, there is only one dot (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-12 10:15:24.267 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-12 10:15:24.267 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2025-05-12 10:15:24.267 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-12 10:15:24.267 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - 401 0 null 2.1142ms
+2025-05-12 10:15:39.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-12 10:15:39.790 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 143.3567ms
+2025-05-12 10:15:39.809 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 10:15:39.809 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-12 10:15:39.812 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.3599ms
+2025-05-12 10:15:39.860 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.8626ms
+2025-05-12 10:15:39.981 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-12 10:15:39.994 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/favicon-32x32.png - null null
+2025-05-12 10:15:40.025 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.3053ms
+2025-05-12 10:15:40.038 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-05-12 10:15:40.039 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/favicon-32x32.png - 200 628 image/png 44.3962ms
+2025-05-12 10:15:46.325 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - null null
+2025-05-12 10:15:46.328 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14120: JWT is not well formed, there is only one dot (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-05-12 10:15:46.328 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-05-12 10:15:46.328 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.ReportController.GetAllReports (SAWA.API)'
+2025-05-12 10:15:46.340 +03:00 [INF] Route matched with {action = "GetAllReports", controller = "Report"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllReports() on controller SAWA.API.Controllers.V1.ReportController (SAWA.API).
+2025-05-12 10:15:47.450 +03:00 [INF] Executed DbCommand (271ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedAt], [r].[Reason], [r].[ReporterId], [r].[TargetId], [r].[Type], [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [Reports] AS [r]
+INNER JOIN [AppUsers] AS [a] ON [r].[ReporterId] = [a].[Id]
+2025-05-12 10:15:47.726 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Collections.Generic.IEnumerable`1[[SAWA.core.DTO.ReportDto, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-12 10:15:47.741 +03:00 [INF] Executed action SAWA.API.Controllers.V1.ReportController.GetAllReports (SAWA.API) in 1400.465ms
+2025-05-12 10:15:47.741 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.ReportController.GetAllReports (SAWA.API)'
+2025-05-12 10:15:47.743 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - 200 null application/json; charset=utf-8 1417.7957ms
+2025-05-12 10:16:42.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/index.html - null null
+2025-05-12 10:16:42.492 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/index.html - 200 null text/html;charset=utf-8 17.1101ms
+2025-05-12 10:16:42.510 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-12 10:16:42.511 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/_vs/browserLink - null null
+2025-05-12 10:16:42.512 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 1.8266ms
+2025-05-12 10:16:42.526 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.4324ms
+2025-05-12 10:16:42.658 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - null null
+2025-05-12 10:16:42.689 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.5424ms
+2025-05-12 10:16:44.955 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - null null
+2025-05-12 10:16:44.958 +03:00 [INF] Executing endpoint 'SAWA.API.Controllers.V1.ReportController.GetAllReports (SAWA.API)'
+2025-05-12 10:16:44.962 +03:00 [INF] Route matched with {action = "GetAllReports", controller = "Report"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllReports() on controller SAWA.API.Controllers.V1.ReportController (SAWA.API).
+2025-05-12 10:16:45.253 +03:00 [INF] Executed DbCommand (206ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedAt], [r].[Reason], [r].[ReporterId], [r].[TargetId], [r].[Type], [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Description], [a].[DocumentURL], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IsApproved], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfilePhotoURL], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[WallpaperPhotoURL]
+FROM [Reports] AS [r]
+INNER JOIN [AppUsers] AS [a] ON [r].[ReporterId] = [a].[Id]
+2025-05-12 10:16:45.257 +03:00 [INF] Executing OkObjectResult, writing value of type 'SAWA.API.Healper.ResponseAPI`1[[System.Collections.Generic.IEnumerable`1[[SAWA.core.DTO.ReportDto, SAWA.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-12 10:16:45.261 +03:00 [INF] Executed action SAWA.API.Controllers.V1.ReportController.GetAllReports (SAWA.API) in 298.1822ms
+2025-05-12 10:16:45.261 +03:00 [INF] Executed endpoint 'SAWA.API.Controllers.V1.ReportController.GetAllReports (SAWA.API)'
+2025-05-12 10:16:45.261 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7029/api/V1/Report/All - 200 null application/json; charset=utf-8 306.1234ms

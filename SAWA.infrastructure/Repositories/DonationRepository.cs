@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
@@ -101,7 +102,26 @@ namespace SAWA.infrastructure.Repositories
             return _mapper.Map<IEnumerable<DonationDto>>(donations);
         }
 
-        
+        public async Task<DonationDto> UpdateDonationStatusAsync(DonationUpdateStatusDto updateStatusDto)
+        {
+            var donation = _db.Donations
+                    .FirstOrDefault(d => d.Id == updateStatusDto.DonationId);
+            if (donation == null)
+            {
+                throw new KeyNotFoundException("Donation not found.");
+            }
+            if (!Enum.TryParse<DonationStatus>(updateStatusDto.NewStatus, true, out var newStatus))
+            {
+                throw new ArgumentException($"Invalid donation status: {updateStatusDto.NewStatus}");
+            }
+
+            donation.Status = newStatus;
+            _db.Donations.Update(donation);
+            await _db.SaveChangesAsync();
+
+            var result = _mapper.Map<DonationDto>(donation);
+            return result;
+        }
     }
 
 }

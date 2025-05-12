@@ -79,7 +79,7 @@ namespace SAWA.API.Controllers.V1
                 bool isCharityWhoAccepted = helpRequest.CharityId == userId;
 
                 if ((!isAdmin && !isOwner && !isCharityWhoAccepted)||
-                    isOwner && updateStatusDt.NewStatus == HelpRequestStatus.Approved)
+                    (isOwner && Enum.TryParse<HelpRequestStatus>(updateStatusDt.NewStatus, true, out var parsedStatus) && parsedStatus == HelpRequestStatus.Approved))
                 {
                     return StatusCode(403, ResponseAPI<string>.Error("You are not authorized to update this help request.", 403));
                 }

@@ -38,4 +38,15 @@ namespace SAWA.core.DTO
         public IFormFileCollection Photos { get; set; }
     }
 
+    public record PostUpdateDto
+    {
+
+        [MaxLength(1000)]
+        public string? Content { get; set; }
+
+        public IFormFileCollection? NewPhotos { get; set; }
+        public bool DeleteOldPhotos { get; set; }
+    }
+
+
 }

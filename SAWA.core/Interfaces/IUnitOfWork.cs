@@ -13,6 +13,7 @@ namespace SAWA.core.Interfaces
         public IBranchesRepository branchesRepository { get; }
         public IHelpRequestRepository helpRequestRepository { get; }
         public IDonationRepository donationRepository { get; }
+        public IReportRepository reportRepository { get; }
         public Task SaveAsync();
     }
 }

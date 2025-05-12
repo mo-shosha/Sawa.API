@@ -2463,7 +2463,7 @@
       ]
     },
     {
-      "Route": "Logs/log-20250511.iqu28urvod.txt",
+      "Route": "Logs/log-20250511.7tu7lyhde9.txt",
       "AssetFile": "Logs/log-20250511.txt",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2477,7 +2477,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "96678"
+          "Value": "101837"
         },
         {
           "Name": "Content-Type",
@@ -2485,21 +2485,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Grhqj8jydnoCoVsqLiwJQ+0HsErTrsr+grPFFe9x9oM=\""
+          "Value": "\"u+TUcZ3GsKonD3KJ8Qatnernjo8X9Uoy9VSKVoSVx5U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 11 May 2025 19:21:09 GMT"
+          "Value": "Sun, 11 May 2025 20:30:45 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "iqu28urvod"
+          "Value": "7tu7lyhde9"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Grhqj8jydnoCoVsqLiwJQ+0HsErTrsr+grPFFe9x9oM="
+          "Value": "sha256-u+TUcZ3GsKonD3KJ8Qatnernjo8X9Uoy9VSKVoSVx5U="
         },
         {
           "Name": "label",
@@ -2522,7 +2522,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "96678"
+          "Value": "101837"
         },
         {
           "Name": "Content-Type",
@@ -2530,17 +2530,99 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Grhqj8jydnoCoVsqLiwJQ+0HsErTrsr+grPFFe9x9oM=\""
+          "Value": "\"u+TUcZ3GsKonD3KJ8Qatnernjo8X9Uoy9VSKVoSVx5U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 11 May 2025 19:21:09 GMT"
+          "Value": "Sun, 11 May 2025 20:30:45 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Grhqj8jydnoCoVsqLiwJQ+0HsErTrsr+grPFFe9x9oM="
+          "Value": "sha256-u+TUcZ3GsKonD3KJ8Qatnernjo8X9Uoy9VSKVoSVx5U="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250512.9e6xjmef2r.txt",
+      "AssetFile": "Logs/log-20250512.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X7aAyQrN55zm4P6s/Mv5qUFx3Xxbyq5QK/kLz8jWJl8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 12 May 2025 07:16:45 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9e6xjmef2r"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X7aAyQrN55zm4P6s/Mv5qUFx3Xxbyq5QK/kLz8jWJl8="
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/log-20250512.txt"
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250512.txt",
+      "AssetFile": "Logs/log-20250512.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X7aAyQrN55zm4P6s/Mv5qUFx3Xxbyq5QK/kLz8jWJl8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 12 May 2025 07:16:45 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X7aAyQrN55zm4P6s/Mv5qUFx3Xxbyq5QK/kLz8jWJl8="
         }
       ]
     }

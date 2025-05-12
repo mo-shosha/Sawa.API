@@ -35,4 +35,9 @@ namespace SAWA.core.DTO
         public string Phone { get; set; }
     }
 
+    public record DonationUpdateStatusDto
+    {
+        public int DonationId { get; set; }
+        public string NewStatus { get; set; }
+    }
 }

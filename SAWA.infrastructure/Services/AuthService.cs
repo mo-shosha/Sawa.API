@@ -117,24 +117,15 @@ namespace SAWA.infrastructure.Services
                     return "Error: The email address is already associated with another account.";
                 }
 
-                //var existingUserWithPhone = _userManager.Users.FirstOrDefault(u => u.PhoneNumber == model.PhoneNumber);
-                //if (!string.IsNullOrEmpty(model.PhoneNumber) && existingUserWithPhone != null)
-                //{
-                //    return "Error: The phone number is already associated with another account.";
-                //}
 
                 if (model.Document != null)
                 {
                     newCharity.DocumentURL = await _fileManagementService.AddImagesAsync(model.Document, model.CharityName);
                 }
 
-                //if (model.WallpaperPhoto != null)
-                //{
-                //    newCharity.WallpaperPhotoURL = await _fileManagementService.AddImagesAsync(model.WallpaperPhoto, model.CharityName);
-                //}
 
                 newCharity.UserName = model.CharityName.Replace(" ", "");
-
+                newCharity.CreatedAt = DateTime.Now;
                 var result = await _userManager.CreateAsync(newCharity, model.Password);
 
                 if (!result.Succeeded)
@@ -163,11 +154,19 @@ namespace SAWA.infrastructure.Services
 
             if (model.ProfilePhoto != null)
             {
+                if (user.ProfilePhotoURL != null)
+                {
+                    _fileManagementService.DeleteImageAsync(user.ProfilePhotoURL);
+                }
                 user.ProfilePhotoURL = await _fileManagementService.AddImagesAsync(model.ProfilePhoto, user.FullName);
             }
 
             if (model.WallpaperPhoto != null)
             {
+                if (user.WallpaperPhotoURL != null)
+                {
+                    _fileManagementService.DeleteImageAsync(user.WallpaperPhotoURL);
+                }
                 user.WallpaperPhotoURL = await _fileManagementService.AddImagesAsync(model.WallpaperPhoto, user.FullName);
             }
 
@@ -220,16 +219,9 @@ namespace SAWA.infrastructure.Services
                     return "Error: The email address is already associated with another account.";
                 }
 
-                //var existingUserWithPhone = _userManager.Users.FirstOrDefault(u => u.PhoneNumber == model.PhoneNumber);
-                //if (!string.IsNullOrEmpty(model.PhoneNumber) && existingUserWithPhone != null)
-                //{
-                //    return "Error: The phone number is already associated with another account.";
-                //}
-                //if (model.ProfilePhoto != null)
-                //{
-                //    newUser.ProfilePhotoURL = await _fileManagementService.AddImagesAsync(model.ProfilePhoto, newUser.FullName);
-                //}
                 newUser.UserName = model.FullName.Replace(" ", "");
+                newUser.CreatedAt = DateTime.Now;
+
                 var result = await _userManager.CreateAsync(newUser, model.Password);
 
                 if (!result.Succeeded)
@@ -319,7 +311,14 @@ namespace SAWA.infrastructure.Services
             }
         }
 
+        public async Task<IdentityResult> ChangePasswordAsync(string userId, ChangePasswordDto dto)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+                return IdentityResult.Failed(new IdentityError { Description = "User not found." });
 
+            return await _userManager.ChangePasswordAsync(user, dto.CurrentPassword, dto.NewPassword);
+        }
         private async Task SendConfirmationEmailAsync(AppUser user)
         {
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -427,7 +426,7 @@ namespace SAWA.infrastructure.Services
             if (!string.IsNullOrEmpty(status))
             {
                 if (status == "Pending") filteredCharities = filteredCharities.Where(c => c.IsApproved == false);
-                else if(status== "Approved ") filteredCharities = filteredCharities.Where(c => c.IsApproved == true);
+                else if(status== "Approved") filteredCharities = filteredCharities.Where(c => c.IsApproved == true);
                 
             }
 

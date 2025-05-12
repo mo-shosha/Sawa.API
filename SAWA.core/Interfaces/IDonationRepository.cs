@@ -14,7 +14,7 @@ namespace SAWA.core.Interfaces
         Task AddDonationsAsync(ItemDonationRequestDto donation, string UserId);
         Task<IEnumerable<DonationDto>> GetDonationsByUserIdAsync(string userId);
         Task<IEnumerable<DonationDto>> GetDonationsByCharityIdAsync(string charityId);
-
+        Task<DonationDto> UpdateDonationStatusAsync(DonationUpdateStatusDto updateStatusDto);
     }
 
 }

@@ -242,9 +242,29 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "SAWA.core.DTO.UserUpdateDto",
-        "IsRequired": true
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Adress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WallpaperPhoto",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProfilePhoto",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -506,6 +526,22 @@
   },
   {
     "ContainingType": "SAWA.API.Controllers.V1.DonationsController",
+    "Method": "UpdateHelpRequest",
+    "RelativePath": "api/V1/Donations/UpdateHelpRequest",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateStatusDt",
+        "Type": "SAWA.core.DTO.DonationUpdateStatusDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.DonationsController",
     "Method": "GetUserDonations",
     "RelativePath": "api/V1/Donations/user",
     "HttpMethod": "GET",
@@ -663,6 +699,63 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.PostController",
+    "Method": "UpdatePost",
+    "RelativePath": "api/V1/Post/update-post/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Content",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NewPhotos",
+        "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeleteOldPhotos",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.ReportController",
+    "Method": "GetAllReports",
+    "RelativePath": "api/V1/Report/All",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.ReportController",
+    "Method": "CreateReport",
+    "RelativePath": "api/V1/Report/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportDto",
+        "Type": "SAWA.core.DTO.ReportCreateDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

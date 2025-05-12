@@ -124,6 +124,49 @@ namespace SAWA.infrastructure.Repositories
             return true;
         }
 
+        public async Task<bool> UpdatePostAsync(int id,PostUpdateDto model)
+        {
+            var post = await _db.Posts
+                .Include(p => p.Photos)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (post == null)
+                return false;
+
+            if (!string.IsNullOrWhiteSpace(model.Content))
+                post.Content = model.Content;
+
+            if (model.DeleteOldPhotos && post.Photos.Any())
+            {
+                foreach (var photo in post.Photos)
+                {
+                     _fileManagementService.DeleteImageAsync(photo.ImageUrl);
+                }
+
+                _db.Photos.RemoveRange(post.Photos);
+                post.Photos.Clear();
+            }
+
+
+            if (model.NewPhotos != null && model.NewPhotos.Any())
+            {
+                var newImageUrls = await _fileManagementService.AddImagesAsync(model.NewPhotos, "Posts");
+
+                foreach (var imageUrl in newImageUrls)
+                {
+                    post.Photos.Add(new Photo
+                    {
+                        ImageUrl = imageUrl,
+                        PostId = post.Id
+                    });
+                }
+            }
+
+            _db.Posts.Update(post);
+            await _db.SaveChangesAsync();
+            return true;
+        }
+
 
     }
 }

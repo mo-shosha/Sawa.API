@@ -33,7 +33,7 @@ namespace SAWA.core.DTO
     public record HelpRequestUpdateStatusDto
     {
         public int RequestId { get; set; }
-        public HelpRequestStatus NewStatus { get; set; }
+        public string NewStatus { get; set; }
     }
 
     public record HelpRequestResponse

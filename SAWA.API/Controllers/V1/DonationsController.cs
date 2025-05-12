@@ -132,6 +132,50 @@ namespace SAWA.API.Controllers.V1
         }
 
 
-       
+        [Authorize(Roles = "user")]
+        [HttpPut("UpdateDonation")]
+        public async Task<IActionResult> UpdateDonation([FromBody] DonationUpdateStatusDto updateStatusDt)
+        {
+            try
+            {
+                if (updateStatusDt == null)
+                    return BadRequest(ResponseAPI<string>.Error("Invalid data."));
+
+                if (updateStatusDt.DonationId <= 0)
+                    return BadRequest(ResponseAPI<string>.Error($"Invalid Id : {updateStatusDt.DonationId}."));
+
+                var userId = GetUserId();
+                var roles = User.FindAll(ClaimTypes.Role).Select(c => c.Value).ToList();
+
+                if (string.IsNullOrEmpty(userId))
+                    return Unauthorized(ResponseAPI<string>.Error("Invalid user."));
+
+                var donation = await _unitOfWork.donationRepository.GetByIdAsync(updateStatusDt.DonationId);
+                if (donation == null)
+                    return NotFound(ResponseAPI<string>.Error("Donation not found."));
+
+                bool isAdmin = roles.Contains("admin");
+                bool isOwner = donation.UserId == userId;
+                bool isCharityWhoAccepted = donation.CharityId == userId;
+                if (
+                    (!isAdmin && !isOwner && !isCharityWhoAccepted) ||
+                    (isOwner && Enum.TryParse<DonationStatus>(updateStatusDt.NewStatus, true, out var parsedStatus) && parsedStatus == DonationStatus.Approved)
+                )
+                {
+                    return StatusCode(403, ResponseAPI<string>.Error("You are not authorized to update this donation.", 403));
+                }
+
+
+
+                var result = await _unitOfWork.donationRepository.UpdateDonationStatusAsync(updateStatusDt);
+                return Ok(ResponseAPI<DonationDto>.Success(result, "Donation status updated successfully."));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ResponseAPI<string>.Error($"An error occurred: {ex.Message}", 500));
+            }
+        }
+
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using SAWA.core.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,6 +12,7 @@ namespace SAWA.core.DTO
         public string Email { get; init; }
         public string PhoneNumber { get; init; }
         public string FullName { get; init; }
+        public string Address { get; init; }
         public string ProfilePhotoUrl { get; init; }
 
         public string WallpaperPhotoUrl { get; init; }
@@ -62,6 +64,7 @@ namespace SAWA.core.DTO
         public string Description { get; init; }
 
         [Required]
+        [PdfOnly]
         public IFormFile Document { get; init; }
 
         //[Required]

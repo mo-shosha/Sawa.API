@@ -107,7 +107,12 @@ namespace SAWA.infrastructure.Repositories
                 throw new KeyNotFoundException("Help request not found.");
             }
 
-            helpRequest.Status = updateStatusDto.NewStatus;
+            if (!Enum.TryParse<HelpRequestStatus>(updateStatusDto.NewStatus, true, out var newStatus))
+            {
+                throw new ArgumentException($"Invalid help request status: {updateStatusDto.NewStatus}");
+            }
+
+            helpRequest.Status = newStatus;
 
             _db.HelpRequests.Update(helpRequest);
             await _db.SaveChangesAsync();

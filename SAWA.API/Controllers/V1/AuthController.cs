@@ -169,7 +169,7 @@ namespace SAWA.API.Controllers.V1
             {
                 var user = await _authService.GetCurrentUserAsync(User);
                 if (user == null)
-                    return NotFound(ResponseAPI<string>.Error("User not found.",404));
+                    return NotFound(ResponseAPI<string>.Error("User not found.", 404));
 
                 return Ok(ResponseAPI<object>.Success(user, "Current user retrieved successfully."));
             }
@@ -182,7 +182,7 @@ namespace SAWA.API.Controllers.V1
 
         [Authorize]
         [HttpPut("update-profile")]
-        public async Task<IActionResult> UpdateProfile([FromBody] UserUpdateDto model)
+        public async Task<IActionResult> UpdateProfile([FromForm] UserUpdateDto model)
         {
             try
             {
@@ -200,6 +200,35 @@ namespace SAWA.API.Controllers.V1
                 return StatusCode(500, ResponseAPI<string>.Error(ex.InnerException?.Message ?? ex.Message, 500));
             }
         }
+
+        [Authorize]
+        [HttpPost("change-password")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto dto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ResponseAPI<string>.Error("Invalid input."));
+
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (string.IsNullOrEmpty(userId))
+                    return Unauthorized(ResponseAPI<string>.Error("Unauthorized.", 401));
+
+                var result = await _authService.ChangePasswordAsync(userId, dto);
+                if (!result.Succeeded)
+                {
+                    var errors = result.Errors.Select(e => e.Description).ToList();
+                    return BadRequest(ResponseAPI<string>.Error($"{errors}"));
+                }
+
+                return Ok(ResponseAPI<string>.Success("Password changed successfully."));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ResponseAPI<string>.Error("An unexpected error occurred. Please try again later."));
+            }
+        }
+
     }
 }
 

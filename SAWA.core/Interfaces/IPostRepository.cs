@@ -14,7 +14,7 @@ namespace SAWA.core.Interfaces
         Task<List<PostDto>> GetAllPostsWithPhotosAndCommentsAsync();
         Task<PostDto> GetPostWithPhotosAndCommentsAsync(int id);
         Task<List<PostDto>> GetCharityPostsWithPhotosAndCommentsAsync(string UserName);
-
+        Task<bool> UpdatePostAsync(int id,PostUpdateDto model);
         Task<bool> DeletePostAsync(int id);
     }
 }

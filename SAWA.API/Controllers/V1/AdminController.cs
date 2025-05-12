@@ -35,7 +35,7 @@ namespace SAWA.API.Controllers.V1
 
 
         [HttpGet("charities")]
-        public async Task<IActionResult> GetAllCharities([FromQuery] string status)
+        public async Task<IActionResult> GetAllCharities([FromQuery] string? status)
         {
             try
             {

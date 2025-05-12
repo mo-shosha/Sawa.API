@@ -19,6 +19,6 @@ namespace SAWA.core.Models
         public int TargetId { get; set; } // The post or comment ID being reported
         public ReportType Type { get; set; }
         public DateTime CreatedAt { get; set; }
-
+        public string Reason { get; set; }
     }
 }
