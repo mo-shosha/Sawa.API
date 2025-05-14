@@ -35,7 +35,7 @@ namespace SAWA.infrastructure.Repositories
             _userManager = userManager;
         }
 
-        public async Task AddDonationsAsync(MonetaryDonationRequestDto dto, string UserId)
+        public async Task<int> AddDonationsAsync(MonetaryDonationRequestDto dto, string UserId)
         {
             var charity = await _userManager.FindByNameAsync(dto.CharityUserName);
             if (charity == null) throw new Exception("Charity not found.");
@@ -49,6 +49,7 @@ namespace SAWA.infrastructure.Repositories
 
             await _db.Donations.AddAsync(donation);
             await _db.SaveChangesAsync();
+            return donation.Id;
         }
 
         public async Task AddDonationsAsync(ItemDonationRequestDto dto, string UserId)
@@ -87,8 +88,11 @@ namespace SAWA.infrastructure.Repositories
         public async Task<IEnumerable<DonationDto>> GetDonationsByCharityIdAsync(string charityId)
         {
             var donations = await _db.Donations
-                .Where(d => d.CharityId == charityId)
+                .Include(d => d.Photos)
+                .Include(d => d.User)
+                .Where(d => d.CharityId == charityId)   
                 .ToListAsync();
+
 
             return _mapper.Map<IEnumerable<DonationDto>>(donations);
         }
@@ -96,8 +100,11 @@ namespace SAWA.infrastructure.Repositories
         public async Task<IEnumerable<DonationDto>> GetDonationsByUserIdAsync(string userId)
         {
             var donations = await _db.Donations
-                .Where(d => d.UserId == userId)
+                .Include(d => d.Photos)
+                .Include(d => d.Charity)
+                .Where(d => d.UserId == userId) 
                 .ToListAsync();
+
 
             return _mapper.Map<IEnumerable<DonationDto>>(donations);
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QXU5uJGqGoOVIaaeRDSXpHfGG3XCqTZ+hk4iBOgK4Vg=",
+  "Hash": "DjfvOaDUIbZjh1wTsS+iG+pu1cL2GFQl/jM1Dfn8PFM=",
   "Source": "SAWA.API",
   "BasePath": "_content/SAWA.API",
   "Mode": "Default",
@@ -682,11 +682,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9e6xjmef2r",
-      "Integrity": "X7aAyQrN55zm4P6s/Mv5qUFx3Xxbyq5QK/kLz8jWJl8=",
+      "Fingerprint": "x6rlgr2tv8",
+      "Integrity": "F8es57+wdxzjiy0DexPoMH0WNM+n34whtqMBBSM0v9o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Logs\\log-20250512.txt"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250513.txt",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Logs/log-20250513#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "exna8mexqd",
+      "Integrity": "Xig6DkNPQWnavFdJmkfYNSxBzTEYBi1uAqZvX8Siuag=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Logs\\log-20250513.txt"
+    },
+    {
+      "Identity": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250514.txt",
+      "SourceId": "SAWA.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\",
+      "BasePath": "_content/SAWA.API",
+      "RelativePath": "Logs/log-20250514#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ss0da1j02j",
+      "Integrity": "TGOweUaF4vR0aY9pM2ZlW9z6+FLQnbYKpJM2GBPg9PE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Logs\\log-20250514.txt"
     }
   ],
   "Endpoints": [
@@ -3233,51 +3275,6 @@
       ]
     },
     {
-      "Route": "Logs/log-20250512.9e6xjmef2r.txt",
-      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250512.txt",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "37767"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"X7aAyQrN55zm4P6s/Mv5qUFx3Xxbyq5QK/kLz8jWJl8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 07:16:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9e6xjmef2r"
-        },
-        {
-          "Name": "label",
-          "Value": "Logs/log-20250512.txt"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-X7aAyQrN55zm4P6s/Mv5qUFx3Xxbyq5QK/kLz8jWJl8="
-        }
-      ]
-    },
-    {
       "Route": "Logs/log-20250512.txt",
       "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250512.txt",
       "Selectors": [],
@@ -3288,7 +3285,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37767"
+          "Value": "93861"
         },
         {
           "Name": "Content-Type",
@@ -3296,11 +3293,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"X7aAyQrN55zm4P6s/Mv5qUFx3Xxbyq5QK/kLz8jWJl8=\""
+          "Value": "\"F8es57+wdxzjiy0DexPoMH0WNM+n34whtqMBBSM0v9o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 07:16:45 GMT"
+          "Value": "Mon, 12 May 2025 14:27:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3310,7 +3307,216 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-X7aAyQrN55zm4P6s/Mv5qUFx3Xxbyq5QK/kLz8jWJl8="
+          "Value": "sha256-F8es57+wdxzjiy0DexPoMH0WNM+n34whtqMBBSM0v9o="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250512.x6rlgr2tv8.txt",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250512.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93861"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F8es57+wdxzjiy0DexPoMH0WNM+n34whtqMBBSM0v9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 12 May 2025 14:27:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x6rlgr2tv8"
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/log-20250512.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F8es57+wdxzjiy0DexPoMH0WNM+n34whtqMBBSM0v9o="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250513.exna8mexqd.txt",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250513.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53085"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xig6DkNPQWnavFdJmkfYNSxBzTEYBi1uAqZvX8Siuag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 20:58:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "exna8mexqd"
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/log-20250513.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xig6DkNPQWnavFdJmkfYNSxBzTEYBi1uAqZvX8Siuag="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250513.txt",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250513.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53085"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xig6DkNPQWnavFdJmkfYNSxBzTEYBi1uAqZvX8Siuag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 20:58:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xig6DkNPQWnavFdJmkfYNSxBzTEYBi1uAqZvX8Siuag="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250514.ss0da1j02j.txt",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250514.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15321"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TGOweUaF4vR0aY9pM2ZlW9z6+FLQnbYKpJM2GBPg9PE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 21:08:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ss0da1j02j"
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/log-20250514.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TGOweUaF4vR0aY9pM2ZlW9z6+FLQnbYKpJM2GBPg9PE="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/log-20250514.txt",
+      "AssetFile": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250514.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15321"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TGOweUaF4vR0aY9pM2ZlW9z6+FLQnbYKpJM2GBPg9PE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 21:08:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TGOweUaF4vR0aY9pM2ZlW9z6+FLQnbYKpJM2GBPg9PE="
         }
       ]
     }

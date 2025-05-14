@@ -14,7 +14,7 @@ namespace SAWA.core.IServices
     {
         Task<string> RegisterUserAsync(UserRegisterDto model);
         Task<string> RegisterCharityAsync(CharityRegisterDto model);
-        Task<AppUserDto> LoginAsync(UserLoginDto model);
+        Task<LoginResponseDto> LoginAsync(UserLoginDto model);
         Task<AppUserDto> LoginWithGoogleAsync(string email);
         Task LogoutAsync();
         Task<bool> UpdateProfileAsync(UserUpdateDto model, string UserId);

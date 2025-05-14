@@ -32,14 +32,14 @@ namespace SAWA.API.Controllers.V1
 
                 var result = await _authService.LoginAsync(model);
 
-                if (result == null)
+                if (result.Success == false)
                 {
                     _logger.LogWarning("Invalid login attempt with email: {Email}", model.Email);
                     return Unauthorized(ResponseAPI<string>.Error("Invalid email or password.", 401));
                 }
 
                 _logger.LogInformation("User logged in successfully: {Email}", model.Email);
-                return Ok(ResponseAPI<object>.Success(result, "Login successful."));
+                return Ok(ResponseAPI<object>.Success(result.User, $"{result.Message}"));
             }
             catch (Exception ex)
             {
@@ -134,32 +134,91 @@ namespace SAWA.API.Controllers.V1
                 if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
                 {
                     _logger.LogWarning("Invalid email confirmation request. UserId or Token is missing.");
-                    return BadRequest(ResponseAPI<string>.Error("Invalid email confirmation request."));
+                    return Content(GetHtmlResponse("Invalid email confirmation request."), "text/html");
                 }
 
                 var user = await _authService.GetUserByIdAsync(userId);
                 if (user == null)
                 {
                     _logger.LogWarning("User not found for email confirmation. UserId: {UserId}", userId);
-                    return NotFound(ResponseAPI<string>.Error("User not found."));
+                    return Content(GetHtmlResponse("User not found."), "text/html");
                 }
 
                 var result = await _authService.ConfirmEmailAsync(user, token);
                 if (!result.Succeeded)
                 {
                     _logger.LogWarning("Email confirmation failed for user: {UserId}", userId);
-                    return BadRequest(ResponseAPI<string>.Error("Email confirmation failed."));
+                    return Content(GetHtmlResponse("Email confirmation failed."), "text/html");
                 }
 
                 _logger.LogInformation("Email confirmed successfully for user: {UserId}", userId);
-                return Ok(ResponseAPI<string>.Success("Email confirmed successfully."));
+                return Content(GetHtmlResponse("Email confirmed successfully."), "text/html");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred during email confirmation.");
-                return BadRequest(ResponseAPI<string>.Error(ex.InnerException?.Message ?? ex.Message));
+                return Content(GetHtmlResponse(ex.InnerException?.Message ?? ex.Message), "text/html");
             }
         }
+
+        private string GetHtmlResponse(string message)
+        {
+            return $@"
+                <!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                    <meta charset='UTF-8'>
+                    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                    <title>Email Confirmation - HopeGivers</title>
+                    <style>
+                        body {{
+                            font-family: Arial, sans-serif;
+                            background-color: #f7f7f7;
+                            color: #333;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                        }}
+                        .container {{
+                            background-color: #ffffff;
+                            padding: 30px;
+                            border-radius: 10px;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            width: 100%;
+                            max-width: 600px;
+                            text-align: center;
+                        }}
+                        .header {{
+                            font-size: 36px;
+                            font-weight: bold;
+                            color: #f4a261;
+                            margin-bottom: 20px;
+                        }}
+                        .tagline {{
+                            font-size: 18px;
+                            color: #6c757d;
+                            margin-bottom: 30px;
+                        }}
+                        .message {{
+                            font-size: 16px;
+                            margin-top: 20px;
+                        }}
+                    </style>
+                </head>
+                <body>
+                    <div class='container'>
+                        <div class='header'>HopeGivers</div>
+                        <div class='tagline'>Empowering Hope, One Click at a Time</div>
+                        <p class='message'>{message}</p>
+                    </div>
+                </body>
+                </html>
+                ";
+        }
+
 
         [Authorize]
         [HttpGet("me")]

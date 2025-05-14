@@ -43,6 +43,7 @@ namespace SAWA.core.DTO
         public string Address { get; set; }
         public DateTime CreatedAt { get; set; }
         public string Status { get; set; }
+        public List<string> PhotoUrls { get; set; } = new();
     }
     public record HelpRequestUserResponse: HelpRequestResponse // return in control panels for user
     {

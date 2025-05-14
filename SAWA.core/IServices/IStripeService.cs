@@ -7,6 +7,6 @@ namespace SAWA.core.IServices
 {
     public interface IStripeService
     {
-        Task<Session> CreateDonationSessionAsync(DonationRequestDto donation);
+        Task<Session> CreateDonationSessionAsync(DonationRequestDto donation, int donationId);
     }
 }

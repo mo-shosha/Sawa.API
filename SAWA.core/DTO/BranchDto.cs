@@ -9,6 +9,7 @@ namespace SAWA.core.DTO
 {
     public record BranchDto
     {
+        public int Id { get; init; }
         public string PhoneNumber { get; init; }
         public string Description { get; init; }
         public string Address { get; init; }
@@ -19,7 +20,7 @@ namespace SAWA.core.DTO
         public string PhoneNumber { get; set; }
         public string Description { get; set; }
         public string Address { get; set; }
-        public IFormFileCollection Photos { get; set; }
+        public IFormFileCollection? Photos { get; set; }
 
     }
 
@@ -28,7 +29,7 @@ namespace SAWA.core.DTO
         public string PhoneNumber { get; set; }
         public string Description { get; set; }
         public string Address { get; set; }
-        public IFormFileCollection NewPhotos { get; set; }
+        public IFormFileCollection? NewPhotos { get; set; }
     }
 
 

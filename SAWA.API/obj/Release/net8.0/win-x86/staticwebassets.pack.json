@@ -129,6 +129,14 @@
       "PackagePath": "staticwebassets\\Logs\\log-20250512.txt"
     },
     {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250513.txt",
+      "PackagePath": "staticwebassets\\Logs\\log-20250513.txt"
+    },
+    {
+      "Id": "E:\\projects in back\\Advansed_SE\\SAWA.API\\SAWA.API\\wwwroot\\Logs\\log-20250514.txt",
+      "PackagePath": "staticwebassets\\Logs\\log-20250514.txt"
+    },
+    {
       "Id": "obj\\Release\\net8.0\\win-x86\\staticwebassets\\msbuild.SAWA.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

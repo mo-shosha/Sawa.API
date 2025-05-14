@@ -64,15 +64,27 @@ public class CommentController : ControllerBase
         {
             var comment = await _unitOfWork.CommentRepository.GetByIdAsync(id);
             if (comment == null)
-                return NotFound(ResponseAPI<string>.Error("Post not found."));
+                return NotFound(ResponseAPI<string>.Error("Comment not found."));
 
             var userId = GetUserId();
             var roles = User.FindAll(ClaimTypes.Role).Select(c => c.Value).ToList();
 
             if (comment.UserId != userId && !roles.Contains("admin"))
             {
-                return StatusCode(403, ResponseAPI<string>.Error("You are not allowed to delete this comment.",403));
+                return StatusCode(403, ResponseAPI<string>.Error("You are not allowed to delete this comment.", 403));
             }
+            var commentReports = await _unitOfWork.reportRepository
+                        .GetAllAsync();
+
+            var reportsToDelete = commentReports.Where(r => r.TargetId == id).ToList();
+
+            foreach (var report in reportsToDelete)
+            {
+                await _unitOfWork.reportRepository.DeleteAsync(report.Id);
+            }
+            await _unitOfWork.SaveAsync();
+
+
             await _unitOfWork.CommentRepository.DeleteAsync(id);
             return Ok(ResponseAPI<string>.Success("Comment deleted successfully."));
         }

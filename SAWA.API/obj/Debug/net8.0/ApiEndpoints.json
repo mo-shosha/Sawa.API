@@ -75,6 +75,22 @@
   },
   {
     "ContainingType": "SAWA.API.Controllers.V1.AuthController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/V1/Auth/change-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SAWA.core.DTO.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SAWA.API.Controllers.V1.AuthController",
     "Method": "ConfirmEmail",
     "RelativePath": "api/V1/Auth/ConfirmEmail",
     "HttpMethod": "GET",
@@ -242,7 +258,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Email",
+        "Name": "FullName",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -526,8 +542,8 @@
   },
   {
     "ContainingType": "SAWA.API.Controllers.V1.DonationsController",
-    "Method": "UpdateHelpRequest",
-    "RelativePath": "api/V1/Donations/UpdateHelpRequest",
+    "Method": "UpdateDonation",
+    "RelativePath": "api/V1/Donations/UpdateDonation",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -757,26 +773,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SAWA.API.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[SAWA.API.WeatherForecast, SAWA.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

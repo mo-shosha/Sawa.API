@@ -118,6 +118,9 @@ namespace SAWA.infrastructure.Repositories
 
             _db.Comments.RemoveRange(post.Comments);
 
+            var postReports = _db.Reports.Where(r => r.TargetId == id);
+            _db.Reports.RemoveRange(postReports);
+
             _db.Posts.Remove(post);
 
             await _db.SaveChangesAsync();

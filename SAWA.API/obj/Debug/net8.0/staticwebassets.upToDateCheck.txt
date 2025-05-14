@@ -30,3 +30,5 @@ wwwroot\Images\string string\03a634c7-46d9-41c8-aab4-0b8ff738769f.png
 wwwroot\Images\string\32499203-a207-49a2-bc49-f25866c6619b.jpg
 wwwroot\Logs\log-20250511.txt
 wwwroot\Logs\log-20250512.txt
+wwwroot\Logs\log-20250513.txt
+wwwroot\Logs\log-20250514.txt

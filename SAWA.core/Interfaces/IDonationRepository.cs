@@ -10,7 +10,7 @@ namespace SAWA.core.Interfaces
 {
     public interface IDonationRepository:IGenericRepository<Donation>
     {
-        Task AddDonationsAsync(MonetaryDonationRequestDto donation,string UserId);
+        Task<int> AddDonationsAsync(MonetaryDonationRequestDto donation,string UserId);
         Task AddDonationsAsync(ItemDonationRequestDto donation, string UserId);
         Task<IEnumerable<DonationDto>> GetDonationsByUserIdAsync(string userId);
         Task<IEnumerable<DonationDto>> GetDonationsByCharityIdAsync(string charityId);

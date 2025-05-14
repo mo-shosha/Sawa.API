@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Claims;
+using SAWA.infrastructure.Data;
 
 namespace SAWA.infrastructure.Services
 {
@@ -30,6 +31,7 @@ namespace SAWA.infrastructure.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
         private readonly IEmailServices _emailService;
+        private readonly AppDbContext _db;
 
         public AuthService(
             UserManager<AppUser> userManager,
@@ -40,7 +42,8 @@ namespace SAWA.infrastructure.Services
             IFileManagementService fileManagementService,
             IUnitOfWork unitOfWork,
             IConfiguration configuration,
-            IEmailServices emailService
+            IEmailServices emailService,
+            AppDbContext db
             )
             
         {
@@ -53,6 +56,7 @@ namespace SAWA.infrastructure.Services
             _unitOfWork = unitOfWork;
             _configuration = configuration;
             _emailService = emailService;
+            _db = db;
         }
 
         public async Task<AppUser> GetUserByEmailAsync(string email)
@@ -65,36 +69,57 @@ namespace SAWA.infrastructure.Services
             return await _userManager.FindByIdAsync(userId);
         }
 
-        public async Task<AppUserDto> LoginAsync(UserLoginDto model)
+        public async Task<LoginResponseDto> LoginAsync(UserLoginDto model)
         {
             try
             {
                 var user = await _userManager.Users
                                         .Where(u => u.Email == model.Email)
                                         .FirstOrDefaultAsync();
-                if (user == null) return null;
 
-                var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
-                if (!result.Succeeded)
-                    return null;
+                if (user == null)
+                    return new LoginResponseDto { Success = false, Message = "User not found" };
 
                 var roles = await _userManager.GetRolesAsync(user);
 
-                var token = await _tokenService.GetAndCreateToken(user);
+                //if (!user.EmailConfirmed)
+                //    return new LoginResponseDto { Success = false, Message = "Email not confirmed" };
+
+                //if (roles.Contains("charity") && user.IsApproved==false)
+                //    return new LoginResponseDto { Success = false, Message = "Profile under review" };
+
+                var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
+                if (!result.Succeeded)
+                    return new LoginResponseDto { Success = false, Message = "Invalid Email or password" };
+                else
+                {
+                    if (!user.EmailConfirmed)
+                        return new LoginResponseDto { Success = true, Message = "Email not confirmed" };
+
+                    if (roles.Contains("charity") && user.IsApproved == false)
+                        return new LoginResponseDto { Success = true, Message = "Profile under review" };
+                }
+
+                    var token = await _tokenService.GetAndCreateToken(user);
 
                 AppUserDto appUser = _mapper.Map<AppUserDto>(user);
                 appUser.Roles = roles.ToList();
                 appUser.Token = token;
                 appUser.ExpireAt = DateTime.Now.AddHours(30);
 
-                return appUser;
+                return new LoginResponseDto
+                {
+                    Success = true,
+                    Message = "Login successful",
+                    User = appUser
+                };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return null;
+                return new LoginResponseDto { Success = false, Message = "An error occurred" };
             }
-
         }
+
 
         public async Task LogoutAsync()
         {
@@ -170,21 +195,27 @@ namespace SAWA.infrastructure.Services
                 user.WallpaperPhotoURL = await _fileManagementService.AddImagesAsync(model.WallpaperPhoto, user.FullName);
             }
 
-            if (!string.IsNullOrEmpty(model.Email) && user.Email != model.Email)
-            {
-                var emailExists = await _userManager.FindByEmailAsync(model.Email);
-                if (emailExists != null && emailExists.Id != UserId)
-                {
-                    return false;
-                }
+            //if (!string.IsNullOrEmpty(model.Email) && user.Email != model.Email)
+            //{
+            //    var emailExists = await _userManager.FindByEmailAsync(model.Email);
+            //    if (emailExists != null && emailExists.Id != UserId)
+            //    {
+            //        return false;
+            //    }
 
-                user.Email = model.Email;
+            //    user.Email = model.Email;
                
-            }
+            //}
 
             if (!string.IsNullOrEmpty(model.Phone) && user.PhoneNumber != model.Phone)
             {
                 user.PhoneNumber = model.Phone;
+
+            }
+
+            if (!string.IsNullOrEmpty(model.FullName) && user.FullName != model.FullName)
+            {
+                user.FullName = model.FullName;
 
             }
 
@@ -386,8 +417,11 @@ namespace SAWA.infrastructure.Services
         {
             var charityUsers = await _userManager.GetUsersInRoleAsync("Charity");
 
-            return _mapper.Map<List<CharityDto>>(charityUsers);
+            var approvedCharities = charityUsers.Where(c => c.IsApproved == true).ToList();
+
+            return _mapper.Map<List<CharityDto>>(approvedCharities);
         }
+
 
         public async Task<AppUser> GetCharityByUserName(string UserName)
         {
@@ -454,17 +488,97 @@ namespace SAWA.infrastructure.Services
             return _mapper.Map<IEnumerable<UserDto>>(users);
         }
 
+        //public async Task<bool> DeleteUserAsync(string id)
+        //{
+        //    var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == id);
+
+        //    if (user == null )
+        //        return false;
+
+        //    await _userManager.DeleteAsync(user);
+        //    await _unitOfWork.SaveAsync();
+        //    return true;
+        //}
+
         public async Task<bool> DeleteUserAsync(string id)
         {
-            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == id);
+            var user = await _userManager.Users
+                .Include(u => u.Posts)
+                    .ThenInclude(p => p.Comments)
+                .Include(u => u.Posts)
+                    .ThenInclude(p => p.Photos)
+                .Include(u => u.Comments)
+                .Include(u => u.DonationsGiven)
+                .Include(u => u.DonationsReceived)
+                .Include(u => u.MyHelpRequests)
+                .Include(u => u.ProvidedHelpRequests)
+                .Include(u => u.Reports)
+                .Include(u => u.Branches)
+                .FirstOrDefaultAsync(u => u.Id == id);
 
-            if (user == null )
+            if (user == null)
                 return false;
 
-            await _userManager.DeleteAsync(user);
+            foreach (var post in user.Posts)
+            {
+                if (post.Photos != null)
+                    _db.Photos.RemoveRange(post.Photos);
+
+                if (post.Comments != null)
+                    _db.Comments.RemoveRange(post.Comments);
+            }
+
+            foreach (var request in user.MyHelpRequests.Concat(user.ProvidedHelpRequests))
+            {
+                var helpPhotos = await _db.Photos
+                    .Where(p => p.HelpRequestId == request.Id)
+                    .ToListAsync();
+
+                _db.Photos.RemoveRange(helpPhotos);
+            }
+
+            foreach (var donation in user.DonationsGiven.Concat(user.DonationsReceived))
+            {
+                var donationPhotos = await _db.Photos
+                    .Where(p => p.DonationId == donation.Id)
+                    .ToListAsync();
+
+                _db.Photos.RemoveRange(donationPhotos);
+            }
+
+            foreach (var branch in user.Branches)
+            {
+                var branchPhotos = await _db.Photos
+                    .Where(p => p.BranchId == branch.Id)
+                    .ToListAsync();
+
+                _db.Photos.RemoveRange(branchPhotos);
+            }
+
+            _db.Posts.RemoveRange(user.Posts);
+
+            _db.Comments.RemoveRange(user.Comments);
+
+            _db.Donations.RemoveRange(user.DonationsGiven);
+            _db.Donations.RemoveRange(user.DonationsReceived);
+
+            _db.HelpRequests.RemoveRange(user.MyHelpRequests);
+            _db.HelpRequests.RemoveRange(user.ProvidedHelpRequests);
+
+            _db.Reports.RemoveRange(user.Reports);
+
+            _db.Branches.RemoveRange(user.Branches);
+
+
+            var result = await _userManager.DeleteAsync(user);
+
+            if (!result.Succeeded)
+                throw new Exception("Failed to delete user.");
+
             await _unitOfWork.SaveAsync();
             return true;
         }
+
 
         public async Task<bool> UpdateUserRoleAsync(UpdateUserRoleDto dto)
         {

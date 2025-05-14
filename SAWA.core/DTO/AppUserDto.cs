@@ -6,6 +6,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SAWA.core.DTO
 {
+
+    public class LoginResponseDto
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public AppUserDto? User { get; set; }
+    }
+
     public record AppUserDto // Data returned when user logs in
     {
         public string UserName { get; init; }
@@ -177,7 +185,8 @@ namespace SAWA.core.DTO
 
     public record UserUpdateDto
     {
-        public string Email { get; set; }
+        public string FullName { get; set; }
+        //public string Email { get; set; }
         public string Phone { get; set; }
         public string Adress { get; set; }
         public IFormFile? WallpaperPhoto { get; set; }

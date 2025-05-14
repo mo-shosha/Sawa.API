@@ -79,6 +79,7 @@ namespace SAWA.infrastructure.Repositories
             var helpRequests = await _db.HelpRequests
                 .Include(hr => hr.User)
                 .Include(hr => hr.Charity)
+                .Include(d => d.Photos)
                 .Where(hr => hr.CharityId == charityId)
                 .ToListAsync();
 
@@ -90,6 +91,7 @@ namespace SAWA.infrastructure.Repositories
             var helpRequests = await _db.HelpRequests
                 .Include(hr => hr.User)
                 .Include(hr => hr.Charity)
+                .Include(d => d.Photos)
                 .Where(hr => hr.UserId == userId)
                 .ToListAsync();
 

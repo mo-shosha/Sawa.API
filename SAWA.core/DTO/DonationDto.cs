@@ -15,7 +15,10 @@ namespace SAWA.core.DTO
         public string Type { get; set; }
         public string Status { get; set; }
         public DateTime CreatedAt { get; set; }
-        public int? Amount { get; set; }
+        public int Amount { get; set; }
+        public List<string> PhotoUrls { get; set; } = new();
+        public string CharityName { get; set; }
+        public string UserName { get; set; }
     }
 
     public record MonetaryDonationRequestDto

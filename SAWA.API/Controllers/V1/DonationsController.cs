@@ -45,7 +45,7 @@ namespace SAWA.API.Controllers.V1
 
             try
             {
-                await _unitOfWork.donationRepository.AddDonationsAsync(dto, userId);
+                var donationId = await _unitOfWork.donationRepository.AddDonationsAsync(dto, userId);
 
                 var stripeDto = new DonationRequestDto
                 {
@@ -53,7 +53,7 @@ namespace SAWA.API.Controllers.V1
                     AmountInCents = (long)(dto.Amount * 100)
                 };
 
-                var session = await _stripeService.CreateDonationSessionAsync(stripeDto);
+                var session = await _stripeService.CreateDonationSessionAsync(stripeDto, donationId);
 
                 return Ok(ResponseAPI<object>.Success(new { url = session.Url }, "Stripe session created."));
             }
@@ -132,7 +132,7 @@ namespace SAWA.API.Controllers.V1
         }
 
 
-        [Authorize(Roles = "user")]
+        [Authorize]
         [HttpPut("UpdateDonation")]
         public async Task<IActionResult> UpdateDonation([FromBody] DonationUpdateStatusDto updateStatusDt)
         {
@@ -157,10 +157,7 @@ namespace SAWA.API.Controllers.V1
                 bool isAdmin = roles.Contains("admin");
                 bool isOwner = donation.UserId == userId;
                 bool isCharityWhoAccepted = donation.CharityId == userId;
-                if (
-                    (!isAdmin && !isOwner && !isCharityWhoAccepted) ||
-                    (isOwner && Enum.TryParse<DonationStatus>(updateStatusDt.NewStatus, true, out var parsedStatus) && parsedStatus == DonationStatus.Approved)
-                )
+                if ((!isAdmin && !isOwner && !isCharityWhoAccepted))
                 {
                     return StatusCode(403, ResponseAPI<string>.Error("You are not authorized to update this donation.", 403));
                 }

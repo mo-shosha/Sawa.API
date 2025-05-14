@@ -34,10 +34,12 @@ namespace SAWA.API.Mapping
 
             CreateMap<HelpRequest, HelpRequestUserResponse>()
                 .IncludeBase<HelpRequest, HelpRequestResponse>()
+                 .ForMember(dest => dest.PhotoUrls, opt => opt.MapFrom(src => src.Photos.Select(p => p.ImageUrl).ToList()))
                 .ForMember(dest => dest.CharityName, opt => opt.MapFrom(src => src.Charity.FullName));
 
             CreateMap<HelpRequest, HelpRequestCharityResponse>()
                 .IncludeBase<HelpRequest, HelpRequestResponse>()
+                .ForMember(dest => dest.PhotoUrls, opt => opt.MapFrom(src => src.Photos.Select(p => p.ImageUrl).ToList()))
                 .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.User.FullName));
         }
     }

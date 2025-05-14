@@ -15,7 +15,7 @@ namespace SAWA.infrastructure.Services
             StripeConfiguration.ApiKey = _settings.SecretKey;
         }
 
-        public async Task<Session> CreateDonationSessionAsync(DonationRequestDto donation)
+        public async Task<Session> CreateDonationSessionAsync(DonationRequestDto donation,int donationId)
         {
             var options = new SessionCreateOptions
             {
@@ -38,7 +38,7 @@ namespace SAWA.infrastructure.Services
                     }
                 },
                 Mode = "payment",
-                SuccessUrl = "https://localhost:3000/donation-success",
+                SuccessUrl = $"http://hope-givers.vercel.app/donationSuccess?donationId={donationId}",
                 CancelUrl = "https://localhost:3000/donation-cancelled"
 
             };

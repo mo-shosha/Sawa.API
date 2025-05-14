@@ -394,7 +394,7 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "Email": {
+                  "FullName": {
                     "type": "string"
                   },
                   "Phone": {
@@ -414,7 +414,7 @@
                 }
               },
               "encoding": {
-                "Email": {
+                "FullName": {
                   "style": "form"
                 },
                 "Phone": {
@@ -429,6 +429,37 @@
                 "ProfilePhoto": {
                   "style": "form"
                 }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/V1/Auth/change-password": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
               }
             }
           }
@@ -869,7 +900,7 @@
         }
       }
     },
-    "/api/V1/Donations/UpdateHelpRequest": {
+    "/api/V1/Donations/UpdateDonation": {
       "put": {
         "tags": [
           "Donations"
@@ -1241,49 +1272,35 @@
           }
         }
       }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
+      "ChangePasswordDto": {
+        "required": [
+          "confirmNewPassword",
+          "currentPassword",
+          "newPassword"
+        ],
+        "type": "object",
+        "properties": {
+          "currentPassword": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "newPassword": {
+            "minLength": 1,
+            "type": "string",
+            "format": "password"
+          },
+          "confirmNewPassword": {
+            "minLength": 1,
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "additionalProperties": false
+      },
       "CommentUpdateDto": {
         "required": [
           "content"
@@ -1298,15 +1315,6 @@
         },
         "additionalProperties": false
       },
-      "DonationStatus": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
       "DonationUpdateStatusDto": {
         "type": "object",
         "properties": {
@@ -1315,7 +1323,8 @@
             "format": "int32"
           },
           "newStatus": {
-            "$ref": "#/components/schemas/DonationStatus"
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1333,15 +1342,6 @@
         },
         "additionalProperties": false
       },
-      "HelpRequestStatus": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
       "HelpRequestUpdateStatusDto": {
         "type": "object",
         "properties": {
@@ -1350,7 +1350,8 @@
             "format": "int32"
           },
           "newStatus": {
-            "$ref": "#/components/schemas/HelpRequestStatus"
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1417,29 +1418,6 @@
             "minLength": 1,
             "type": "string",
             "format": "password"
-          }
-        },
-        "additionalProperties": false
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
